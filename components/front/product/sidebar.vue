@@ -1,6 +1,6 @@
 <template>
-    <div>
-        i am side bar
+    <div class="sidebar">
+
     </div>
 </template>
 
@@ -10,6 +10,10 @@
     }
 </script>
 
-<style scoped>
-
-</style>
+<!--<style lang="sass" scoped>-->
+<!--.sidebar{-->
+    <!--.accordion{-->
+        <!--background: red;-->
+    <!--}-->
+<!--}-->
+<!--</style>-->
