@@ -109,7 +109,6 @@ export const actions = {
         ]
 
         commit('productsList', products, arg)
-
         // axios.get()
     }
 }
