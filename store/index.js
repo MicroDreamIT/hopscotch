@@ -466,11 +466,7 @@ export const getters ={
             }
         }
 
-        if(cats.length){
-            return _.uniq(cats)
-        }else{
-            return []
-        }
-    }
 
+        return _.uniq(cats)
+    }
 }

@@ -8,7 +8,7 @@
     export default {
         name: "sidebar",
         created(){
-
+            console.log(this.$store.getters.sizesName)
         }
     }
 </script>
