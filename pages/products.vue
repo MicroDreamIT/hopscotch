@@ -1,18 +1,21 @@
 <template>
     <div>
-        <mdb-container>
+        <mdb-container fluid>
             <mdb-row>
                 <mdb-col md="3">
-                    <sidebar></sidebar>
+                    <sidebar :ages="ages"></sidebar>
                 </mdb-col>
                 <mdb-col md="9">
                     <mdb-row>
                         <mdb-col md="12">
-                            <ul>
-                                <li v-for="name in filterList">
-                                    {{name}}
-                                </li>
-                            </ul>
+                            <mdb-list-group horizontal>
+                                <mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">
+                                    <mdb-btn color="danger" size="sm" rounded>
+                                        {{name}}
+                                    </mdb-btn>
+                                </mdb-list-group-item>
+                            </mdb-list-group>
+
                         </mdb-col>
                     </mdb-row>
                     <product-list></product-list>
@@ -40,16 +43,15 @@
             }
         },
         computed:{
-            filterList(){
+            ages(){
                 return this.$store.getters.sizesName
             }
         },
     }
 </script>
 
-<style scoped>
-    .container{
-        max-width: 1400px!important;
-        margin: 0 auto!important;
+<style scoped lang="scss">
+    .top-filter{
+        border: none !important;
     }
 </style>

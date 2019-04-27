@@ -36,7 +36,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-      '~plugins/mdbv.js'
+      '~plugins/mdbv.js',
+      '~plugins/accordions.js'
   ],
 
   /*
