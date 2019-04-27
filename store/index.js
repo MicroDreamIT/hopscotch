@@ -4,7 +4,8 @@ const fakerSize = ['0-3 months', '3-6 months', '6-12 months', '12-15 month', '15
 const fakerSex = ['male', 'female', 'both']
 
 export const state = () => ({
-    products:[]
+    products:[],
+
 })
 export const actions = {
     /* for ajax request for get products
@@ -27,6 +28,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -49,6 +56,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -71,6 +84,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -93,6 +112,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -115,6 +140,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -137,6 +168,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -159,6 +196,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
@@ -181,6 +224,12 @@ export const actions = {
                 category_id: Vue.faker().random.uuid(),
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
                 attributes:{
                     size:[
                         {
