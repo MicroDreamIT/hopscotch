@@ -6,6 +6,15 @@
                     <sidebar></sidebar>
                 </mdb-col>
                 <mdb-col md="9">
+                    <mdb-row>
+                        <mdb-col md="12">
+                            <ul>
+                                <li v-for="name in filterList">
+                                    {{name}}
+                                </li>
+                            </ul>
+                        </mdb-col>
+                    </mdb-row>
                     <product-list></product-list>
                 </mdb-col>
             </mdb-row>
@@ -29,7 +38,12 @@
             if(!this.$store.state.products.length){
                 this.$store.dispatch('getProducts')
             }
-        }
+        },
+        computed:{
+            filterList(){
+                return this.$store.getters.sizesName
+            }
+        },
     }
 </script>
 
