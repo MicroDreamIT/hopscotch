@@ -1,5 +1,6 @@
 <template>
     <div class="sidebar">
+        Filters
         <badger-accordion>
             <badger-accordion-item>
                 <template slot="header">Ages</template>

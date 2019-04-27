@@ -1,6 +1,6 @@
 import Vue from 'vue'
 Vue.use(require('vue-faker'))
-const fakerSize = ['0-3 months', '3-6 months', '6-12 months', '12-15 month', '15-20 months']
+const fakerSize = ['0-3 months', '3-6 months', '6-12 months', '12-15 months', '15-20 months']
 const fakerSex = ['male', 'female', 'both']
 
 export const state = () => ({
@@ -467,6 +467,6 @@ export const getters ={
         }
 
 
-        return _.uniq(cats)
+        return _.uniq(cats.sort())
     }
 }
