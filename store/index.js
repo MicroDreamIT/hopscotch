@@ -5,7 +5,6 @@ const fakerSex = ['male', 'female', 'both']
 
 export const state = () => ({
     products:[],
-
 })
 export const actions = {
     /* for ajax request for get products
@@ -251,5 +250,13 @@ export const actions = {
 export const mutations = {
     productsList(state, arr, arg=null){
         state.products = arr
+    }
+}
+
+export const getters ={
+    categories: state => {
+        let cats = state.products.forEach(product=>{
+
+        })
     }
 }

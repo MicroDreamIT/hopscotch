@@ -6,7 +6,10 @@
 
 <script>
     export default {
-        name: "sidebar"
+        name: "sidebar",
+        created(){
+            console.log(this.$store.getters.categories)
+        }
     }
 </script>
 
