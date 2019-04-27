@@ -41,8 +41,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -69,8 +83,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -97,8 +125,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -125,8 +167,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -153,8 +209,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -181,8 +251,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -209,8 +293,22 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
             {
@@ -237,10 +335,108 @@ export const actions = {
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
                             discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
                         }
-                    ],
+                    ]
                 }
             },
+            {
+                id:Vue.faker().random.uuid(),
+                name:Vue.faker().commerce.productName(),
+                description:Vue.faker().lorem.paragraph(),
+                price: Vue.faker().commerce.price(),
+                discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
+                attributes:{
+                    size:[
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        }
+                    ]
+                }
+            },
+            {
+                id:Vue.faker().random.uuid(),
+                name:Vue.faker().commerce.productName(),
+                description:Vue.faker().lorem.paragraph(),
+                price: Vue.faker().commerce.price(),
+                discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
+                images:[
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                ],
+                attributes:{
+                    size:[
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        },
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        }
+                    ]
+                }
+            }
         ]
         commit('productsList', products, arg)
         // axios.get()
@@ -254,9 +450,27 @@ export const mutations = {
 }
 
 export const getters ={
-    categories: state => {
-        let cats = state.products.forEach(product=>{
+    sizesName: state => {
+        let cats = []
+        for (let i=0; i<state.products.length;i++){
+            if(!_.isEmpty(state.products[i])){
+                if(state.products[i]!==undefined){
+                    if(!_.isEmpty(state.products[i].attributes)){
+                        if(state.products[i].attributes.size.length){
+                            for (let j=0; j<state.products[i].attributes.size.length; j++){
+                                cats.push(state.products[i].attributes.size[j].name)
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-        })
+        if(cats.length){
+            return _.uniq(cats)
+        }else{
+            return []
+        }
     }
+
 }

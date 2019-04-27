@@ -12,3 +12,7 @@
       components:{Headers, Footers}
   }
 </script>
+
+<style lang="scss">
+    @import "./scss/app.scss";
+</style>
