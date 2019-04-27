@@ -10,7 +10,7 @@
                         <mdb-col md="12">
                             <mdb-list-group horizontal>
                                 <mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">
-                                    <mdb-btn color="danger" size="sm" rounded>
+                                    <mdb-btn color="danger" size="sm" rounded @click="triggerFilter(name)">
                                         {{name}}
                                     </mdb-btn>
                                 </mdb-list-group-item>
@@ -47,6 +47,11 @@
                 return this.$store.getters.sizesName
             }
         },
+        methods:{
+            triggerFilter(name){
+                alert(name)
+            }
+        }
     }
 </script>
 

@@ -466,7 +466,6 @@ export const getters ={
             }
         }
 
-
-        return _.uniq(cats.sort())
+        return _.uniq(cats)
     }
 }
