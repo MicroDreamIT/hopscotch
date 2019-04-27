@@ -1,6 +1,7 @@
 import Vue from 'vue'
 Vue.use(require('vue-faker'))
 const fakerSize = ['0-3 months', '3-6 months', '6-12 months', '12-15 month', '15-20 months']
+const fakerSex = ['male', 'female', 'both']
 
 export const state = () => ({
     products:[]
@@ -22,6 +23,10 @@ export const actions = {
                 description:Vue.faker().lorem.paragraph(),
                 price: Vue.faker().commerce.price(),
                 discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
                 attributes:{
                     size:[
                         {
@@ -40,6 +45,10 @@ export const actions = {
                 description:Vue.faker().lorem.paragraph(),
                 price: Vue.faker().commerce.price(),
                 discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
                 attributes:{
                     size:[
                         {
@@ -58,6 +67,10 @@ export const actions = {
                 description:Vue.faker().lorem.paragraph(),
                 price: Vue.faker().commerce.price(),
                 discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
                 attributes:{
                     size:[
                         {
@@ -76,6 +89,10 @@ export const actions = {
                 description:Vue.faker().lorem.paragraph(),
                 price: Vue.faker().commerce.price(),
                 discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
                 attributes:{
                     size:[
                         {
@@ -94,6 +111,76 @@ export const actions = {
                 description:Vue.faker().lorem.paragraph(),
                 price: Vue.faker().commerce.price(),
                 discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
+                attributes:{
+                    size:[
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        }
+                    ],
+                }
+            },
+            {
+                id:Vue.faker().random.uuid(),
+                name:Vue.faker().commerce.productName(),
+                description:Vue.faker().lorem.paragraph(),
+                price: Vue.faker().commerce.price(),
+                discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
+                attributes:{
+                    size:[
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        }
+                    ],
+                }
+            },
+            {
+                id:Vue.faker().random.uuid(),
+                name:Vue.faker().commerce.productName(),
+                description:Vue.faker().lorem.paragraph(),
+                price: Vue.faker().commerce.price(),
+                discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
+                attributes:{
+                    size:[
+                        {
+                            id:Vue.faker().random.uuid(),
+                            name: Vue.faker().random.arrayElement(fakerSize),
+                            price:Vue.faker().commerce.price(),
+                            quantity:Vue.faker().random.number(),
+                            discount:Vue.faker().random.number()
+                        }
+                    ],
+                }
+            },
+            {
+                id:Vue.faker().random.uuid(),
+                name:Vue.faker().commerce.productName(),
+                description:Vue.faker().lorem.paragraph(),
+                price: Vue.faker().commerce.price(),
+                discount:Vue.faker().random.number(),
+                shop_for:Vue.faker().random.arrayElement(fakerSex),
+                category_id: Vue.faker().random.uuid(),
+                band_id: Vue.faker().random.uuid(),
+                color:Vue.faker().commerce.color(),
                 attributes:{
                     size:[
                         {
