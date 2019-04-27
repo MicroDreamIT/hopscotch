@@ -1,6 +1,6 @@
 <template>
     <div>
-        <mdb-container fluid>
+        <mdb-container>
             <mdb-row>
                 <mdb-col md="3">
                     <sidebar></sidebar>
@@ -34,5 +34,8 @@
 </script>
 
 <style scoped>
-
+    .container{
+        max-width: 1400px!important;
+        margin: 0 auto!important;
+    }
 </style>
