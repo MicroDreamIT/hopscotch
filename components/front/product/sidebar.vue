@@ -7,7 +7,7 @@
                 <template slot="content">
                     <mdb-list-group>
                         <mdb-list-group-item v-for="age in ages" :key="age">
-                            {{age}}
+                            <input type="checkbox" v-model="filterItems" :value="age">{{age}}
                         </mdb-list-group-item>
                     </mdb-list-group>
                 </template>
@@ -22,6 +22,12 @@
         props:['ages'],
         data(){
             return {
+                filterItems:[]
+            }
+        },
+        watch:{
+            filterItems(val){
+                // emit value from here
 
             }
         }
