@@ -9,8 +9,9 @@
 
         </mdb-row>
         <mdb-row>
-            <div class="d-flex flex-row p-2 product-item">
+             <div class="d-flex flex-row p-2 product-item">
                 <mdb-card class="pr-1" v-for="(item,index) in product" :key="index">
+
 
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
                         <img :src="item.images[0].path"
@@ -42,7 +43,10 @@
 </template>
 
 <script>
+    import Nuxt from "../../../.nuxt/components/nuxt";
+
     export default {
+        components: {Nuxt},
         name: "productList",
         data(){
             return{
