@@ -7,7 +7,7 @@ export const state = () => ({
     products:[],
 })
 export const actions = {
-    /* for ajax request for get products
+    /* for ajax request for get product
     from the server. Here I have used
     another arg as null should be object
     contains logic for query
