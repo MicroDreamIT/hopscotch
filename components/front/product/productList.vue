@@ -18,7 +18,10 @@
                         <!--{{product[0].images[0].path}}-->
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
-                            <mdb-card-text>{{item.price-item.discount}} {{item.price}}  <span class="discount">{{'('+item.discount+')'}} </span></mdb-card-text>
+                            <mdb-card-text>
+                                {{'$ '}}{{item.price-(item.price*item.discount/100)}} <strike>{{'$ '}}{{item.price}}</strike>
+                                <span class="discount">{{'('+item.discount+' % off)'}} </span>
+                            </mdb-card-text>
                         </div>
                         <div :ref="'item'+index" class="item-hover">
                             <mdb-card>
@@ -167,7 +170,7 @@
         position: absolute;
         right: 0;
         bottom: 60px;
-       // display: none;
+       display: none;
     }
     .item-hover .card{
         border-right:1px solid #7070706e ;
