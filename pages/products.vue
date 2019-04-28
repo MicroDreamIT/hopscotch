@@ -2,23 +2,38 @@
     <div>
         <mdb-container>
             <mdb-row>
-                <mdb-col md="3">
-                    <sidebar :ages="ages"></sidebar>
+                <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
+                    <sidebar :ages="ages" class="on-sm-device"></sidebar>
                 </mdb-col>
-                <mdb-col md="9">
-                    <mdb-row>
-                        <mdb-col md="12">
-                            <mdb-list-group horizontal>
-                            <mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">
-                                <mdb-btn color="danger" size="sm" rounded @click="triggerFilter(name)">
-                                    {{name}}
-                                </mdb-btn>
-                            </mdb-list-group-item>
-                        </mdb-list-group>
+                <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
+                        <mdb-col class="col-md-12 " >
+                           <div class="d-flex mt-5 flex-wrap on-sm-device">
+                               <strong>Showing 78 Results for  </strong>
+                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                           </div>
+                            <div class="d-flex flex-wrap on-sm-device">
+                                <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                                <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                                <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                                <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                                <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                            </div>
+                            <!--<mdb-list-group horizontal>-->
+                            <!--<mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">-->
+                                <!--<mdb-btn color="danger" size="sm" rounded @click="triggerFilter(name)">-->
+                                    <!--{{name}}-->
+                                <!--</mdb-btn>-->
+                            <!--</mdb-list-group-item>-->
+                        <!--</mdb-list-group>-->
+                            <product-list></product-list>
 
                         </mdb-col>
-                    </mdb-row>
-                    <product-list></product-list>
+                  
+                   
                 </mdb-col>
             </mdb-row>
         </mdb-container>

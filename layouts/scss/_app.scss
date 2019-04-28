@@ -7,4 +7,33 @@
 body{
   background:#F5F5F5;
 }
+.item-hover.hover-item .card{
+  @media(max-width: 768px){
+    bottom: 0!important;
+  }
+}
+
+.contentArea{
+  @media(max-width:425px){
+   min-width: 320px;
+  }
+}
+.on-sm-device{
+  @media(max-width:768px){
+    display: none!important;
+  }
+}
+.product-item div {
+  flex: 0 0 33.3333%;
+      @media(max-width: 768px){
+        flex-wrap: wrap;
+        flex: 50%;
+        margin-bottom: 0px;
+      }
+      @media(max-width:425px){
+        flex-wrap: wrap;
+        flex: 100%;
+      }
+
+}
 
