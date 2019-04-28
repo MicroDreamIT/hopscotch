@@ -1,6 +1,6 @@
 <template>
     <mdb-container class="mt-5">
-        <mdb-row class="search-item">
+        <mdb-row class="search-item on-sm-device">
             <div>Sort by:</div>
             <div>Popular</div>
             <div>Lowest Price</div>
@@ -13,8 +13,9 @@
                 <mdb-card  v-for="(item,index) in product" :key="index">
 
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
-                        <img :src="item.images[0].path"
-                             alt="Card image cap">
+                        <!--<img :src="item.images[0].path"-->
+                             <!--alt="Card image cap">-->
+                        <img src="../../../static/images/product-image2.PNG" alt="" >
                         <!--{{product[0].images[0].path}}-->
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
@@ -121,12 +122,14 @@
         font-size: 11px;
         box-shadow: none;
         border: 1px solid #707070a3;
-        
+        border-radius: 15px;
     }
-    .customBtnProduct:hover{
-        border:1px solid transparent;
-        box-shadow: 0px 4px 15px #00000029;
-        color:#ED54AC;
+    .customBtnProduct{
+      &:hover{
+          border:1px solid transparent;
+          box-shadow: 0px 4px 15px #00000029;
+          color:#ED54AC;
+      }
     }
     .productAttributes{
         display: flex;
@@ -160,24 +163,19 @@
         padding: 5px 15px;
         font-size: 14px;
     }
-    .product-item div {
-        flex: 0 0 33.3333%;
-    }
+   
     p {
         margin: 0;
     }
     .item-hover {
         position: absolute;
         right: 0;
-        bottom: 60px;
+        bottom:60px;
        display: none;
+       
     }
-    .item-hover .card{
-        border-right:1px solid #7070706e ;
-        border-left:1px solid #7070706e ;
-        border-top:0px solid transparent ;
-        border-bottom:0px solid transparent ;
-    }
+  
+    
     .hover-item {
         display: block;
     }
