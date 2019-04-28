@@ -28,10 +28,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -40,21 +40,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -70,10 +73,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -82,21 +85,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -112,10 +118,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -124,21 +130,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -154,10 +163,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -166,21 +175,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -196,10 +208,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
                 ],
                 attributes:{
                     size:[
@@ -208,21 +220,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -238,10 +253,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -250,21 +265,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -280,10 +298,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default: 0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default: 1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default: 0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default: 0},
                 ],
                 attributes:{
                     size:[
@@ -292,21 +310,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            size:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            size:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            size:0
                         }
                     ]
                 }
@@ -322,10 +343,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -334,21 +355,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -364,10 +388,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
                 ],
                 attributes:{
                     size:[
@@ -376,21 +400,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }
@@ -406,10 +433,10 @@ export const actions = {
                 band_id: Vue.faker().random.uuid(),
                 color:Vue.faker().commerce.color(),
                 images:[
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
-                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion()},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
+                    {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
                 ],
                 attributes:{
                     size:[
@@ -418,21 +445,24 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:1
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         },
                         {
                             id:Vue.faker().random.uuid(),
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number()
+                            discount:Vue.faker().random.number(),
+                            default:0
                         }
                     ]
                 }

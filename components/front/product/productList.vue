@@ -11,13 +11,11 @@
         <mdb-row>
             <div class="d-flex flex-row p-2 product-item">
                 <mdb-card  v-for="(item,index) in product" :key="index">
-
-                    <nuxt-link :to="{name:'product-show', params:{show:item.id}}">click</nuxt-link>
-
-
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
-                        <img :src="item.images[0].path"
-                             alt="Card image cap">
+                        <nuxt-link :to="{name:'product-show', params:{show:item.id}}">
+                            <img :src="item.images[0].path" alt="Card image cap"/>
+                        </nuxt-link>
+
                         <!--{{product[0].images[0].path}}-->
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
