@@ -1,6 +1,9 @@
 .btn-rounded{
   border-radius: 24px !important;
 }
+.badger-accordion__panel{
+  border-bottom: 1px solid lightgray;
+}
 .badger-accordion__panel.js-badger-accordion-panel.-ba-is-hidden{
   margin-bottom: 0!important;
 }

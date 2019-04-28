@@ -2,10 +2,10 @@
     <div>
         <mdb-container>
             <mdb-row>
-                <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
+                <mdb-col class="col-lg-3 col-md-12 col-xs-12 on-sm-device">
                     <sidebar :ages="ages" class="on-sm-device"></sidebar>
                 </mdb-col>
-                <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
+                <mdb-col class="col-lg-9 col-md-12 col-xs-12 contentArea ">
                         <mdb-col class="col-md-12 " >
                            <div class="d-flex mt-5 flex-wrap on-sm-device">
                                <strong>Showing 78 Results for  </strong>

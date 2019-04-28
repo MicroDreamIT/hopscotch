@@ -1,5 +1,5 @@
 <template>
-	<div class="sidebar">
+	<div class="sidebar bg-white">
 		<div class="d-flex justify-content-between p-3 border mt-4">
 			<b>Filter</b>
 			<b>Clear All</b>
@@ -21,9 +21,7 @@
 					</mdb-list-group>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Ages</template>
 				<template slot="content">
@@ -34,10 +32,7 @@
 					</div>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Categories</template>
 				<template slot="content">
@@ -51,9 +46,7 @@
 					</div>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Delivery Time</template>
 				<template slot="content">
@@ -69,9 +62,7 @@
 					</mdb-list-group>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Colour</template>
 				<template slot="content">
@@ -81,9 +72,7 @@
 					</div>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Price</template>
 				<template slot="content">
@@ -94,9 +83,7 @@
 					</div>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Discount</template>
 				<template slot="content">
@@ -108,9 +95,7 @@
 					</mdb-list-group>
 				</template>
 			</badger-accordion-item>
-		</badger-accordion>
-		
-		<badger-accordion>
+
 			<badger-accordion-item>
 				<template slot="header">Brands</template>
 				<template slot="content">
