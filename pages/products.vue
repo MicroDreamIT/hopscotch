@@ -9,12 +9,12 @@
                     <mdb-row>
                         <mdb-col md="12">
                             <mdb-list-group horizontal>
-                                <mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">
-                                    <mdb-btn color="danger" size="sm" rounded @click="triggerFilter(name)">
-                                        {{name}}
-                                    </mdb-btn>
-                                </mdb-list-group-item>
-                            </mdb-list-group>
+                            <mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">
+                                <mdb-btn color="danger" size="sm" rounded @click="triggerFilter(name)">
+                                    {{name}}
+                                </mdb-btn>
+                            </mdb-list-group-item>
+                        </mdb-list-group>
 
                         </mdb-col>
                     </mdb-row>

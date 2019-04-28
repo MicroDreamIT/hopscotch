@@ -8,7 +8,7 @@
             <mdb-navbar-toggler>
                 <mdb-navbar-nav>
                     <mdb-nav-item to="/" active>Home</mdb-nav-item>
-                    <mdb-nav-item to="products">product</mdb-nav-item>
+                    <mdb-nav-item to="products">Products</mdb-nav-item>
                 </mdb-navbar-nav>
             </mdb-navbar-toggler>
         </mdb-navbar>
