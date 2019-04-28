@@ -1,5 +1,13 @@
 <template>
     <mdb-container class="mt-5">
+        <mdb-row class="search-item">
+            <div>Sort by:</div>
+            <div>Popular</div>
+            <div>Lowest Price</div>
+            <div>Highest Price</div>
+
+
+        </mdb-row>
         <mdb-row>
             <div class="d-flex flex-row p-2 product-item">
                 <mdb-card class="pr-1" v-for="(item,index) in product" :key="index">
@@ -84,5 +92,27 @@
     }
     .hover-item {
         display: block;
+    }
+    .search-item{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .search-item div{
+      padding-left: 10px;
+        font-weight: 400;
+        font-size: 14px;
+
+
+    }
+    .search-item div:last-child{
+        padding-right: 35px;
+    }
+    .search-item ul{
+        flex: 1;
+        display: flex;
+    }
+    .search-item ul li{
+        flex: 1;
+        list-style: none;
     }
 </style>
