@@ -25,7 +25,10 @@ export const actions = {
                 discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
@@ -70,7 +73,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
@@ -115,7 +121,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
@@ -160,7 +169,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
@@ -205,7 +217,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
@@ -250,7 +265,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
@@ -295,7 +313,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default: 0},
@@ -340,7 +361,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},
@@ -385,7 +409,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:1},
@@ -430,7 +457,10 @@ export const actions = {
                   discount:Vue.faker().random.number({min:5, max:10}),
                 shop_for:Vue.faker().random.arrayElement(fakerSex),
                 category_id: Vue.faker().random.uuid(),
-                band_id: Vue.faker().random.uuid(),
+                brand: {
+                    id:Vue.faker().random.uuid(),
+                    name:Vue.faker().company.companyName()
+                },
                 color:Vue.faker().commerce.color(),
                 images:[
                     {id:Vue.faker().random.uuid(), model:'Product', path:Vue.faker().image.fashion(), default:0},

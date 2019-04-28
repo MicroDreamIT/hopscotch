@@ -31,11 +31,52 @@
                             <a href="#" class="pink-text">EDIT PINCODE</a>
                         </div>
                         <ul class="list-group">
-                            <li class="list-group-item bg-transparent">Get it by <badge>testing</badge></li>
+                            <li class="list-group-item bg-transparent">Get it by <span class="badge badge-secondary">Secondary</span></li>
                             <li class="list-group-item bg-transparent">Cash on delivery</li>
                             <li class="list-group-item bg-transparent">15 days return</li>
                         </ul>
                     </div>
+                    <badger-accordion>
+                        <badger-accordion-item>
+                            <template slot="header">Items details</template>
+                            <template slot="content">
+                                <div class="custom-control custom-checkbox">
+                                    <strong>FEATURES</strong>
+                                    <ul>
+                                        <li>Fabric : 100% Cotton</li>
+                                        <li>
+                                            The actual product may differ slightly in color from the one illustrated in the images.
+                                        </li>
+                                    </ul>
+                                    <strong>WHAT'S INCLUDED:</strong>
+                                    <ul>
+                                        <li>1 Top , 1 Skirt</li>
+                                    </ul>
+                                    <strong>CARE:</strong>
+                                    <ul>
+                                        <li>Gentle wash</li>
+                                    </ul>
+                                    <strong>Suitable For</strong>
+                                    <ul>
+                                        <li>Girls</li>
+                                    </ul>
+                                    <strong>Colour</strong>
+                                    <ul>
+                                        <li>Navy</li>
+                                    </ul>
+                                </div>
+                            </template>
+                        </badger-accordion-item>
+                    </badger-accordion>
+
+                    <badger-accordion>
+                        <badger-accordion-item>
+                            <template slot="header">By brand {{product.brand.name}}</template>
+                            <!--<template slot="content">-->
+                                <!--asdf-->
+                            <!--</template>-->
+                        </badger-accordion-item>
+                    </badger-accordion>
                 </mdb-col>
             </mdb-row>
         </mdb-container>
