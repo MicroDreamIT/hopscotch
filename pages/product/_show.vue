@@ -2,10 +2,10 @@
     <div>
         <mdb-container class="mt-5">
             <mdb-row class="search-item">
-                <mdb-col col="8">
+                <mdb-col col="7">
                     asdfdsaf
                 </mdb-col>
-                <mdb-col col="4">
+                <mdb-col col="5">
                     <p>White Stylish Half Sleeves Shirt And Suspender Style Shorts Sets</p>
                     <h5>$999 - $1,216</h5>
 
@@ -18,7 +18,8 @@
                             <option>2-3 years</option>
                             <option>3-4 years</option>
                         </select>
-                        <mdb-btn color="pink" class="form-control">ADD TO CART</mdb-btn>
+                        <br>
+                        <mdb-btn color="pink" block>ADD TO CART</mdb-btn>
                     </div>
 
                     <div>
@@ -27,7 +28,7 @@
                 </mdb-col>
             </mdb-row>
         </mdb-container>
-    
+
     </div>
 </template>
 
@@ -35,10 +36,18 @@
     export default{
         data(){
             return{
-            
-            
+                product: this.$store.state.products[0],
+                selectedSize:{}
             }
-        
+        },
+        created(){
+            console.log(this.product.attributes.size)
+            this.selectedSize = this.getDefaultSize(this.product.attributes.size)
+        },
+        methods:{
+            getDefaultSize(size){
+                return size.filter(val=>val.default)[0]
+            },
         }
     }
 </script>

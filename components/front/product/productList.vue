@@ -11,8 +11,11 @@
         <mdb-row>
             <div class="d-flex flex-row p-2 product-item">
                 <mdb-card  v-for="(item,index) in product" :key="index">
-
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
+                        <nuxt-link :to="{name:'product-show', params:{show:item.id}}">
+                            <img :src="item.images[0].path" alt="Card image cap"/>
+                        </nuxt-link>
+
                         <!--<img :src="item.images[0].path"-->
                              <!--alt="Card image cap">-->
                         <img src="../../../static/images/product-image2.PNG" alt="" >
@@ -27,7 +30,7 @@
                         <div :ref="'item'+index" class="item-hover">
                             <mdb-card>
                                 <mdb-card-header class="cardHeader">
-                                   <span class="text-center">Get it in 1-2 weeks</span>
+                                    <span class="text-center">Get it in 1-2 weeks</span>
                                 </mdb-card-header>
                                 <mdb-card-body>
                                     <div class="productAttributes">
@@ -35,17 +38,26 @@
                                         <span>View size chart</span>
                                     </div>
                                     <div class="d-flex flex-wrap pt-2">
-                                        <mdb-btn  rounded class="customBtnProduct">6-12 month </mdb-btn>
-                                        <mdb-btn  rounded class="customBtnProduct">1-2 years</mdb-btn>
-                                        <mdb-btn  rounded class="customBtnProduct">2-3 years</mdb-btn>
-                                        <mdb-btn  rounded class="customBtnProduct">2-3 years</mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">6-12
+                                            month
+                                        </mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">1-2
+                                            years
+                                        </mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">2-3
+                                            years
+                                        </mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">3-4
+                                            years
+                                        </mdb-btn>
                                     </div>
-                                   
+
                                 </mdb-card-body>
                                 <mdb-card-footer class="productFooter">
                                     <div>
-                                        <button class="addToCart"> Select a Size</button>
-                                        <!--<button class="addToCart">Add To Cart</button>-->
+                                        <button class="addToCart" v-if="cartButton">Select a Size</button>
+                                        <button class="addToCart" :ref="'cart'+index" v-else>Add To Cart
+                                        </button>
                                     </div>
                                 </mdb-card-footer>
                             </mdb-card>
@@ -63,9 +75,10 @@
 <script>
     export default {
         name: "productList",
-        data(){
-            return{
-                product:[]
+        data() {
+            return {
+                product: [],
+                cartButton: true,
 
         }
         },
@@ -86,7 +99,7 @@
 </script>
 
 <style scoped lang="scss">
-    .card{
+    .card {
         border: 1px solid White;
         box-shadow: none;
     }
