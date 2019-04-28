@@ -1,3 +1,21 @@
 .btn-rounded{
   border-radius: 24px !important;
 }
+
+.badger-accordion__panel.js-badger-accordion-panel.-ba-is-hidden{
+  margin-bottom: 0!important;
+}
+
+.selectColor{
+  display: none;
+}
+.selectColor:checked + label{
+  color: red !important;
+  -webkit-appearance: none;
+  background: #e80808;
+
+}
+.colorLabel{
+ -webkit-appearance: none;
+  background: White;
+}

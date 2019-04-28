@@ -1,6 +1,6 @@
 <template>
     <div>
-        <mdb-container fluid>
+        <mdb-container>
             <mdb-row>
                 <mdb-col md="3">
                     <sidebar :ages="ages"></sidebar>
@@ -59,4 +59,10 @@
     .top-filter{
         border: none !important;
     }
+
+        .container {
+            max-width: 1400px!important;
+        }
+
+
 </style>
