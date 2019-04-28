@@ -40,7 +40,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:12,
                             default:1
                         },
                         {
@@ -48,7 +48,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -56,7 +56,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -85,7 +85,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -93,7 +93,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -101,7 +101,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -130,7 +130,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -138,7 +138,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -146,7 +146,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -175,7 +175,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -183,7 +183,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -191,7 +191,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -220,7 +220,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -228,7 +228,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -236,7 +236,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -265,7 +265,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -273,7 +273,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -281,7 +281,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -310,7 +310,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             size:1
                         },
                         {
@@ -318,7 +318,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             size:0
                         },
                         {
@@ -326,7 +326,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             size:0
                         }
                     ]
@@ -355,7 +355,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -363,7 +363,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -371,7 +371,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -400,7 +400,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -408,7 +408,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -416,7 +416,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]
@@ -445,7 +445,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:1
                         },
                         {
@@ -453,7 +453,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         },
                         {
@@ -461,7 +461,7 @@ export const actions = {
                             name: Vue.faker().random.arrayElement(fakerSize),
                             price:Vue.faker().commerce.price(),
                             quantity:Vue.faker().random.number(),
-                            discount:Vue.faker().random.number(),
+                            discount:23,
                             default:0
                         }
                     ]

@@ -1,6 +1,6 @@
 <template>
 
-        <mdb-navbar expand="large" dark color="red accent-3">
+        <mdb-navbar expand="large" dark color="pink lighten-2">
             <!-- Navbar brand -->
             <mdb-navbar-brand href="#">
                 Navbar

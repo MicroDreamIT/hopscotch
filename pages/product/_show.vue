@@ -1,25 +1,27 @@
 <template>
     <div>
         <mdb-container class="mt-5">
-            <mdb-row class="search-item">
+            <mdb-row bg-white>
                 <mdb-col col="7">
                     asdfdsaf
                 </mdb-col>
                 <mdb-col col="5">
-                    <p>White Stylish Half Sleeves Shirt And Suspender Style Shorts Sets</p>
-                    <h5>$999 - $1,216</h5>
+                    <p>{{product.name}}</p>
+                    <div v-if="selectedSize.hasOwnProperty('id')">
+                        <strong class="text-danger ">
+                            {{withoutDiscountPrice}}</strong> <strike>{{withDiscountPrice}}</strike> <strong>{{selectedSize.discount? selectedSize.discount+'% off':''}}</strong>
+                    </div>
 
                     <div class="form-group">
-                        <label>Default input</label>
-                        <select class="form-control">
-                            <option value="" disabled selected>Select a size</option>
-                            <option>6-12 months</option>
-                            <option>1-2 years</option>
-                            <option>2-3 years</option>
-                            <option>3-4 years</option>
+                        <div class="d-flex justify-content-between">
+                            <strong>Size</strong>
+                            <a href="#" class="pink-text">VIEW SIZE CHART</a>
+                        </div>
+                        <select class="form-control" v-model="selectedSize">
+                            <option v-for="size in product.attributes.size" :key="size.id" :value="size">{{size.name}}</option>
                         </select>
                         <br>
-                        <mdb-btn color="pink" block>ADD TO CART</mdb-btn>
+                        <mdb-btn color="pink lighten-2" block>ADD TO CART</mdb-btn>
                     </div>
 
                     <div>
@@ -41,8 +43,19 @@
             }
         },
         created(){
-            console.log(this.product.attributes.size)
             this.selectedSize = this.getDefaultSize(this.product.attributes.size)
+        },
+        computed:{
+            withoutDiscountPrice(){
+                return this.selectedSize.price
+            },
+            withDiscountPrice(){
+                let discount = parseFloat(this.selectedSize.discount)
+                let price = parseFloat(this.selectedSize.price)
+
+                return price - (price*discount/100).toFixed(2)
+            }
+
         },
         methods:{
             getDefaultSize(size){
