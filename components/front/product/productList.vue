@@ -13,12 +13,13 @@
                 <mdb-card  v-for="(item,index) in product" :key="index">
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
                         <nuxt-link :to="{name:'product-show', params:{show:item.id}}">
-                            <img :src="item.images[0].path" alt="Card image cap"/>
+                            <img src="../../../static/images/product-image2.PNG" alt="" >
+                            <!--<img :src="item.images[0].path" alt="Card image cap"/>-->
                         </nuxt-link>
 
                         <!--<img :src="item.images[0].path"-->
                              <!--alt="Card image cap">-->
-                        <img src="../../../static/images/product-image2.PNG" alt="" >
+                        <!--<img src="../../../static/images/product-image2.PNG" alt="" >-->
                         <!--{{product[0].images[0].path}}-->
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
