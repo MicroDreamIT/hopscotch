@@ -10,15 +10,18 @@
         </mdb-row>
         <mdb-row>
             <div class="d-flex flex-row p-2 product-item">
-                <mdb-card v-for="(item,index) in product" :key="index">
-
+                <mdb-card  v-for="(item,index) in product" :key="index">
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
-                        <img :src="item.images[0].path"
-                             alt="Card image cap">
+                        <nuxt-link :to="{name:'product-show', params:{show:item.id}}">
+                            <img :src="item.images[0].path" alt="Card image cap"/>
+                        </nuxt-link>
+
                         <!--{{product[0].images[0].path}}-->
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
-                            <mdb-card-text>{{item.price-item.discount}} {{item.price}} <span class="discount">{{'('+item.discount+')'}} </span>
+                            <mdb-card-text>
+                                {{'$ '}}{{item.price-(item.price*item.discount/100)}} <strike>{{'$ '}}{{item.price}}</strike>
+                                <span class="discount">{{'('+item.discount+' % off)'}} </span>
                             </mdb-card-text>
                         </div>
                         <div :ref="'item'+index" class="item-hover">
@@ -198,45 +201,37 @@
         position: absolute;
         right: 0;
         bottom: 60px;
-        display: none;
+       display: none;
     }
-
-    .item-hover .card {
-        border-right: 1px solid #7070706e;
-        border-left: 1px solid #7070706e;
-        border-top: 0px solid transparent;
-        border-bottom: 0px solid transparent;
+    .item-hover .card{
+        border-right:1px solid #7070706e ;
+        border-left:1px solid #7070706e ;
+        border-top:0px solid transparent ;
+        border-bottom:0px solid transparent ;
     }
-
     .hover-item {
         display: block;
     }
-
-    .search-item {
+    .search-item{
         display: flex;
         justify-content: flex-end;
     }
-
-    .search-item div {
-        padding-left: 10px;
+    .search-item div{
+      padding-left: 10px;
         font-weight: 400;
         font-size: 14px;
 
 
     }
-
-    .search-item div:last-child {
+    .search-item div:last-child{
         padding-right: 35px;
     }
-
-    .search-item ul {
+    .search-item ul{
         flex: 1;
         display: flex;
     }
-
-    .search-item ul li {
+    .search-item ul li{
         flex: 1;
         list-style: none;
     }
-
 </style>
