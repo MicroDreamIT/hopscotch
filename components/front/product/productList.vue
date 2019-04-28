@@ -57,7 +57,7 @@
                                 <mdb-card-footer class="productFooter">
                                     <div>
                                         <button class="addToCart" v-if="cartButton">Select a Size</button>
-                                        <button class="addToCart" :ref="'cart'+index" v-else>Add To Cart
+                                        <button class="addToCart" v-else>Add To Cart
                                         </button>
                                     </div>
                                 </mdb-card-footer>
@@ -92,8 +92,13 @@
                 itemElement.add('hover-item')
             },
             hideItem(item){
+                this.cartButton=true
                 let itemElement=this.$refs[item][0].classList
                 itemElement.remove('hover-item')
+            },
+            cart()
+            {
+                this.cartButton?this.cartButton=false:null
             }
         }
     }
