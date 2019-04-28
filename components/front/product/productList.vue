@@ -10,7 +10,7 @@
         </mdb-row>
         <mdb-row>
             <div class="d-flex flex-row p-2 product-item">
-                <mdb-card class="pr-1" v-for="(item,index) in product" :key="index">
+                <mdb-card  v-for="(item,index) in product" :key="index">
 
                     <nuxt-link :to="{name:'product-show', params:{show:item.id}}">click</nuxt-link>
 
@@ -19,18 +19,33 @@
                         <img :src="item.images[0].path"
                              alt="Card image cap">
                         <!--{{product[0].images[0].path}}-->
-                        <mdb-card-text>{{item.name}}</mdb-card-text>
-                        <mdb-card-text>{{item.price-item.discount}} {{item.price}} {{item.discount}}</mdb-card-text>
+                        <div class="bottom-text">
+                            <mdb-card-text>{{item.name}}</mdb-card-text>
+                            <mdb-card-text>{{item.price-item.discount}} {{item.price}}  <span class="discount">{{'('+item.discount+')'}} </span></mdb-card-text>
+                        </div>
                         <div :ref="'item'+index" class="item-hover">
                             <mdb-card>
-                                <mdb-card-header>
-                                    Get it in 1-2 weeks
+                                <mdb-card-header class="cardHeader">
+                                   <span class="text-center">Get it in 1-2 weeks</span>
                                 </mdb-card-header>
                                 <mdb-card-body>
-                                    <mdb-card-text>Some quick example text to build on the cd's content.</mdb-card-text>
+                                    <div class="productAttributes">
+                                        <span>Size</span>
+                                        <span>View size chart</span>
+                                    </div>
+                                    <div class="d-flex flex-wrap pt-2">
+                                        <mdb-btn  rounded class="customBtnProduct">6-12 month </mdb-btn>
+                                        <mdb-btn  rounded class="customBtnProduct">1-2 years</mdb-btn>
+                                        <mdb-btn  rounded class="customBtnProduct">2-3 years</mdb-btn>
+                                        <mdb-btn  rounded class="customBtnProduct">2-3 years</mdb-btn>
+                                    </div>
+                                   
                                 </mdb-card-body>
-                                <mdb-card-footer>
-                                    Select a Size
+                                <mdb-card-footer class="productFooter">
+                                    <div>
+                                        <button class="addToCart"> Select a Size</button>
+                                        <!--<button class="addToCart">Add To Cart</button>-->
+                                    </div>
                                 </mdb-card-footer>
                             </mdb-card>
                         </div>
@@ -69,7 +84,71 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .card{
+        border: 1px solid White;
+        box-shadow: none;
+    }
+    .bottom-text .card-text{
+        padding: 0;
+        font-size: 13px;
+    }
+    .bottom-text .card-text .discount{
+        color:green;
+        font-weight: bold;
+    }
+    .bottom-text{
+     padding: 12px 15px;
+    }
+    .addToCart{
+        padding: 8px 0;
+        color: #eae5e5;
+        text-align: center;
+        background: #ed54a4;
+        width: 100%;
+        display: block;
+        font-size: 13px;
+        outline:0;
+    }
+    .productFooter{
+        padding: 0;
+    }
+    
+    .customBtnProduct{
+        background: none !important;
+        padding: 6px 9px;
+        color: #707070;
+        font-size: 11px;
+        box-shadow: none;
+        border: 1px solid #707070a3;
+        
+    }
+    .customBtnProduct:hover{
+        border:1px solid transparent;
+        box-shadow: 0px 4px 15px #00000029;
+        color:#ED54AC;
+    }
+    .productAttributes{
+        display: flex;
+        justify-content: space-between;
+    }
+    .productAttributes span:first-child{
+        color:black;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .productAttributes span:last-child{
+        color:#ED54A4;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .cardHeader{
+        padding: 2px 0;
+        font-size: 12px;
+        text-align: center;
+        background: rgb(112, 112, 112);
+        color: #fff;
+    }
     .product-item {
         flex-wrap: wrap;
     }
@@ -90,8 +169,14 @@
     .item-hover {
         position: absolute;
         right: 0;
-        bottom: 0;
-        display: none;
+        bottom: 60px;
+       // display: none;
+    }
+    .item-hover .card{
+        border-right:1px solid #7070706e ;
+        border-left:1px solid #7070706e ;
+        border-top:0px solid transparent ;
+        border-bottom:0px solid transparent ;
     }
     .hover-item {
         display: block;
