@@ -10,7 +10,7 @@
         </mdb-row>
         <mdb-row>
             <div class="d-flex flex-row p-2 product-item">
-                <mdb-card  v-for="(item,index) in product" :key="index">
+                <mdb-card v-for="(item,index) in product" :key="index">
 
                     <div @mouseover="showItem('item'+index)" @mouseleave="hideItem('item'+index)">
                         <img :src="item.images[0].path"
@@ -18,12 +18,13 @@
                         <!--{{product[0].images[0].path}}-->
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
-                            <mdb-card-text>{{item.price-item.discount}} {{item.price}}  <span class="discount">{{'('+item.discount+')'}} </span></mdb-card-text>
+                            <mdb-card-text>{{item.price-item.discount}} {{item.price}} <span class="discount">{{'('+item.discount+')'}} </span>
+                            </mdb-card-text>
                         </div>
                         <div :ref="'item'+index" class="item-hover">
                             <mdb-card>
                                 <mdb-card-header class="cardHeader">
-                                   <span class="text-center">Get it in 1-2 weeks</span>
+                                    <span class="text-center">Get it in 1-2 weeks</span>
                                 </mdb-card-header>
                                 <mdb-card-body>
                                     <div class="productAttributes">
@@ -31,17 +32,26 @@
                                         <span>View size chart</span>
                                     </div>
                                     <div class="d-flex flex-wrap pt-2">
-                                        <mdb-btn  rounded class="customBtnProduct">6-12 month </mdb-btn>
-                                        <mdb-btn  rounded class="customBtnProduct">1-2 years</mdb-btn>
-                                        <mdb-btn  rounded class="customBtnProduct">2-3 years</mdb-btn>
-                                        <mdb-btn  rounded class="customBtnProduct">2-3 years</mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">6-12
+                                            month
+                                        </mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">1-2
+                                            years
+                                        </mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">2-3
+                                            years
+                                        </mdb-btn>
+                                        <mdb-btn rounded class="customBtnProduct" @click="cart">3-4
+                                            years
+                                        </mdb-btn>
                                     </div>
-                                   
+
                                 </mdb-card-body>
                                 <mdb-card-footer class="productFooter">
                                     <div>
-                                        <button class="addToCart"> Select a Size</button>
-                                        <!--<button class="addToCart">Add To Cart</button>-->
+                                        <button class="addToCart" v-if="cartButton">Select a Size</button>
+                                        <button class="addToCart" :ref="'cart'+index" v-else>Add To Cart
+                                        </button>
                                     </div>
                                 </mdb-card-footer>
                             </mdb-card>
@@ -59,45 +69,54 @@
 <script>
     export default {
         name: "productList",
-        data(){
-            return{
-                product:[]
+        data() {
+            return {
+                product: [],
+                cartButton: true,
 
-        }
+            }
         },
-        created(){
-          this.product=this.$store.state.products;
+        created() {
+            this.product = this.$store.state.products;
         },
         methods: {
             showItem(item) {
-                let itemElement=this.$refs[item][0].classList
+                let itemElement = this.$refs[item][0].classList
                 itemElement.add('hover-item')
             },
-            hideItem(item){
-                let itemElement=this.$refs[item][0].classList
+            hideItem(item) {
+                this.cartButton = true
+                let itemElement = this.$refs[item][0].classList
                 itemElement.remove('hover-item')
-            }
+            },
+            cart() {
+                this.cartButton ? this.cartButton = false : null
+            },
         }
     }
 </script>
 
 <style scoped lang="scss">
-    .card{
+    .card {
         border: 1px solid White;
         box-shadow: none;
     }
-    .bottom-text .card-text{
+
+    .bottom-text .card-text {
         padding: 0;
         font-size: 13px;
     }
-    .bottom-text .card-text .discount{
-        color:green;
+
+    .bottom-text .card-text .discount {
+        color: green;
         font-weight: bold;
     }
-    .bottom-text{
-     padding: 12px 15px;
+
+    .bottom-text {
+        padding: 12px 15px;
     }
-    .addToCart{
+
+    .addToCart {
         padding: 8px 0;
         color: #eae5e5;
         text-align: center;
@@ -105,99 +124,119 @@
         width: 100%;
         display: block;
         font-size: 13px;
-        outline:0;
+        outline: 0;
     }
-    .productFooter{
+
+    .productFooter {
         padding: 0;
     }
-    
-    .customBtnProduct{
+
+    .customBtnProduct {
         background: none !important;
         padding: 6px 9px;
         color: #707070;
         font-size: 11px;
         box-shadow: none;
         border: 1px solid #707070a3;
-        
+
     }
-    .customBtnProduct:hover{
-        border:1px solid transparent;
+
+    .customBtnProduct:hover {
+        border: 1px solid transparent;
         box-shadow: 0px 4px 15px #00000029;
-        color:#ED54AC;
+        color: #ED54AC;
     }
-    .productAttributes{
+
+    .productAttributes {
         display: flex;
         justify-content: space-between;
     }
-    .productAttributes span:first-child{
-        color:black;
+
+    .productAttributes span:first-child {
+        color: black;
         font-size: 14px;
         font-weight: bold;
     }
-    .productAttributes span:last-child{
-        color:#ED54A4;
+
+    .productAttributes span:last-child {
+        color: #ED54A4;
         font-size: 14px;
         font-weight: bold;
     }
-    .cardHeader{
+
+    .cardHeader {
         padding: 2px 0;
         font-size: 12px;
         text-align: center;
         background: rgb(112, 112, 112);
         color: #fff;
     }
+
     .product-item {
         flex-wrap: wrap;
     }
+
     .product-item img {
         max-width: 100%;
         max-height: 100%;
     }
+
     .product-item p {
         padding: 5px 15px;
         font-size: 14px;
     }
+
     .product-item div {
         flex: 0 0 33.3333%;
     }
+
     p {
         margin: 0;
     }
+
     .item-hover {
         position: absolute;
         right: 0;
         bottom: 60px;
-       // display: none;
+        display: none;
     }
-    .item-hover .card{
-        border-right:1px solid #7070706e ;
-        border-left:1px solid #7070706e ;
-        border-top:0px solid transparent ;
-        border-bottom:0px solid transparent ;
+
+    .item-hover .card {
+        border-right: 1px solid #7070706e;
+        border-left: 1px solid #7070706e;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
     }
+
     .hover-item {
         display: block;
     }
-    .search-item{
+
+    .search-item {
         display: flex;
         justify-content: flex-end;
     }
-    .search-item div{
-      padding-left: 10px;
+
+    .search-item div {
+        padding-left: 10px;
         font-weight: 400;
         font-size: 14px;
 
 
     }
-    .search-item div:last-child{
+
+    .search-item div:last-child {
         padding-right: 35px;
     }
-    .search-item ul{
+
+    .search-item ul {
         flex: 1;
         display: flex;
     }
-    .search-item ul li{
+
+    .search-item ul li {
         flex: 1;
         list-style: none;
     }
+
 </style>
