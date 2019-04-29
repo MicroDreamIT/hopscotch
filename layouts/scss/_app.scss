@@ -249,4 +249,10 @@ body{
 
 .search-item{
   color: #707070;
+  .active{
+
+    color: #ed54a4!important;
+    font-weight: 600;
+    border-bottom: 2px solid #ed54a4;
+  }
 }

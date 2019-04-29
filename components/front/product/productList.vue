@@ -2,7 +2,7 @@
     <mdb-container class="mt-2">
         <mdb-row class="search-item on-sm-device">
             <div>Sort by:</div>
-            <div>Popular</div>
+            <div class="active">Popular</div>
             <div>Lowest Price</div>
             <div>Highest Price</div>
         </mdb-row>
@@ -212,7 +212,7 @@
         justify-content: flex-end;
 
         div {
-            padding-left: 10px;
+            margin-left: 10px;
             font-weight: 400;
             font-size: 14px;
 
