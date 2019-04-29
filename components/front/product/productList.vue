@@ -89,7 +89,9 @@
                 let itemElement = this.$refs[item][0].classList
                 itemElement.remove('hover-item')
             },
-            cart() {
+            cart(e) {
+                let targetElement = e.target.classList
+                targetElement.contains('active')?targetElement.remove('active'):targetElement.add('active')
                 this.cartButton ? this.cartButton = false : null
             }
         }
@@ -98,7 +100,7 @@
 
 <style scoped lang="scss">
     .card {
-        border: 0.4px solid #F5F5F5 ;
+	    border: 0.5px solid #f5f5f5;
         box-shadow: none;
         background:white;
     }
@@ -143,6 +145,11 @@
 
     .customBtnProduct {
         &:hover {
+            border: 1px solid transparent;
+            box-shadow: 0px 4px 15px #00000029;
+            color: #ED54AC;
+        }
+        &.active{
             border: 1px solid transparent;
             box-shadow: 0px 4px 15px #00000029;
             color: #ED54AC;
@@ -197,9 +204,8 @@
     .item-hover {
         position: absolute;
         right: 0;
-        bottom: 61px;
-        display: none;
-
+	    bottom:-50%;
+	    transition: bottom 0.5s ease;
     }
 
 
@@ -210,9 +216,10 @@
     .search-item {
         display: flex;
         justify-content: flex-end;
+        padding-bottom: 10px;
 
         div {
-            margin-left: 10px;
+            margin-left: 12px;
             font-weight: 400;
             font-size: 14px;
 
