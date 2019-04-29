@@ -1,9 +1,9 @@
 <template>
     <div v-if="loaded">
         <mdb-container class="border-bottom">
-            <mdb-row class="bg-white ">
-                <mdb-col class="col-lg-7">
-                    asdfdsaf
+            <mdb-row class="bg-white">
+                <mdb-col class="col-lg-7"><br>
+                    <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block pb-3">
                 </mdb-col>
                 <mdb-col class="col-lg-5 border-left">
                     <div class="cart-section">
@@ -89,6 +89,7 @@
                    <div class="w-100">
                        <h4 class="text-center">Similar LED Shoes </h4>
                        <div class="product-feature">
+                      
                        <div>
                            <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
                            <p class="mt-2">₹584</p>
@@ -105,22 +106,7 @@
                            <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
                            <p class="mt-2">₹584</p>
                        </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div><div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
+                           <div>
                            <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
                            <p class="mt-2">₹584</p>
                        </div>
