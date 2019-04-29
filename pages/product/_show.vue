@@ -1,87 +1,151 @@
 <template>
     <div>
-        <mdb-container class="mt-5">
-            <mdb-row class="bg-white pt-3 pb-3">
-                <mdb-col col="7">
+        <mdb-container class="border-bottom">
+            <mdb-row class="bg-white ">
+                <mdb-col class="col-lg-7">
                     asdfdsaf
                 </mdb-col>
-                <mdb-col col="5">
-                    <p>{{product.name}}</p>
-                    <div v-if="selectedSize.hasOwnProperty('id')">
-                        <strong class="text-danger ">${{withoutDiscountPrice}}</strong>
-                        <strike>${{withDiscountPrice}}</strike>
-                        <strong>{{selectedSize.discount? selectedSize.discount+'% off':''}}</strong>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="d-flex justify-content-between">
-                            <strong>Size</strong>
-                            <a href="#" class="pink-text">VIEW SIZE CHART</a>
+                <mdb-col class="col-lg-5 border-left">
+                    <div class="cart-section">
+                        <p>{{product.name}}</p>
+                        <div v-if="selectedSize.hasOwnProperty('id')" class="price">
+                            <span class="text-danger">${{withDiscountPrice.toFixed(2)}}</span>
+                            <strike >${{withoutDiscountPrice}}</strike>
+                            <strong >{{selectedSize.discount? selectedSize.discount+'% off':''}}</strong>
                         </div>
-                        <select class="form-control" v-model="selectedSize">
-                            <option v-for="size in product.attributes.size" :key="size.id" :value="size">{{size.name}}</option>
-                        </select>
+                        <div class="form-group">
+                            <div class="size-cart">
+                                <strong>Size</strong>
+                                <a href="#">VIEW SIZE CHART</a>
+                            </div>
+                            <select class="form-control" v-model="selectedSize">
+                                <option v-for="size in product.attributes.size" :key="size.id" :value="size">{{size.name}}</option>
+                            </select>
+                       
+                            <mdb-btn class="mt-3 add-to-cart" block>ADD TO CART</mdb-btn>
+                        </div>
+                        <div class="p-3 delivery">
+                            <div >
+                                <strong>delivery to 769002</strong>
+                                <a href="#" class=" ">EDIT PINCODE</a>
+                            </div>
+                            <!--<span class="info"> Select a size for delivery information</span>-->
+                            <ul class="delivery-status">
+                                <li><span> Cash on delivery available.</span> </li>
+                                <li><span>15 days return</span> </li>
+                            </ul>
+                        </div>
                         <br>
-                        <mdb-btn color="pink lighten-2" block>ADD TO CART</mdb-btn>
+                        <br>
+                       <div class="adjustAccordion">
+                           <badger-accordion>
+                               <badger-accordion-item>
+                                   <template slot="header">Items details</template>
+                                   <template slot="content">
+                                       <div class="custom-control custom-checkbox"><br>
+                                           <strong>FEATURES</strong>
+                                           <ul>
+                                               <li>Fabric : 100% Cotton</li>
+                                               <li>
+                                                   The actual product may differ slightly in color from the one illustrated in the images.
+                                               </li>
+                                           </ul>
+                                           <strong>WHAT'S INCLUDED:</strong>
+                                           <ul>
+                                               <li>1 Top , 1 Skirt</li>
+                                           </ul>
+                                           <strong>CARE:</strong>
+                                           <ul>
+                                               <li>Gentle wash</li>
+                                           </ul>
+                                           <strong>Suitable For</strong>
+                                           <ul>
+                                               <li>Girls</li>
+                                           </ul>
+                                           <strong>Colour</strong>
+                                           <ul>
+                                               <li>Navy</li>
+                                           </ul>
+                                       </div>
+                                   </template>
+                               </badger-accordion-item>
+                           </badger-accordion>
+                           <badger-accordion>
+                               <badger-accordion-item>
+                                   <template slot="header">By brand {{product.brand.name}}</template>
+                                   <!--<template slot="content">-->
+                                   <!--asdf-->
+                                   <!--</template>-->
+                               </badger-accordion-item>
+                           </badger-accordion>
+                       </div>
                     </div>
-
-                    <div class="bg-grey-light p-3">
-                        <div class="d-flex justify-between">
-                            <strong>delivery to 769002</strong>
-                            <a href="#" class="pink-text">EDIT PINCODE</a>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item bg-transparent">Get it by <span class="badge badge-secondary">Secondary</span></li>
-                            <li class="list-group-item bg-transparent">Cash on delivery</li>
-                            <li class="list-group-item bg-transparent">15 days return</li>
-                        </ul>
-                    </div>
-                    <badger-accordion>
-                        <badger-accordion-item>
-                            <template slot="header">Items details</template>
-                            <template slot="content">
-                                <div class="custom-control custom-checkbox">
-                                    <strong>FEATURES</strong>
-                                    <ul>
-                                        <li>Fabric : 100% Cotton</li>
-                                        <li>
-                                            The actual product may differ slightly in color from the one illustrated in the images.
-                                        </li>
-                                    </ul>
-                                    <strong>WHAT'S INCLUDED:</strong>
-                                    <ul>
-                                        <li>1 Top , 1 Skirt</li>
-                                    </ul>
-                                    <strong>CARE:</strong>
-                                    <ul>
-                                        <li>Gentle wash</li>
-                                    </ul>
-                                    <strong>Suitable For</strong>
-                                    <ul>
-                                        <li>Girls</li>
-                                    </ul>
-                                    <strong>Colour</strong>
-                                    <ul>
-                                        <li>Navy</li>
-                                    </ul>
-                                </div>
-                            </template>
-                        </badger-accordion-item>
-                    </badger-accordion>
-
-                    <badger-accordion>
-                        <badger-accordion-item>
-                            <template slot="header">By brand {{product.brand.name}}</template>
-                            <!--<template slot="content">-->
-                                <!--asdf-->
-                            <!--</template>-->
-                        </badger-accordion-item>
-                    </badger-accordion>
                 </mdb-col>
             </mdb-row>
         </mdb-container>
+        <section class="features">
+            <div class="container-fluid">
+                <div class="row">
+                   <div class="w-100">
+                       <h4 class="text-center">Similar LED Shoes </h4>
+                       <div class="product-feature">
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div><div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row ">
+                    <div class="bottom-link">
+                        <a href="#">MORE LED SHOES FROM NATURAL BEAUTY &nbsp; | </a>
+                        <a href="#"> MORE BLACK LED SHOES &nbsp; | </a>
+                        <a href="#"> MORE LED SHOES </a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
 
     </div>
+    
 </template>
 
 <script>
