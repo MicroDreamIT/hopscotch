@@ -98,7 +98,7 @@
 
 <style scoped lang="scss">
     .card {
-        border-right: 1px solid white ;
+        border: 0.5px solid #F5F5F5 ;
         box-shadow: none;
         background:white;
     }
@@ -178,7 +178,7 @@
 
     .product-item {
         flex-wrap: wrap;
-
+        background: #F5F5F5;
         img {
             max-width: 100%;
             max-height: 100%;
