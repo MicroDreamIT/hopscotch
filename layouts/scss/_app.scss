@@ -7,14 +7,14 @@ $primary:#ED54A4!important;
 
 
 .adjustAccordion{
-    .component-badger-accordion.badger-accordion--initialized{
-      border: 1px solid lightgrey;
-      padding: 9px 14px;
-      margin-bottom: -1px;
-    }
-  .badger-accordion__panel {
-    border-bottom: 0px solid lightgray;
-  }
+      .component-badger-accordion.badger-accordion--initialized{
+        border: 1px solid lightgrey;
+        padding: 9px 14px;
+        margin-bottom: -1px;
+      }
+      .badger-accordion__panel {
+        border-bottom: 0px solid lightgray;
+      }
 }
 .bottom-link {
   display: flex;
