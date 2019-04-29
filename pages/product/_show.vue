@@ -3,7 +3,7 @@
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
-                    <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block pb-3">
+                    <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block w-100 pb-3 ">
                 </mdb-col>
                 <mdb-col class="col-lg-4 border-left">
                     <div class="cart-section">
