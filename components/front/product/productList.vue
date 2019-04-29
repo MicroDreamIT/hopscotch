@@ -89,7 +89,9 @@
                 let itemElement = this.$refs[item][0].classList
                 itemElement.remove('hover-item')
             },
-            cart() {
+            cart(e) {
+                let targetElement = e.target.classList
+                targetElement.contains('active')?targetElement.remove('active'):targetElement.add('active')
                 this.cartButton ? this.cartButton = false : null
             }
         }
@@ -143,6 +145,11 @@
 
     .customBtnProduct {
         &:hover {
+            border: 1px solid transparent;
+            box-shadow: 0px 4px 15px #00000029;
+            color: #ED54AC;
+        }
+        &.active{
             border: 1px solid transparent;
             box-shadow: 0px 4px 15px #00000029;
             color: #ED54AC;
