@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="loaded">
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white ">
                 <mdb-col class="col-lg-7">
@@ -152,14 +152,27 @@
     export default{
         data(){
             return{
-                product: this.$store.state.products[0],
+                product: {},
                 selectedSize:{}
             }
         },
+
         created(){
+            if(!this.$store.state.products.length){
+                this.$store.dispatch('getProducts')
+            }
+            this.product = this.$store.state.products[0]
             this.selectedSize = this.getDefaultSize(this.product.attributes.size)
+
         },
         computed:{
+            loaded(){
+                if(!_.isEmpty(this.product)){
+                    if(this.product.id !== undefined && this.product.attributes !== undefined){
+                        return true
+                    }
+                }
+            },
             withoutDiscountPrice(){
                 return this.selectedSize.price
             },
