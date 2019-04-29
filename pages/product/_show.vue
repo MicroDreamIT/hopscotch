@@ -2,16 +2,16 @@
     <div v-if="loaded">
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
-                <mdb-col class="col-lg-7"><br>
+                <mdb-col class="col-lg-8"><br>
                     <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block pb-3">
                 </mdb-col>
-                <mdb-col class="col-lg-5 border-left">
+                <mdb-col class="col-lg-4 border-left">
                     <div class="cart-section">
                         <p>{{product.name}}</p>
                         <div v-if="selectedSize.hasOwnProperty('id')" class="price">
-                            <span class="text-danger">${{withDiscountPrice.toFixed(2)}}</span>
+                            <span >${{withDiscountPrice.toFixed(2)}}</span>
                             <strike >${{withoutDiscountPrice}}</strike>
-                            <strong >{{selectedSize.discount? selectedSize.discount+'% off':''}}</strong>
+                            <strong class="text-danger">{{selectedSize.discount? selectedSize.discount+'% off':''}}</strong>
                         </div>
                         <div class="form-group">
                             <div class="size-cart">
