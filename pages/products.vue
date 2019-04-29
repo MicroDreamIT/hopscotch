@@ -12,11 +12,7 @@
                                <div> 0-3 Months <span>X</span></div>
                                <div> 0-3 Months <span>X</span></div>
                                <div> 0-3 Months <span>X</span></div>
-                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
-                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
-                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
-                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
-                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
+
                            </div>
                             <div class="d-flex flex-wrap on-sm-device">
                                 <mdb-btn
@@ -29,13 +25,6 @@
                                     {{name}}
                                 </mdb-btn>
                             </div>
-                            <!--<mdb-list-group horizontal>-->
-                            <!--<mdb-list-group-item v-for="name in ages" :key="name" class="top-filter">-->
-                                <!--<mdb-btn color="danger" size="sm" rounded @click="triggerFilter(name)">-->
-                                    <!--{{name}}-->
-                                <!--</mdb-btn>-->
-                            <!--</mdb-list-group-item>-->
-                        <!--</mdb-list-group>-->
                             <product-list></product-list>
 
                         </mdb-col>
