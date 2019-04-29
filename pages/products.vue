@@ -16,7 +16,13 @@
                                <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
                            </div>
                             <div class="d-flex flex-wrap on-sm-device">
-                                <mdb-btn color="pink" size="sm" rounded @click="triggerFilter(name)" v-for="name in ages" :key="name">
+                                <mdb-btn
+                                        color="pink"
+                                        size="sm"
+                                        rounded
+                                        @click="triggerFilter(name)"
+                                        v-for="name in ages" :key="name"
+                                >
                                     {{name}}
                                 </mdb-btn>
                             </div>
