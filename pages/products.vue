@@ -18,6 +18,7 @@
                                 <mdb-btn
                                         color="pink"
                                         size="sm"
+                                        class="cust-btn"
                                         rounded
                                         @click="triggerFilter(name)"
                                         v-for="name in ages" :key="name"

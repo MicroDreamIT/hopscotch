@@ -210,9 +210,10 @@
     .search-item {
         display: flex;
         justify-content: flex-end;
+        padding-bottom: 10px;
 
         div {
-            margin-left: 10px;
+            margin-left: 12px;
             font-weight: 400;
             font-size: 14px;
 
