@@ -16,6 +16,9 @@ $primary:#ED54A4!important;
         border-bottom: 0px solid lightgray;
       }
 }
+.btn-pink{
+  background: $primary;
+}
 .bottom-link {
   display: flex;
   flex-wrap: wrap;
@@ -251,7 +254,10 @@ body{
 
 
 }
-
+.cust-btn{
+  font-size: 12px!important;
+  font-weight: bold;
+}
 .search-item{
   color: #707070;
   .active{
