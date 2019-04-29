@@ -105,6 +105,9 @@
 
     .bottom-text {
         padding: 12px 15px;
+        z-index: 2;
+        position: relative;
+        background: #fff;
         .card-text {
             padding: 0;
             font-size: 13px;
