@@ -6,6 +6,21 @@
 $primary:#ED54A4!important;
 
 
+
+.owl-carousel .owl-stage {
+ @media(max-width: 425px){
+   display: flex;
+ }
+}
+
+
+.modify{
+  .owl-item{
+    width:160px!important;
+    margin:0 3px;
+  }
+}
+
 .adjustAccordion{
       .component-badger-accordion.badger-accordion--initialized{
         border: 1px solid lightgrey;
@@ -25,12 +40,12 @@ $primary:#ED54A4!important;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 50px 0;
+  padding: 15px 0;
   a{
     padding: 0 5px;
-    color:#6B6B6B;
+    color: #1e1e1e;
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: normal;
   }
 }
 
@@ -154,6 +169,7 @@ body{
   @media(max-width: 768px){
     bottom: 0!important;
   }
+
 }
 
 .contentArea{
@@ -203,10 +219,12 @@ body{
          position: relative;
          z-index: 1;
          .item-hover{
-           bottom:14.5%!important;
+           bottom:14.5%;
+           @media(max-width:1024px){
+             bottom: 19.4%!important;
+           }
          }
        }
-    //border: 0.5px solid #F5F5F5!important;
   }
 }
 
