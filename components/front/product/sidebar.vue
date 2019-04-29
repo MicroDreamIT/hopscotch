@@ -1,8 +1,8 @@
 <template>
 	<div class="sidebar bg-white">
 		<div class="d-flex justify-content-between p-3 border mt-4">
-			<b>Filter</b>
-			<b>Clear All</b>
+			<span class="filter-text">Filter</span>
+			<span class="clear-filter">Clear All</span>
 		</div>
 		
 		<badger-accordion class="filter-item">
@@ -36,14 +36,10 @@
 			<badger-accordion-item>
 				<template slot="header">Categories</template>
 				<template slot="content">
-					<div class="form-group d-flex flex-column">
-						<label class="pt-1">Categories 1</label>
-						<label>Categories 1</label>
-						<label>Categories 1</label>
-						<label>Categories 1</label>
-						<label>Categories 1</label>
-					
-					</div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input selectColor" id="cat1" multiple>
+                        <label class="custom-control-label colorLabel" for="cat1">Cat 1</label>
+                    </div>
 				</template>
 			</badger-accordion-item>
 
@@ -157,7 +153,13 @@
 		margin-bottom: 0 !important;
 		
 	}
-
+    .filter-text{
+        color:#707070!important;
+        font-weight: 400!important;
+    }
+    .clear-filter{
+        color: #b0b0b0 !important;
+    }
 
 
 
