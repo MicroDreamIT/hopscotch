@@ -5,7 +5,7 @@
 			<b>Clear All</b>
 		</div>
 		
-		<badger-accordion>
+		<badger-accordion class="filter-item">
 			<badger-accordion-item>
 				<template slot="header">Shop For</template>
 				<template slot="content">
@@ -157,6 +157,8 @@
 		margin-bottom: 0 !important;
 		
 	}
+
+
 
 
 </style>

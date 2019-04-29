@@ -40,3 +40,21 @@ body{
 
 }
 
+.component-badger-accordion.filter-item{
+  .badger-accordion__header{
+    padding: 8px 10px!important;
+    color:#707070!important;
+    font-weight: 400!important;
+  }
+}
+
+.item-hover{
+  .card{
+    border: none!important;
+  }
+}
+.product-item{
+  .card{
+    border: 0.5px solid White!important;
+  }
+}
