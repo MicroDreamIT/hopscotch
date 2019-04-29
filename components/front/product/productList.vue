@@ -1,5 +1,5 @@
 <template>
-    <mdb-container class="mt-5">
+    <mdb-container class="mt-2">
         <mdb-row class="search-item on-sm-device">
             <div>Sort by:</div>
             <div>Popular</div>
