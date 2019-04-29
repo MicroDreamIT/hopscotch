@@ -1,4 +1,3 @@
-
 @import "_custom-variables.scss";
 .btn-rounded{
   border-radius: 24px !important;
@@ -11,6 +10,7 @@
 }
 body{
   background:#F5F5F5;
+
 }
 .item-hover.hover-item .card{
   @media(max-width: 768px){
@@ -66,4 +66,32 @@ body{
 }
 .custom-checkbox{
   padding: 5px 0 5px 40px;
+}
+
+.badger-accordion__panel:last-child{
+  border-bottom: none;
+}
+.search-item-top{
+  padding-bottom: 25px;
+  div {
+    padding: 0 5px;
+    margin-right: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    span{
+      padding: 1px 5px;
+      background: darkgrey;
+      border-radius: 10px;
+      cursor: pointer;
+
+    }
+
+  }
+  div:nth-child(2)
+  {
+    margin-left: 8px;
+  }
+
+
+
 }

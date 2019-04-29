@@ -2,18 +2,21 @@
     <div>
         <mdb-container>
             <mdb-row>
-                <mdb-col class="col-lg-3 col-md-12 col-xs-12 on-sm-device">
+                <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
                     <sidebar :ages="ages" class="on-sm-device"></sidebar>
                 </mdb-col>
-                <mdb-col class="col-lg-9 col-md-12 col-xs-12 contentArea ">
+                <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
                         <mdb-col class="col-md-12 " >
-                           <div class="d-flex mt-5 flex-wrap on-sm-device">
+                           <div class="d-flex mt-5 flex-wrap search-item-top on-sm-device">
                                <strong>Showing 78 Results for  </strong>
-                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
-                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
-                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
-                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
-                               <mdb-btn color="danger" size="sm" rounded>Danger rounded </mdb-btn>
+                               <div> 0-3 Months <span>X</span></div>
+                               <div> 0-3 Months <span>X</span></div>
+                               <div> 0-3 Months <span>X</span></div>
+                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
+                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
+                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
+                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
+                               <!--<mdb-btn color="none" size="sm" rounded>Danger rounded </mdb-btn>-->
                            </div>
                             <div class="d-flex flex-wrap on-sm-device">
                                 <mdb-btn color="pink" size="sm" rounded @click="triggerFilter(name)" v-for="name in ages" :key="name">
