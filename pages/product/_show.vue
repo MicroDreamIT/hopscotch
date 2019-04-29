@@ -88,33 +88,56 @@
                 <div class="row">
                    <div class="w-100">
                        <h4 class="text-center">Similar LED Shoes </h4>
-                       <div class="product-feature">
-                      
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                           <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
-                           <p class="mt-2">₹584</p>
-                       </div>
-                       </div>
+                       <carousel >
+                           <div class="">
+                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                               <p class="mt-2">₹584</p>
+                           </div>
+                           <div class="">
+                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                               <p class="mt-2">₹584</p>
+                           </div>
+                           <div class="">
+                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                               <p class="mt-2">₹584</p>
+                           </div>
+                           <div class="">
+                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">
+                               <p class="mt-2">₹584</p>
+                           </div>
+        
+                           <!--<template slot="next">-->
+                           <!--<span class="next">next</span>-->
+                           <!--</template>-->
+    
+                       </carousel>
+                       <!--<div class="product-feature">-->
+                      <!---->
+                       <!--<div>-->
+                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
+                           <!--<p class="mt-2">₹584</p>-->
+                       <!--</div>-->
+                       <!--<div>-->
+                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
+                           <!--<p class="mt-2">₹584</p>-->
+                       <!--</div>-->
+                       <!--<div>-->
+                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
+                           <!--<p class="mt-2">₹584</p>-->
+                       <!--</div>-->
+                       <!--<div>-->
+                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
+                           <!--<p class="mt-2">₹584</p>-->
+                       <!--</div>-->
+                           <!--<div>-->
+                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
+                           <!--<p class="mt-2">₹584</p>-->
+                       <!--</div>-->
+                       <!--<div>-->
+                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
+                           <!--<p class="mt-2">₹584</p>-->
+                       <!--</div>-->
+                       <!--</div>-->
                    </div>
                 </div>
             </div>
@@ -125,6 +148,7 @@
                         <a href="#"> MORE BLACK LED SHOES &nbsp; | </a>
                         <a href="#"> MORE LED SHOES </a>
                     </div>
+                   
                 </div>
             </div>
             
@@ -133,9 +157,11 @@
     </div>
     
 </template>
-
 <script>
+    import carousel from 'vue-owl-carousel'
+    
     export default{
+        components: { carousel },
         data(){
             return{
                 product: this.$store.state.products[0],
