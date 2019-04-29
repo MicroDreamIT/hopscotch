@@ -98,7 +98,7 @@
 
 <style scoped lang="scss">
     .card {
-        border: 0.5px solid #F5F5F5 ;
+        border: 0.4px solid #F5F5F5 ;
         box-shadow: none;
         background:white;
     }
@@ -197,7 +197,7 @@
     .item-hover {
         position: absolute;
         right: 0;
-        bottom: 60px;
+        bottom: 61px;
         display: none;
 
     }

@@ -19,7 +19,12 @@
                             <a href="#" class="pink-text">VIEW SIZE CHART</a>
                         </div>
                         <select class="form-control" v-model="selectedSize">
-                            <option v-for="size in product.attributes.size" :key="size.id" :value="size">{{size.name}}</option>
+                            <option
+                                    v-for="size in product.attributes.size"
+                                    :key="size.id" :value="size"
+                            >
+                                {{size.name}}
+                            </option>
                         </select>
                         <br>
                         <mdb-btn color="pink lighten-2" block>ADD TO CART</mdb-btn>
@@ -31,7 +36,9 @@
                             <a href="#" class="pink-text">EDIT PINCODE</a>
                         </div>
                         <ul class="list-group">
-                            <li class="list-group-item bg-transparent">Get it by <span class="badge badge-secondary">Secondary</span></li>
+                            <li class="list-group-item bg-transparent">Get it by
+                                <span class="badge badge-secondary">Secondary</span>
+                            </li>
                             <li class="list-group-item bg-transparent">Cash on delivery</li>
                             <li class="list-group-item bg-transparent">15 days return</li>
                         </ul>
@@ -45,7 +52,8 @@
                                     <ul>
                                         <li>Fabric : 100% Cotton</li>
                                         <li>
-                                            The actual product may differ slightly in color from the one illustrated in the images.
+                                            The actual product may differ slightly in color from
+                                            the one illustrated in the images.
                                         </li>
                                     </ul>
                                     <strong>WHAT'S INCLUDED:</strong>
