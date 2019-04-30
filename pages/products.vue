@@ -1,9 +1,14 @@
 <template>
     <div>
+        <div class="filter-bar">
+            <div class="items" onClick="showFilter"><mdb-icon  icon="filter" /> filter</div>
+            <div class="items">1045 items</div>
+            <div class="items"><mdb-icon  icon="sort-alpha-up" /> sort </div>
+        </div>
         <mdb-container>
             <mdb-row>
-                <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
-                    <sidebar :ages="ages" class="on-sm-device"></sidebar>
+                <mdb-col class="col-lg-2 col-md-12 col-xs-12 ">
+                    <sidebar :ages="ages" class=""></sidebar>
                 </mdb-col>
                 <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
                         <mdb-col class="col-md-12 " >
@@ -26,12 +31,9 @@
                                     >
                                         {{name}}
                                     </mdb-btn>
-
                                 </carousel>
                             </div>
-
                             <product-list></product-list>
-
                         </mdb-col>
                 </mdb-col>
             </mdb-row>
@@ -43,6 +45,10 @@
     import Sidebar from '~/components/front/product/sidebar.vue'
     import ProductList from '~/components/front/product/productList.vue'
     import carousel from 'vue-owl-carousel'
+
+    // function showFilter(){
+    //     alert("fg");
+    // }
     
     export default {
         name: "products",
@@ -66,7 +72,8 @@
         methods:{
             triggerFilter(name){
                 alert(name)
-            }
+            },
+           
         }
     }
 </script>
