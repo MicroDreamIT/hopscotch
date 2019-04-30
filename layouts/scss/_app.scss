@@ -13,6 +13,19 @@ body{
     .owl-item{
       max-width: 160px;
     }
+    .owl-nav{
+      position: absolute;
+      top: -6px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      [class*='owl-']{
+        margin: 0;
+        padding: 10px 7px;
+        border-radius: 50%;
+      }
+    }
   }
 }
 
