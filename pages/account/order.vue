@@ -1,5 +1,9 @@
 <template>
     <div>
+
+        <vcl-facebook></vcl-facebook>
+
+
         <mdb-container>
             <br>
             <mdb-row>
