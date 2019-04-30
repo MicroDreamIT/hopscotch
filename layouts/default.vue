@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!--<mdb-container>-->
+      <!--<vcl-facebook></vcl-facebook>-->
+    <!--</mdb-container>-->
     <headers></headers>
     <nuxt />
     <footers></footers>

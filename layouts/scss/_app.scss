@@ -306,13 +306,15 @@ body {
 .show-bottom-slider {
   .owl-item {
     width: 170px !important;
+    margin-left: 10px;
   }
 
   .owl-stage {
     img {
       width: auto;
       height: 100%;
-      padding-left: 10px;
+
+      border: 1px solid #e6e6e6!important;
       @media(max-width: 425px){
         height: 200px!important;
         min-width: 250px!important;
@@ -325,6 +327,7 @@ body {
 .product-slide {
   .owl-item[style] {
     width: 800px !important;
+    margin-left: 10px;
   }
 
   .owl-stage {
@@ -335,7 +338,6 @@ body {
     img {
       height: 540px !important;
       min-width: 600px !important;
-      padding-left: 10px;
       @media(max-width: 768px){
         height: 400px!important;
         min-width: 400px!important;
@@ -783,4 +785,24 @@ body {
   border-bottom: 0;
   border-right: 1px solid transparent;
   padding-right: 15px;
+}
+
+.similer-title{
+  position: relative;
+  font-size: 24px;
+  line-height: 29px;
+  &:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 60px;
+    background: $primary;
+    top:40px;
+    left: 48%;
+
+  }
+
+}
+strike{
+  color: #bbb7b7 !important;
 }
