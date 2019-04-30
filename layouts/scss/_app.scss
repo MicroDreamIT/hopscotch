@@ -50,6 +50,38 @@ body{
         border-radius: 50%;
       }
 }
+.show-bottom-slider{
+  .owl-item[style]{
+    width: 170px!important;
+  }
+  .owl-stage{
+    img{
+      width: auto;
+      height: 100%;
+      padding-left: 10px;
+    }
+  }
+}
+
+      //.owl-nav{
+      //  position: absolute;
+      //  bottom: 104px;
+      //  display: flex;
+      //  justify-content: space-between;
+      //  padding: 0px 30px;
+      //  width: 100%;
+      //}
+      //.owl-theme .owl-nav [class*='owl-']{
+      //  color: #FFF;
+      //  font-size: 14px;
+      //  margin: 0;
+      //  padding: 10px 7px;
+      //  background: #D6D6D6;
+      //  display: inline-block;
+      //  cursor: pointer;
+      //  border-radius: 50%;
+      //}
+
 
 .adjustAccordion{
       .component-badger-accordion.badger-accordion--initialized{

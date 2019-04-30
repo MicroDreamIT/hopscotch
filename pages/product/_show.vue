@@ -4,11 +4,16 @@
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
                     <carousel :dots="false">
-                        <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
+                        <template slot="prev"></template>
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
-                        <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
+                            <img src="../../static/images/product-image2.PNG">
+                            <img src="../../static/images/product-image2.PNG">
+                            <img src="../../static/images/product-image2.PNG">
+                            <img src="../../static/images/product-image2.PNG">
+                            <img src="../../static/images/product-image2.PNG">
+                        <template slot="prev"></template>
                     </carousel>
                 </mdb-col>
                 <mdb-col class="col-lg-4 border-left">
@@ -27,7 +32,7 @@
                             <select class="form-control" v-model="selectedSize">
                                 <option v-for="size in product.attributes.size" :key="size.id" :value="size">{{size.name}}</option>
                             </select>
-                       
+
                             <mdb-btn class="mt-3 add-to-cart" block>ADD TO CART</mdb-btn>
                         </div>
                         <div class="p-3 delivery">
@@ -95,10 +100,10 @@
                    <div class="w-100">
                        <h4 class="text-center">Similar LED Shoes </h4><br>
                        <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
-                       <carousel class="modify" :nav="false" :dots="false" >
-                       <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
+                       <div class="show-bottom-slider">
+                       <carousel class="modify"  :dots="false" >
                        <div>
-                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
                            <p class="mt-2">₹584</p>
                        </div>
                        <div>
@@ -145,8 +150,24 @@
                            <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
                            <p class="mt-2">₹584</p>
                        </div>
-                       <template slot="next"><mdb-btn class="next">next</mdb-btn></template>
                    </carousel>
+                       </div>
+                        <!--<div class="show-bottom-slider">-->
+                            <!--<carousel :dots="false">-->
+                                <!--<template slot="prev"></template>-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<img src="../../static/images/product-image2.PNG">-->
+                                <!--<template slot="prev"></template>-->
+                            <!--</carousel>-->
+                        <!--</div>-->
+
                    </div>
                 </div>
             </div>
@@ -157,14 +178,14 @@
                         <a href="#"> MORE BLACK LED SHOES &nbsp; | </a>
                         <a href="#"> MORE LED SHOES </a>
                     </div>
-                   
+
                 </div>
             </div>
-            
+
         </section>
 
     </div>
-    
+
 </template>
 <script>
     import carousel from 'vue-owl-carousel'
