@@ -3,6 +3,7 @@
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
+                    <div class="product-slide">
                     <carousel :dots="false">
                         <img src="../../static/images/product-image2.PNG">
                         <img src="../../static/images/product-image2.PNG">
@@ -26,6 +27,9 @@
                         <img src="../../static/images/sim-7.jpg">
                         <img src="../../static/images/sim-8.jpg">
                     </carousel>
+
+                    </div>
+
                 </mdb-col>
                 <mdb-col class="col-lg-4 border-left">
                     <div class="cart-section">
