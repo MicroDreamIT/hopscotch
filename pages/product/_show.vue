@@ -4,7 +4,7 @@
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
                     <div class="product-slide">
-                        <carousel :dots="false">
+                        <carousel :dots="false"  :navText = "['','']" >
                             <template slot="prev"></template>
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
