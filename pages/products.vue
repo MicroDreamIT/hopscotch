@@ -1,17 +1,5 @@
 <template>
     <div>
-	    <div class="filter-bar">
-		   <div class="items">
-			   <mdb-icon  icon="filter" /> filter
-		   </div>
-		   <div class="items">
-			   1045 items
-		   </div>
-		   <div class="items">
-			   <mdb-icon  icon="sort-alpha-up" />
-			   sort
-		   </div>
-	    </div>
         <mdb-container>
             <mdb-row>
                 <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
@@ -19,7 +7,6 @@
                 </mdb-col>
                 <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
                         <mdb-col class="col-md-12 " >
-	                       
                            <div class="d-flex mt-5 flex-wrap search-item-top on-sm-device">
                                <span>Showing <strong>78</strong> Results for  </span>
                                <div> 0-3 Months <span>X</span></div>
@@ -27,32 +14,22 @@
                                <div> 0-3 Months <span>X</span></div>
 
                            </div>
-	                        <carousel :navText = "['','']" class="sort-item" :nav="true" :dots="false">
-			                        <mdb-btn
-					                        color="pink"
-					                        size="sm"
-					                        class="cust-btn"
-					                        rounded
-					                        @click="triggerFilter(name)"
-					                        v-for="name in ages" :key="name"
-			                        >
-				                        {{name}}
-			                        </mdb-btn>
-		                   
-	                        </carousel>
-	                      
-                            <!--<div class="d-flex flex-wrap on-sm-device">-->
-                                <!--<mdb-btn-->
-                                        <!--color="pink"-->
-                                        <!--size="sm"-->
-                                        <!--class="cust-btn"-->
-                                        <!--rounded-->
-                                        <!--@click="triggerFilter(name)"-->
-                                        <!--v-for="name in ages" :key="name"-->
-                                <!--&gt;-->
-                                    <!--{{name}}-->
-                                <!--</mdb-btn>-->
-                            <!--</div>-->
+                            <div class="product-top-slide">
+                                <carousel :navText = "['','']" class="sort-item" :nav="true" :dots="false" :autoWidth="true">
+                                    <mdb-btn
+                                            color="pink"
+                                            size="sm"
+                                            class="cust-btn"
+                                            rounded
+                                            @click="triggerFilter(name)"
+                                            v-for="name in ages" :key="name"
+                                    >
+                                        {{name}}
+                                    </mdb-btn>
+
+                                </carousel>
+                            </div>
+
                             <product-list></product-list>
 
                         </mdb-col>
