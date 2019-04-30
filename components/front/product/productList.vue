@@ -144,6 +144,9 @@
         box-shadow: none;
         border: 1px solid #707070a3;
         border-radius: 15px;
+        &.active{
+            background: transparent!important;
+        }
     }
 
     .customBtnProduct {
@@ -152,11 +155,16 @@
             box-shadow: 0px 4px 15px #00000029;
             color: #ED54AC;
         }
-        &.active{
-            border: 1px solid transparent;
-            box-shadow: 0px 4px 15px #00000029;
-            color: #ED54AC;
-        }
+        /*&.active{*/
+            /*border: 1px solid transparent;*/
+            /*box-shadow: 0px 4px 15px #00000029;*/
+            /*color: #ED54AC;*/
+        /*}*/
+    }
+    .customBtnProduct.btn.btn-default.btn-rounded.ripple-parent.active{
+            background: transparent!important;
+            box-shadow: none;
+            color: #ED54A4!important;
     }
 
     .productAttributes {
