@@ -25,12 +25,19 @@ body{
  }
 }
 
+.show-bottom-slider{
+  .owl-item[style]{
+    width: 170px!important;
+  }
+  .owl-stage{
+    img{
+      width: auto;
+      height: 100%;
+      padding-left: 10px;
+    }
+  }
+}
 
-.modify{
-      .owl-item{
-        width:160px!important;
-        margin:0 3px;
-      }
       //.owl-nav{
       //  position: absolute;
       //  bottom: 104px;
@@ -49,7 +56,7 @@ body{
       //  cursor: pointer;
       //  border-radius: 50%;
       //}
-}
+
 
 .adjustAccordion{
       .component-badger-accordion.badger-accordion--initialized{
