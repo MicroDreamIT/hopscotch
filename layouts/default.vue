@@ -15,4 +15,5 @@
 
 <style lang="scss">
     @import "./scss/app.scss";
+    @font-face { font-family: averta; src: url(../assets/fonts/AvertaDemoRegular.otf); }
 </style>
