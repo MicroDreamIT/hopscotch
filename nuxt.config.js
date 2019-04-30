@@ -38,7 +38,8 @@ export default {
   */
   plugins: [
       '~plugins/mdbv.js',
-      '~plugins/accordions.js'
+      '~plugins/accordions.js',
+      '~plugins/others.js',
   ],
 
   /*

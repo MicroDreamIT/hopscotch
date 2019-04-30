@@ -5,7 +5,48 @@ $primary: #ED54A4 !important;
 body {
   font-family: averta, sans-serif !important;
 }
-
+.filterArea{
+  display: none;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 11;
+  flex-direction: column;
+  @media(max-width: 425px){
+    display: flex;
+    .items{
+          flex: 1;
+         &:not(:last-child){
+           padding: 0 15px;
+         }
+      &:nth-child(1){
+            max-height: 45px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+            font-size: 14px;
+            line-height: 48px;
+            text-align: center;
+            color: #333;
+      }
+        &:nth-child(3){
+            position: absolute;
+            height: 50px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+  }
+}
 .badger-accordion__header .js-badger-accordion-header {
   display: flex;
   align-items: center;
