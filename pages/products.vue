@@ -8,7 +8,7 @@
                 <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
                         <mdb-col class="col-md-12 " >
                            <div class="d-flex mt-5 flex-wrap search-item-top on-sm-device">
-                               <strong>Showing 78 Results for  </strong>
+                               <span>Showing <strong>78</strong> Results for  </span>
                                <div> 0-3 Months <span>X</span></div>
                                <div> 0-3 Months <span>X</span></div>
                                <div> 0-3 Months <span>X</span></div>
@@ -72,9 +72,7 @@
         border: none !important;
     }
 
-        .container {
-            max-width: 1400px!important;
-        }
+
 
 
 </style>

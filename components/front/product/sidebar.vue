@@ -1,7 +1,7 @@
 <template>
 	<div class="sidebar bg-white">
 		<div class="d-flex justify-content-between p-3 border mt-4">
-			<span class="filter-text">Filter</span>
+			<span class="filter-text">Filters</span>
 			<span class="clear-filter">Clear All</span>
 		</div>
 		
@@ -23,7 +23,7 @@
 			</badger-accordion-item>
 
 			<badger-accordion-item>
-				<template slot="header">Ages</template>
+				<template slot="header">Age</template>
 				<template slot="content">
 					<div class="custom-control custom-checkbox" v-for="(age,index) in ages" :key="index">
 						<input type="checkbox" v-model="filterItems" :value="age" class="custom-control-input"
@@ -154,8 +154,10 @@
 		
 	}
     .filter-text{
-        color:#707070!important;
-        font-weight: 400!important;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #707070;
     }
     .clear-filter{
         color: #b0b0b0 !important;
