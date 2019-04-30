@@ -80,7 +80,7 @@
                                 <badger-accordion-item>
                                     <template slot="header">Items details</template>
                                     <template slot="content">
-                                        <div class="custom-control custom-checkbox"><br>
+                                        <div class="custom-control custom-checkbox item-accordion"><br>
                                             <strong>FEATURES</strong>
                                             <ul>
                                                 <li>Fabric : 100% Cotton</li>
@@ -126,7 +126,7 @@
             <div class="container">
                 <div class="row">
                     <div class="w-100">
-                        <h4 class="text-center">Similar LED Shoes </h4><br>
+                        <p class="text-center">Similar LED Shoes </p><br>
                         <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
                         <div class="show-bottom-slider">
                             <carousel class="modify" :dots="false" :autoWidth="true" :navText = "['','']">
