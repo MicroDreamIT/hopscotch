@@ -5,12 +5,8 @@
                 <mdb-col class="col-lg-8"><br>
                     <div class="product-slide">
                     <carousel :dots="false">
-                        <img src="../../static/images/product-image2.PNG">
-                        <img src="../../static/images/product-image2.PNG">
-                        <img src="../../static/images/product-image2.PNG">
-                        <img src="../../static/images/product-image2.PNG">
-                        <img src="../../static/images/product-image2.PNG">
                         <img src="../../static/images/sim-1.jpg">
+                        <img src="../../static/images/product-image2.PNG">
                         <img src="../../static/images/sim-2.jpg">
                         <img src="../../static/images/sim-3.jpg">
                         <img src="../../static/images/sim-4.jpg">
