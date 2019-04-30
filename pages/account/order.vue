@@ -18,22 +18,34 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#" >Orders</a>
+                                <a class="nav-link text-pink hover:text-pink-darker" href="#" >
+                                    <mdb-icon icon="shopping-bag"  class="pr-3"/>Orders
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#">Profile details</a>
+                                <a class="nav-link text-pink hover:text-pink-darker" href="#">
+                                    <mdb-icon far icon="user-circle"  class="pr-3"/>Profile details
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#">My Moments</a>
+                                <a class="nav-link text-pink hover:text-pink-darker" href="#">
+                                    <mdb-icon fab icon="gratipay"  class="pr-3"/>My Moments
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#">Saved Cards</a>
+                                <a class="nav-link text-pink hover:text-pink-darker" href="#">
+                                    <mdb-icon fab icon="cc-mastercard"  class="pr-3"/>Saved Cards
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#">Credits</a>
+                                <a class="nav-link text-pink hover:text-pink-darker" href="#">
+                                    <mdb-icon icon="hand-holding-usd"  class="pr-3"/>Credits
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#">Sign Out</a>
+                                <a class="nav-link text-pink hover:text-pink-darker" href="#">
+                                    <mdb-icon icon="sign-out-alt"  class="pr-3"/>Sign Out
+                                </a>
                             </li>
                         </ul>
                     </div>
