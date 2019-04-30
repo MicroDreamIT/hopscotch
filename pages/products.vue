@@ -29,8 +29,6 @@
                             <product-list></product-list>
 
                         </mdb-col>
-                  
-                   
                 </mdb-col>
             </mdb-row>
         </mdb-container>
