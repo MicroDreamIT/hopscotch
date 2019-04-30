@@ -582,3 +582,8 @@ body{
     width: 160px!important;
   }
 }
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #fff!important;
+  color: $primary!important;
+  text-decoration: none;
+}
