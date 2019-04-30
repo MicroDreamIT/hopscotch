@@ -101,7 +101,7 @@
                        <h4 class="text-center">Similar LED Shoes </h4><br>
                        <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
                        <div class="show-bottom-slider">
-                       <carousel class="modify"  :dots="false" >
+                       <carousel class="modify"  :dots="false" :autoWidth="true" >
                        <div>
                            <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
                            <p class="mt-2">₹584</p>
@@ -205,6 +205,7 @@
             }
             this.product = this.$store.state.products[0]
             this.selectedSize = this.getDefaultSize(this.product.attributes.size)
+
 
         },
         computed:{
