@@ -126,7 +126,7 @@
             <div class="container">
                 <div class="row">
                     <div class="w-100">
-                        <p class="text-center">Similar LED Shoes </p><br>
+                        <p class="text-center similer-title">Similar LED Shoes </p><br>
                         <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
                         <div class="show-bottom-slider">
                             <carousel class="modify" :dots="false" :autoWidth="true" :navText = "['','']">
