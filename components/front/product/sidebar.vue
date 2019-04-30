@@ -10,12 +10,12 @@
 				<template slot="header">Shop For</template>
 				<template slot="content">
 					<mdb-list-group>
-						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" name="radio1" id="boys">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" name="sex" value="1" id="boys">
 							<label class="custom-control-label" for="boys">Boys</label>
 						</div>
-						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" name="radio1" id="girls">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input"  name="sex" value="1" id="girls">
 							<label class="custom-control-label" for="girls">Girls</label>
 						</div>
 					</mdb-list-group>
@@ -138,8 +138,10 @@
             filterItems(val) {
                 // emit value from here
 
-            }
-        }
+            },
+	       
+        } ,
+	 
     }
 </script>
 
