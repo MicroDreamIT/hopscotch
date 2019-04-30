@@ -5,7 +5,23 @@
                 <mdb-col class="col-lg-8"><br>
                     <div class="product-slide">
                         <carousel :dots="false"  :navText = "['','']" >
-                            <template slot="prev"></template>
+	                        <img src="../../static/images/sim-1.jpg">
+	                        <img src="../../static/images/product-image2.PNG">
+	                        <img src="../../static/images/sim-2.jpg">
+	                        <img src="../../static/images/sim-3.jpg">
+	                        <img src="../../static/images/sim-4.jpg">
+	                        <img src="../../static/images/sim-5.jpg">
+	                        <img src="../../static/images/sim-6.jpg">
+	                        <img src="../../static/images/sim-7.jpg">
+	                        <img src="../../static/images/sim-8.jpg">
+	                        <img src="../../static/images/sim-1.jpg">
+	                        <img src="../../static/images/sim-2.jpg">
+	                        <img src="../../static/images/sim-3.jpg">
+	                        <img src="../../static/images/sim-4.jpg">
+	                        <img src="../../static/images/sim-5.jpg">
+	                        <img src="../../static/images/sim-6.jpg">
+	                        <img src="../../static/images/sim-7.jpg">
+	                        <img src="../../static/images/sim-8.jpg">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
@@ -16,26 +32,6 @@
                             <img src="../../static/images/product-image2.PNG">
                             <template slot="prev"></template>
                         </carousel>
-                    <carousel :dots="false">
-                        <img src="../../static/images/sim-1.jpg">
-                        <img src="../../static/images/product-image2.PNG">
-                        <img src="../../static/images/sim-2.jpg">
-                        <img src="../../static/images/sim-3.jpg">
-                        <img src="../../static/images/sim-4.jpg">
-                        <img src="../../static/images/sim-5.jpg">
-                        <img src="../../static/images/sim-6.jpg">
-                        <img src="../../static/images/sim-7.jpg">
-                        <img src="../../static/images/sim-8.jpg">
-                        <img src="../../static/images/sim-1.jpg">
-                        <img src="../../static/images/sim-2.jpg">
-                        <img src="../../static/images/sim-3.jpg">
-                        <img src="../../static/images/sim-4.jpg">
-                        <img src="../../static/images/sim-5.jpg">
-                        <img src="../../static/images/sim-6.jpg">
-                        <img src="../../static/images/sim-7.jpg">
-                        <img src="../../static/images/sim-8.jpg">
-                    </carousel>
-
                     </div>
 
                 </mdb-col>
@@ -133,7 +129,7 @@
                         <h4 class="text-center">Similar LED Shoes </h4><br>
                         <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
                         <div class="show-bottom-slider">
-                            <carousel class="modify" :dots="false" :autoWidth="true">
+                            <carousel class="modify" :dots="false" :autoWidth="true" :navText = "['','']">
                                 <div>
                                     <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
                                     <p class="mt-2">₹584</p>

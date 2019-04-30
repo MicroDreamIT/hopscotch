@@ -17,6 +17,7 @@ body{
   .owl-stage{
     display: flex;
     justify-content: flex-start;
+    padding-left: 45px;
     .owl-item{
       max-width: 160px;
       button{
@@ -30,7 +31,7 @@ body{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    //flex-direction: row-reverse;
         [class*='owl-']{
           color: #737373!important;
           font-size: 14px;
@@ -50,7 +51,7 @@ body{
       box-shadow: -20px 2px 25px 12px #f8f8ff9c;
       position: relative;
       &:after{
-        content: '\203A';
+        content: '\2039';
         position: absolute;
         top: -5px;
         left: 13px;
@@ -75,7 +76,7 @@ body{
       box-shadow: 20px 0px 25px 12px #f8f8ff9c;
       position: relative;
       &:after{
-        content: '\2039';
+        content: ' \203A';
         position: absolute;
         top: -5px;
         left: 13px;
@@ -115,13 +116,84 @@ body{
         width:160px!important;
         margin:0 3px;
       }
+    .owl-stage{
+      display: flex;
+      width: 200%;
+    }
       .owl-nav{
         position: absolute;
-        bottom: 104px;
+        bottom: 50%;
         display: flex;
         justify-content: space-between;
         padding: 0px 30px;
+        //flex-direction: row-reverse;
         width: 100%;
+        [class*='owl-']{
+          color: #737373!important;
+          font-size: 14px;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 36px;
+          width: 36px;
+          border-radius: 50%!important;
+          background: #fff!important;
+          &:hover{
+            color: $primary;
+          }
+        }
+        .owl-prev{
+          box-shadow: -20px 2px 25px 12px #f8f8ff9c;
+          position: relative;
+          &:after{
+            content: '\2039';
+            position: absolute;
+            top: -5px;
+            left: 13px;
+            font-size: 1.7rem;
+            font-weight: lighter;
+            color: #adacac;
+          }
+          &:before{
+            content: '';
+            height: 33px;
+            width: 35px;
+            left: 3px;
+            background: #00000012;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            z-index: -1;
+            filter: blur(2px);
+          }
+        }
+        .owl-next{
+          box-shadow: 20px 0px 25px 12px #f8f8ff9c;
+          position: relative;
+          &:after{
+            content: '\203A';
+            position: absolute;
+            top: -5px;
+            left: 13px;
+            font-size: 1.7rem;
+            font-weight: lighter;
+            color: #adacac;
+          }
+          &:before{
+            content: '';
+            height: 33px;
+            width: 35px;
+            left: 3px;
+            background: #00000012;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            z-index: -1;
+            filter: blur(2px);
+          }
+
+        }
       }
       .owl-theme .owl-nav [class*='owl-']{
         color: #FFF;
@@ -133,9 +205,11 @@ body{
         cursor: pointer;
         border-radius: 50%;
       }
+
 }
+
 .show-bottom-slider{
-  .owl-item[style]{
+  .owl-item{
     width: 170px!important;
   }
   .owl-stage{
@@ -169,13 +243,12 @@ body{
     padding: 0px 30px;
     width: 100%;
     .owl-prev{
-      //box-shadow: -20px 2px 25px 12px #f8f8ff9c;
       position: relative;
       &:after{
-        content: '\203A';
+        content: '\2039';
         position: absolute;
-        top: -5px;
-        left: 13px;
+        top: 2px;
+        left: 19px;
         font-size: 1.7rem;
         font-weight: lighter;
         color: #adacac;
@@ -186,25 +259,29 @@ body{
       //box-shadow: 20px 0px 25px 12px #f8f8ff9c;
       position: relative;
       &:after{
-        content: '\2039';
+        content: '\203A';
         position: absolute;
-        top: -5px;
-        left: 13px;
-        font-size: 1.7rem;
+        top: 0;
+        left: 21px;
+        font-size: 1.8rem;
         font-weight: lighter;
         color: #adacac;
       }
     }
   }
   .owl-theme .owl-nav [class*='owl-']{
-    color: #FFF;
+    color: #fff;
     font-size: 14px;
     margin: 0;
     padding: 10px 7px;
-    background: #D6D6D6;
-    display: inline-block;
+    background: #ffffff;
     cursor: pointer;
     border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -419,7 +496,19 @@ body{
          .item-hover{
            bottom:14.5%;
            @media(max-width:1024px){
-             bottom: 19.4%!important;
+             bottom: 19.3%!important;
+           }
+           @media only screen and (min-device-width:426px) and (max-device-width: 768px)  {
+             bottom: 15.2%!important;
+           }
+           @media only screen and (min-device-width:376px) and (max-device-width:425px)  {
+             bottom: 15%!important;
+           }
+           @media only screen and (min-device-width:321px) and (max-device-width:375px)  {
+             bottom:16.8%!important;
+           }
+           @media(max-width: 320px){
+             bottom:20.2%!important;
            }
          }
        }
