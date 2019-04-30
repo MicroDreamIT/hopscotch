@@ -143,33 +143,6 @@
                                <p class="mt-2">₹584</p>
                            </div>
                        </carousel>
-                       <!--<div class="product-feature">-->
-                      <!---->
-                       <!--<div>-->
-                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
-                           <!--<p class="mt-2">₹584</p>-->
-                       <!--</div>-->
-                       <!--<div>-->
-                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
-                           <!--<p class="mt-2">₹584</p>-->
-                       <!--</div>-->
-                       <!--<div>-->
-                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
-                           <!--<p class="mt-2">₹584</p>-->
-                       <!--</div>-->
-                       <!--<div>-->
-                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
-                           <!--<p class="mt-2">₹584</p>-->
-                       <!--</div>-->
-                           <!--<div>-->
-                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
-                           <!--<p class="mt-2">₹584</p>-->
-                       <!--</div>-->
-                       <!--<div>-->
-                           <!--<img src="../../static/images/product-image2.PNG" alt="" class="img-fluid d-block">-->
-                           <!--<p class="mt-2">₹584</p>-->
-                       <!--</div>-->
-                       <!--</div>-->
                    </div>
                 </div>
             </div>
