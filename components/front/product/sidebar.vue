@@ -154,8 +154,10 @@
 		
 	}
     .filter-text{
-        color:#707070!important;
-        font-weight: 400!important;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #707070;
     }
     .clear-filter{
         color: #b0b0b0 !important;

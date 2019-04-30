@@ -19,7 +19,7 @@
                         <div class="bottom-text">
                             <mdb-card-text>{{item.name}}</mdb-card-text>
                             <mdb-card-text>
-                                {{'$ '}}{{item.price-(item.price*item.discount/100)}}
+                               <strong> {{'$ '}}{{item.price-(item.price*item.discount/100)}}</strong>
                                 <strike>{{'$ '}}{{item.price}}</strike>
                                 <span class="discount">{{'('+item.discount+' % off)'}} </span>
                             </mdb-card-text>
