@@ -3,10 +3,12 @@
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
-                    <carousel :nav="true" :dots="false">
-                            <img src="../../static/images/product-image2.PNG" alt="" class=" ">
-                            <img src="../../static/images/product-image2.PNG" alt="" class=" ">
-                            <img src="../../static/images/product-image2.PNG" alt="" class=" ">
+                    <carousel :dots="false">
+                        <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
+                            <img src="../../static/images/product-image2.PNG">
+                            <img src="../../static/images/product-image2.PNG">
+                            <img src="../../static/images/product-image2.PNG">
+                        <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
                     </carousel>
                 </mdb-col>
                 <mdb-col class="col-lg-4 border-left">
@@ -93,7 +95,8 @@
                    <div class="w-100">
                        <h4 class="text-center">Similar LED Shoes </h4><br>
                        <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
-                       <carousel class="modify" :nav="true" :dots="false">
+                       <carousel class="modify" :nav="false" :dots="false" >
+                           <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
                            <div>
                                <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
                                <p class="mt-2">₹584</p>
@@ -142,6 +145,7 @@
                                <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
                                <p class="mt-2">₹584</p>
                            </div>
+                           <template slot="next"><mdb-btn class="next">next</mdb-btn></template>
                        </carousel>
                    </div>
                 </div>
@@ -164,7 +168,7 @@
 </template>
 <script>
     import carousel from 'vue-owl-carousel'
-    
+
     export default{
         components: { carousel },
         data(){
