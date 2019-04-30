@@ -54,7 +54,7 @@
                                 <mdb-card-footer class="productFooter">
                                     <div>
                                         <button class="addToCart" v-if="cartButton">Select a Size</button>
-                                        <button class="addToCart" v-else>Add To Cart
+                                        <button class="addToCart" v-else @click.prevent="addOnCart()">Add To Cart
                                         </button>
                                     </div>
                                 </mdb-card-footer>
@@ -91,8 +91,12 @@
             },
             cart(e) {
                 let targetElement = e.target.classList
-                targetElement.contains('active')?targetElement.remove('active'):targetElement.add('active')
+                targetElement.contains('active')?
+                    targetElement.remove('active'):targetElement.add('active')
                 this.cartButton ? this.cartButton = false : null
+            },
+            addOnCart(){
+                alert('I am on cart')
             }
         }
     }
