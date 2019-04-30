@@ -3,8 +3,9 @@
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
-                    <carousel :dots="false">
-                        <template slot="prev"></template>
+                    <div class="product-slide">
+                        <carousel :dots="false">
+                            <template slot="prev"></template>
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
@@ -13,8 +14,10 @@
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
-                        <template slot="prev"></template>
-                    </carousel>
+                            <template slot="prev"></template>
+                        </carousel>
+                    </div>
+
                 </mdb-col>
                 <mdb-col class="col-lg-4 border-left">
                     <div class="cart-section">
@@ -152,21 +155,6 @@
                        </div>
                    </carousel>
                        </div>
-                        <!--<div class="show-bottom-slider">-->
-                            <!--<carousel :dots="false">-->
-                                <!--<template slot="prev"></template>-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<template slot="prev"></template>-->
-                            <!--</carousel>-->
-                        <!--</div>-->
 
                    </div>
                 </div>
