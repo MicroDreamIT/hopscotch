@@ -6,25 +6,96 @@ $primary:#ED54A4!important;
 body{
   font-family: averta,sans-serif!important;
 }
+
+  .badger-accordion__header .js-badger-accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+  }
+
 .sort-item{
   .owl-stage{
     display: flex;
     justify-content: flex-start;
     .owl-item{
       max-width: 160px;
-    }
-    .owl-nav{
-      position: absolute;
-      top: -6px;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      [class*='owl-']{
-        margin: 0;
-        padding: 10px 7px;
-        border-radius: 50%;
+      button{
+        min-width: 130px;
       }
+    }
+  }
+  .owl-nav{
+    position: absolute;
+    top: -10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+        [class*='owl-']{
+          color: #737373!important;
+          font-size: 14px;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 36px;
+          width: 36px;
+          border-radius: 50%!important;
+          background: #fff!important;
+          &:hover{
+            color: $primary;
+          }
+        }
+    .owl-prev{
+      box-shadow: -20px 2px 25px 12px #f8f8ff9c;
+      position: relative;
+      &:after{
+        content: '\203A';
+        position: absolute;
+        top: -5px;
+        left: 13px;
+        font-size: 1.7rem;
+        font-weight: lighter;
+        color: #adacac;
+      }
+      &:before{
+        content: '';
+        height: 33px;
+        width: 35px;
+        left: 3px;
+        background: #00000012;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        z-index: -1;
+        filter: blur(2px);
+      }
+    }
+    .owl-next{
+      box-shadow: 20px 0px 25px 12px #f8f8ff9c;
+      position: relative;
+      &:after{
+        content: '\2039';
+        position: absolute;
+        top: -5px;
+        left: 13px;
+        font-size: 1.7rem;
+        font-weight: lighter;
+        color: #adacac;
+      }
+      &:before{
+        content: '';
+        height: 33px;
+        width: 35px;
+        left: 3px;
+        background: #00000012;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        z-index: -1;
+        filter: blur(2px);
+      }
+
     }
   }
 }

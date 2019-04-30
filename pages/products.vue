@@ -14,7 +14,7 @@
                                <div> 0-3 Months <span>X</span></div>
 
                            </div>
-	                        <carousel :navText = "['oooo','iiii']" class="sort-item" :nav="true" :dots="false">
+	                        <carousel :navText = "['','']" class="sort-item" :nav="true" :dots="false">
 			                        <mdb-btn
 					                        color="pink"
 					                        size="sm"
