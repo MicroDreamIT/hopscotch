@@ -96,57 +96,57 @@
                        <h4 class="text-center">Similar LED Shoes </h4><br>
                        <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
                        <carousel class="modify" :nav="false" :dots="false" >
-                           <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <div>
-                               <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
-                               <p class="mt-2">₹584</p>
-                           </div>
-                           <template slot="next"><mdb-btn class="next">next</mdb-btn></template>
-                       </carousel>
+                       <template slot="prev"><mdb-btn class="prev">prev</mdb-btn></template>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid ">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <div>
+                           <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
+                           <p class="mt-2">₹584</p>
+                       </div>
+                       <template slot="next"><mdb-btn class="next">next</mdb-btn></template>
+                   </carousel>
                    </div>
                 </div>
             </div>

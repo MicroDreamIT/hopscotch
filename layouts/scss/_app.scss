@@ -6,6 +6,15 @@ $primary:#ED54A4!important;
 body{
   font-family: averta,sans-serif!important;
 }
+.sort-item{
+  .owl-stage{
+    display: flex;
+    justify-content: flex-start;
+    .owl-item{
+      max-width: 160px;
+    }
+  }
+}
 
 .container {
   max-width: 1400px!important;

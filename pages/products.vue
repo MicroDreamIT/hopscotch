@@ -14,18 +14,31 @@
                                <div> 0-3 Months <span>X</span></div>
 
                            </div>
-                            <div class="d-flex flex-wrap on-sm-device">
-                                <mdb-btn
-                                        color="pink"
-                                        size="sm"
-                                        class="cust-btn"
-                                        rounded
-                                        @click="triggerFilter(name)"
-                                        v-for="name in ages" :key="name"
-                                >
-                                    {{name}}
-                                </mdb-btn>
-                            </div>
+	                        <carousel class="sort-item" :nav="true" :dots="false">
+			                        <mdb-btn
+					                        color="pink"
+					                        size="sm"
+					                        class="cust-btn"
+					                        rounded
+					                        @click="triggerFilter(name)"
+					                        v-for="name in ages" :key="name"
+			                        >
+				                        {{name}}
+			                        </mdb-btn>
+		                   
+	                        </carousel>
+                            <!--<div class="d-flex flex-wrap on-sm-device">-->
+                                <!--<mdb-btn-->
+                                        <!--color="pink"-->
+                                        <!--size="sm"-->
+                                        <!--class="cust-btn"-->
+                                        <!--rounded-->
+                                        <!--@click="triggerFilter(name)"-->
+                                        <!--v-for="name in ages" :key="name"-->
+                                <!--&gt;-->
+                                    <!--{{name}}-->
+                                <!--</mdb-btn>-->
+                            <!--</div>-->
                             <product-list></product-list>
 
                         </mdb-col>
@@ -38,10 +51,12 @@
 <script>
     import Sidebar from '~/components/front/product/sidebar.vue'
     import ProductList from '~/components/front/product/productList.vue'
+    import carousel from 'vue-owl-carousel'
+    
     export default {
         name: "products",
         components:{
-            Sidebar,ProductList
+            Sidebar,ProductList,carousel
         },
         data(){
             return {
