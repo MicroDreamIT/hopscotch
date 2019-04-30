@@ -26,8 +26,8 @@ body {
     .owl-item {
       max-width: 160px;
 
-      button {
-        min-width: 130px;
+      button{
+        min-width: 143px;
       }
     }
   }
@@ -244,6 +244,10 @@ body {
       width: auto;
       height: 100%;
       padding-left: 10px;
+      @media(max-width: 425px){
+        height: 200px!important;
+        min-width: 250px!important;
+      }
     }
   }
 
@@ -263,6 +267,10 @@ body {
       height: 540px !important;
       min-width: 600px !important;
       padding-left: 10px;
+      @media(max-width: 768px){
+        height: 400px!important;
+        min-width: 400px!important;
+      }
     }
   }
 
@@ -654,4 +662,15 @@ body {
     font-weight: 600;
     border-bottom: 2px solid #ed54a4;
   }
+}
+
+.product-top-slide{
+  .owl-item[style]{
+    width: 160px!important;
+  }
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #fff!important;
+  color: $primary!important;
+  text-decoration: none;
 }

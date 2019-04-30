@@ -2,7 +2,7 @@
     <div v-if="loaded">
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
-                <mdb-col class="col-lg-8"><br>
+                <mdb-col class="col-md-8"><br>
                     <div class="product-slide">
                         <carousel :dots="false"  :navText = "['','']" >
 	                        <img src="../../static/images/sim-1.jpg">
@@ -35,7 +35,7 @@
                     </div>
 
                 </mdb-col>
-                <mdb-col class="col-lg-4 border-left">
+                <mdb-col class="col-md-4 border-left">
                     <div class="cart-section">
                         <p>{{product.name}}</p>
                         <div v-if="selectedSize.hasOwnProperty('id')" class="price">
