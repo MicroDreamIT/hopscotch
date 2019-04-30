@@ -1,10 +1,11 @@
-//@font-face {
-//  font-family: avetra;
-//  src: url(../scss/fonts/averta-regular-webfont.woff2) format("woff");
-//}
+
 @import "_custom-variables.scss";
+
 $primary:#ED54A4!important;
 
+body{
+  font-family: averta,sans-serif!important;
+}
 
 
 .owl-carousel .owl-stage {

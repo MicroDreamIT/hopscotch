@@ -14,7 +14,7 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
 
@@ -29,7 +29,8 @@ export default {
   css: [
     '~/assets/css/tailwind.css',
       'bootstrap-css-only/css/bootstrap.min.css',
-      'mdbvue/build/css/mdb.css'
+      'mdbvue/build/css/mdb.css',
+
   ],
 
   /*
