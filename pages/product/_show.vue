@@ -3,8 +3,9 @@
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-lg-8"><br>
-                    <carousel :dots="false">
-                        <template slot="prev"></template>
+                    <div class="product-slide">
+                        <carousel :dots="false">
+                            <template slot="prev"></template>
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
@@ -13,8 +14,10 @@
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
                             <img src="../../static/images/product-image2.PNG">
-                        <template slot="prev"></template>
-                    </carousel>
+                            <template slot="prev"></template>
+                        </carousel>
+                    </div>
+
                 </mdb-col>
                 <mdb-col class="col-lg-4 border-left">
                     <div class="cart-section">
@@ -101,7 +104,7 @@
                        <h4 class="text-center">Similar LED Shoes </h4><br>
                        <!--:responsive="{0:{items:1,nav:false},600:{items:3,nav:true}}-->
                        <div class="show-bottom-slider">
-                       <carousel class="modify"  :dots="false" >
+                       <carousel class="modify"  :dots="false" :autoWidth="true" >
                        <div>
                            <img src="../../static/images/product-image2.PNG" alt="" class="img-fluid">
                            <p class="mt-2">₹584</p>
@@ -152,21 +155,6 @@
                        </div>
                    </carousel>
                        </div>
-                        <!--<div class="show-bottom-slider">-->
-                            <!--<carousel :dots="false">-->
-                                <!--<template slot="prev"></template>-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<img src="../../static/images/product-image2.PNG">-->
-                                <!--<template slot="prev"></template>-->
-                            <!--</carousel>-->
-                        <!--</div>-->
 
                    </div>
                 </div>
@@ -205,6 +193,7 @@
             }
             this.product = this.$store.state.products[0]
             this.selectedSize = this.getDefaultSize(this.product.attributes.size)
+
 
         },
         computed:{
