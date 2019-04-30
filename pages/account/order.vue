@@ -52,7 +52,7 @@
                 </mdb-col>
                 <mdb-col md="6">
                     <h5>Orders</h5>
-
+                    <br>
                     <mdb-row class="bg-white p-4 hover:shadow mb-4">
                         <mdb-col md="6">
                             <span>Arrives by May 7</span>
