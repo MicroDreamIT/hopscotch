@@ -1,5 +1,17 @@
 <template>
     <div>
+	    <div class="filter-bar">
+		   <div class="items">
+			   <mdb-icon  icon="filter" /> filter
+		   </div>
+		   <div class="items">
+			   1045 items
+		   </div>
+		   <div class="items">
+			   <mdb-icon  icon="sort-alpha-up" />
+			   sort
+		   </div>
+	    </div>
         <mdb-container>
             <mdb-row>
                 <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
@@ -7,6 +19,7 @@
                 </mdb-col>
                 <mdb-col class="col-lg-10 col-md-12 col-xs-12 contentArea ">
                         <mdb-col class="col-md-12 " >
+	                       
                            <div class="d-flex mt-5 flex-wrap search-item-top on-sm-device">
                                <span>Showing <strong>78</strong> Results for  </span>
                                <div> 0-3 Months <span>X</span></div>
@@ -27,6 +40,7 @@
 			                        </mdb-btn>
 		                   
 	                        </carousel>
+	                      
                             <!--<div class="d-flex flex-wrap on-sm-device">-->
                                 <!--<mdb-btn-->
                                         <!--color="pink"-->
