@@ -39,9 +39,9 @@
                     <div class="cart-section">
                         <p>{{product.name}}</p>
                         <div v-if="selectedSize.hasOwnProperty('id')" class="price">
-                            <span>${{withDiscountPrice.toFixed(2)}}</span>
-                            <strike>${{withoutDiscountPrice}}</strike>
-                            <strong class="text-danger">
+                            <span class="f18">${{withDiscountPrice.toFixed(2)}}</span>
+                            <strike class="f14">${{withoutDiscountPrice}}</strike>
+                            <strong class="text-danger f14">
                                 {{selectedSize.discount? selectedSize.discount+'%off':''}}
                             </strong>
                         </div>
@@ -55,6 +55,7 @@
                                         v-for="size in product.attributes.size"
                                         :key="size.id"
                                         :value="size"
+
                                 >
                                     {{size.name}}
                                 </option>
