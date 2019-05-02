@@ -103,14 +103,19 @@
 				<template slot="header">Colour</template>
 				<template slot="content" >
 						<div class="color-section">
-							<div v-for="(color,index) in colors"
-								 :style="{ background: color }"
-								 class="color-box"
-								 @click="colorSelected=!colorSelected"
-							>
 
-								<div v-if="colorSelected">x</div>
-							</div>
+							<label v-for="(item,index) in colors"
+								 :style="{ background: item.color }"
+								 class="color-box"
+                                 :id="'colorCheck'+index"
+                                 @click="doCheck(index)"
+							>
+                                <div v-if="colors[index].value" class="checkMark">&check;</div>
+                                <input type="checkbox"  :id="'colorCheck'+index" />
+
+
+
+                            </label>
 						</div>
 				</template>
 			</badger-accordion-item>
@@ -206,9 +211,32 @@
 	            'AA','BB','CC','DD','EE','FF','GG'
 	            ],
 				colors:[
-						'red','yellow','green','blue','pink','cyan','black','gray','white','rgb(220, 52, 59)'
+                    {color:'red',value:false},
+                    {color:'yellow',value:false},
+                    {color:'green',value:false},
+                    {color:'blue',value:false},
+                    {color:'pink',value:false},
+                    {color:'cyan',value:false},
+                    {color:'gray',value:false},
+                    {color:'white',value:false},
 				],
                 filterItems: [],
+                colorCount:0,
+            }
+        },
+        methods:{
+            doCheck(index){
+
+                if(this.colorCount==0){
+                    this.colors[index].value=!this.colors[index].value
+                    this.colorCount++
+
+                }else{
+                    this.colorCount=0
+                }
+                console.log(this.colors[index].value)
+
+
             }
         },
         watch: {
@@ -239,6 +267,18 @@
     }
     .clear-filter{
         color: #b0b0b0 !important;
+    }
+    .color-section{
+        input[type="checkbox"] {
+            opacity: 0;
+        }
+
+    }
+    .checkMark{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 25px;
     }
 
 
