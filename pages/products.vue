@@ -13,7 +13,7 @@
         </div>
         <div v-if="filterArea" class="filterArea">
             <div class="items">
-                <div @click="filterArea = false">x</div>
+                <div @click="filterArea = false"> X </div>
                 <div>Filter</div>
                 <div>Clear all</div>
             </div>
@@ -23,40 +23,134 @@
                     <button class="tablinks" @click="openFilter('age')">Age</button>
                     <button class="tablinks" @click="openFilter('category')">Category</button>
                     <button class="tablinks" @click="openFilter('delivery')">Delivery</button>
-                    <button class="tablinks" @click="openFilter('colour')">Coluor</button>
+                    <button class="tablinks" @click="openFilter('colour')">Colour</button>
                     <button class="tablinks" @click="openFilter('price')">Price</button>
                     <button class="tablinks" @click="openFilter('discount')">Discount</button>
                 </div>
 
                 <div id="shop" class="tabcontent">
-                    <h3>shop</h3>
-                    <p>shop goes here</p>
+                    <mdb-list-group>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   name="sex"
+                                   value="1"
+                                   id="boys"
+                            >
+                            <label class="custom-control-label"
+                                   for="boys"
+                            >
+                                Boys
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox"
+                                   class="custom-control-input"
+                                   name="sex"
+                                   value="1"
+                                   id="girls"
+                            />
+                            <label class="custom-control-label"
+                                   for="girls"
+                            >
+                                Girls
+                            </label>
+                        </div>
+                    </mdb-list-group>
                 </div>
                 <div id="age" class="tabcontent">
-                    <h3>Age</h3>
-                    <p>Age goes here</p>
+	                <div class="custom-control custom-checkbox"
+	                     v-for="(age,index) in ages"
+	                     :key="index"
+	                >
+		                <input type="checkbox"
+		                       v-model="filterItems"
+		                       :value="age"
+		                       class="custom-control-input"
+		                       :id="'ages'+index"
+		                >
+		                <label class="custom-control-label"
+		                       :for="'ages'+index"
+		                >
+			                {{age}}
+		                </label>
+	                </div>
                 </div>
 	            <div id="category" class="tabcontent">
-		            <h3>Age</h3>
-		            <p>Age goes here</p>
+		            <div class="custom-control custom-checkbox">
+			            <input type="checkbox"
+			                   class="custom-control-input selectColor"
+			                   id="cat1"
+			            >
+			            <label class="custom-control-label colorLabel" for="cat1">Cat 1</label>
+		            </div>
 	            </div>
 
                 <div id="delivery" class="tabcontent">
-                    <h3>Delivery</h3>
-                    <p>Delivery goes here</p>
+	                <mdb-list-group>
+		                <div class="custom-control custom-radio">
+			                <input type="radio"
+			                       class="custom-control-input"
+			                       name="deleveryTime"
+			                       id="weekOne"
+			                />
+			                <label class="custom-control-label" for="weekOne">In a Week 1</label>
+		                </div>
+		                <div class="custom-control custom-radio">
+			                <input type="radio"
+			                       class="custom-control-input"
+			                       name="deleveryTime"
+			                       id="weekTwo"
+			                />
+			                <label class="custom-control-label" for="weekTwo">In a Week 2</label>
+		                </div>
+	                </mdb-list-group>
                 </div>
                 <div id="colour" class="tabcontent">
-                    <h3>Colour</h3>
-                    <p>Colour goes here</p>
+	                <div class="color-section">
+		                <div v-for="(color,index) in colors"
+		                     :style="{ background: color }"
+		                     class="color-box"
+		                >
+			
+			                <!--<mdb-input type="checkbox" :id="'colorBox'+index"/>-->
+		                </div>
+	                </div>
                 </div>
                 <div id="price" class="tabcontent">
-                    <h3>Price</h3>
-                    <p>Price goes here</p>
+	                <div class="custom-control custom-checkbox"
+	                     v-for="(price,index) in prices"
+	                     :key="index"
+	                >
+		                <input type="checkbox"
+		                       v-model="filterItems"
+		                       :value="price"
+		                       class="custom-control-input"
+		                       :id="'price'+index"
+		                />
+		                <label class="custom-control-label"
+		                       :for="'price'+index"
+		                >
+			                {{price}}
+		                </label>
+	                </div>
                 </div>
 
                 <div id="discount" class="tabcontent">
-                    <h3>Discount</h3>
-                    <p>Discount goes here</p>
+	                <mdb-list-group>
+		                <div class="custom-control custom-radio"
+		                     v-for="(discount,index) in discounts"
+		                     :key="index"
+		                >
+			                <input type="radio"
+			                       class="custom-control-input"
+			                       name="discount"
+			                       :id="'disc'+index"
+			                />
+			                <label class="custom-control-label"
+			                       :for="'disc'+index">{{discount}}</label>
+		                </div>
+	                </mdb-list-group>
                 </div>
                 
 
@@ -68,7 +162,7 @@
             </div>
         </div>
         <mdb-container>
-            <mdb-row>
+            <mdb-row style="margin:0;">
                 <mdb-col class="col-lg-2 col-md-12 col-xs-12 on-sm-device">
                     <sidebar :ages="ages" class="on-sm-device"></sidebar>
                 </mdb-col>
@@ -124,7 +218,27 @@
         data(){
             return {
                 filterArea:false,
-                
+                prices: [
+                    'Below 200',
+                    '200-300',
+                    '300-400',
+                    '400-600',
+                    'Above 600',
+                ],
+                discounts: [
+                    '10% and above',
+                    '20% and above',
+                    '30% and above',
+                    '40% and above',
+                    '50% and above',
+                ],
+                Brands:[
+                    'AA','BB','CC','DD','EE','FF','GG'
+                ],
+                colors:[
+                    'red','yellow','green','blue','pink','cyan','black','gray','white'
+                ],
+                filterItems: [],
             }
         },
         created() {
