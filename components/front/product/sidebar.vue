@@ -11,12 +11,30 @@
 				<template slot="content">
 					<mdb-list-group>
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input" name="sex" value="1" id="boys">
-							<label class="custom-control-label" for="boys">Boys</label>
+							<input type="checkbox"
+								   class="custom-control-input"
+								   name="sex"
+								   value="1"
+								   id="boys"
+							>
+							<label class="custom-control-label"
+								   for="boys"
+							>
+								Boys
+							</label>
 						</div>
 						<div class="custom-control custom-checkbox">
-							<input type="checkbox" class="custom-control-input"  name="sex" value="1" id="girls">
-							<label class="custom-control-label" for="girls">Girls</label>
+							<input type="checkbox"
+								   class="custom-control-input"
+								   name="sex"
+								   value="1"
+								   id="girls"
+							/>
+							<label class="custom-control-label"
+								   for="girls"
+							>
+								Girls
+							</label>
 						</div>
 					</mdb-list-group>
 				</template>
@@ -25,19 +43,33 @@
 			<badger-accordion-item>
 				<template slot="header">Age</template>
 				<template slot="content">
-					<div class="custom-control custom-checkbox" v-for="(age,index) in ages" :key="index">
-						<input type="checkbox" v-model="filterItems" :value="age" class="custom-control-input"
-						       :id="'ages'+index" multiple>
-						<label class="custom-control-label" :for="'ages'+index">{{age}}</label>
+					<div class="custom-control custom-checkbox"
+						 v-for="(age,index) in ages"
+						 :key="index"
+					>
+						<input type="checkbox"
+							   v-model="filterItems"
+							   :value="age"
+							   class="custom-control-input"
+						       :id="'ages'+index"
+						>
+						<label class="custom-control-label"
+							   :for="'ages'+index"
+						>
+							{{age}}
+						</label>
 					</div>
 				</template>
 			</badger-accordion-item>
 
 			<badger-accordion-item>
-				<template slot="header">Categories</template>
+				<template slot="header">Category</template>
 				<template slot="content">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input selectColor" id="cat1" multiple>
+                        <input type="checkbox"
+							   class="custom-control-input selectColor"
+							   id="cat1"
+						>
                         <label class="custom-control-label colorLabel" for="cat1">Cat 1</label>
                     </div>
 				</template>
@@ -48,11 +80,19 @@
 				<template slot="content">
 					<mdb-list-group>
 						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" name="deleveryTime" id="weekOne">
+							<input type="radio"
+								   class="custom-control-input"
+								   name="deleveryTime"
+								   id="weekOne"
+							/>
 							<label class="custom-control-label" for="weekOne">In a Week 1</label>
 						</div>
 						<div class="custom-control custom-radio">
-							<input type="radio" class="custom-control-input" name="deleveryTime" id="weekTwo">
+							<input type="radio"
+								   class="custom-control-input"
+								   name="deleveryTime"
+								   id="weekTwo"
+							/>
 							<label class="custom-control-label" for="weekTwo">In a Week 2</label>
 						</div>
 					</mdb-list-group>
@@ -61,21 +101,37 @@
 
 			<badger-accordion-item>
 				<template slot="header">Colour</template>
-				<template slot="content">
-					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input selectColor" id="red" multiple>
-						<label class="custom-control-label colorLabel" for="red">red</label>
-					</div>
+				<template slot="content" >
+						<div class="color-section">
+							<div v-for="(color,index) in colors"
+								 :style="{ background: color }"
+								 class="color-box"
+							>
+
+								<!--<mdb-input type="checkbox" :id="'colorBox'+index"/>-->
+							</div>
+						</div>
 				</template>
 			</badger-accordion-item>
 
 			<badger-accordion-item>
 				<template slot="header">Price</template>
 				<template slot="content">
-					<div class="custom-control custom-checkbox" v-for="(price,index) in prices" :key="index">
-						<input type="checkbox" v-model="filterItems" :value="price" class="custom-control-input"
-						       :id="'price'+index" multiple>
-						<label class="custom-control-label" :for="'price'+index">{{price}}</label>
+					<div class="custom-control custom-checkbox"
+						 v-for="(price,index) in prices"
+						 :key="index"
+					>
+						<input type="checkbox"
+							   v-model="filterItems"
+							   :value="price"
+							   class="custom-control-input"
+						       :id="'price'+index"
+						/>
+						<label class="custom-control-label"
+							   :for="'price'+index"
+						>
+							{{price}}
+						</label>
 					</div>
 				</template>
 			</badger-accordion-item>
@@ -84,9 +140,17 @@
 				<template slot="header">Discount</template>
 				<template slot="content">
 					<mdb-list-group>
-						<div class="custom-control custom-radio" v-for="(discount,index) in discounts" :key="index">
-							<input type="radio" class="custom-control-input" name="discount" :id="'discountss'+index">
-							<label class="custom-control-label" :for="'discountss'+index">{{discount}}</label>
+						<div class="custom-control custom-radio"
+							 v-for="(discount,index) in discounts"
+							 :key="index"
+						>
+							<input type="radio"
+								   class="custom-control-input"
+								   name="discount"
+								   :id="'disc'+index"
+							/>
+							<label class="custom-control-label"
+								   :for="'disc'+index">{{discount}}</label>
 						</div>
 					</mdb-list-group>
 				</template>
@@ -95,10 +159,18 @@
 			<badger-accordion-item>
 				<template slot="header">Brands</template>
 				<template slot="content">
-					<div class="custom-control custom-checkbox" v-for="(age,index) in ages" :key="index">
-						<input type="checkbox" v-model="filterItems" :value="age" class="custom-control-input"
-						       :id="'ages'+index" multiple>
-						<label class="custom-control-label" :for="'ages'+index">{{age}}</label>
+					<div class="custom-control custom-checkbox"
+						 v-for="(age,index) in ages"
+						 :key="index"
+					>
+						<input type="checkbox"
+							   v-model="filterItems"
+							   :value="age"
+							   class="custom-control-input"
+						       :id="'ages'+index"
+						/>
+						<label class="custom-control-label"
+							   :for="'ages'+index">{{age}}</label>
 					</div>
 				</template>
 			</badger-accordion-item>
@@ -131,6 +203,9 @@
 	            Brands:[
 	            'AA','BB','CC','DD','EE','FF','GG'
 	            ],
+				colors:[
+						'red','yellow','green','blue','pink','cyan','black','gray','white'
+				],
                 filterItems: [],
             }
         },

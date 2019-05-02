@@ -862,3 +862,15 @@ strike{
   }
 
   }
+
+.color-section{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+}
+.color-box{
+  width:35px;
+  border: 1px solid #e6e6e6;
+  margin: 2px;
+  height:24px;
+}
