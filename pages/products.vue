@@ -138,7 +138,10 @@
             }
         },
         updated(){
-            document.getElementById("defaultOpen").click();
+            if(document.getElementById("defaultOpen")){
+                document.getElementById("defaultOpen").click();
+            }
+
         },
         methods:{
             triggerFilter(name){
