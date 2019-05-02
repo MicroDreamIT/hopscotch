@@ -14,30 +14,46 @@
             </div>
             <div class="items">
                 <div class="tab">
-                    <button class="tablinks" @click="openCity('Age')" id="defaultOpen">Age</button>
-                    <button class="tablinks" @click="openCity('Price')">Price</button>
-                    <button class="tablinks" @click="openCity('Discount')">Discount</button>
-                    <button class="tablinks" @click="openCity('Branch')">Branch</button>
+                    <button class="tablinks" @click="openFilter('Shop')" id="defaultOpen">Shop for</button>
+                    <button class="tablinks" @click="openFilter('Age')">Age</button>
+                    <!--<button class="tablinks" @click="openFilter('Category')">Category</button>-->
+                    <!--<button class="tablinks" @click="openFilter('Delivery')">Delivery</button>-->
+                    <!--<button class="tablinks" @click="openFilter('Colour')">Coluor</button>-->
+                    <!--<button class="tablinks" @click="openFilter('Price')">Price</button>-->
+                    <!--<button class="tablinks" @click="openFilter('Discount')">Discount</button>-->
                 </div>
 
+                <div id="shop" class="tabcontent">
+                    <h3>shop</h3>
+                    <p>shop goes here</p>
+                </div>
                 <div id="Age" class="tabcontent">
                     <h3>Age</h3>
                     <p>Age goes here</p>
                 </div>
+	            <!--<div id="Category" class="tabcontent">-->
+		            <!--<h3>Age</h3>-->
+		            <!--<p>Age goes here</p>-->
+	            <!--</div>-->
 
-                <div id="Price" class="tabcontent">
-                    <h3>Price</h3>
-                    <p>Price goes here</p>
-                </div>
+                <!--<div id="Delivery" class="tabcontent">-->
+                    <!--<h3>Delivery</h3>-->
+                    <!--<p>Delivery goes here</p>-->
+                <!--</div>-->
+                <!--<div id="Colour" class="tabcontent">-->
+                    <!--<h3>Colour</h3>-->
+                    <!--<p>Colour goes here</p>-->
+                <!--</div>-->
+                <!--<div id="Price" class="tabcontent">-->
+                    <!--<h3>Price</h3>-->
+                    <!--<p>Price goes here</p>-->
+                <!--</div>-->
 
-                <div id="Discount" class="tabcontent">
-                    <h3>Discount</h3>
-                    <p>Discount goes here</p>
-                </div>
-                <div id="Branch" class="tabcontent">
-                    <h3>Branch</h3>
-                    <p>Branch goes here</p>
-                </div>
+                <!--<div id="Discount" class="tabcontent">-->
+                    <!--<h3>Discount</h3>-->
+                    <!--<p>Discount goes here</p>-->
+                <!--</div>-->
+                
 
 
 
@@ -116,7 +132,7 @@
             triggerFilter(name){
                 alert(name)
             },
-            openCity(filterName){
+            openFilter(filterName){
 
                     var i, tabcontent, tablinks;
                     tabcontent = document.getElementsByClassName("tabcontent");
@@ -128,7 +144,7 @@
                         tablinks[i].className = tablinks[i].className.replace(" active", "");
                     }
                     document.getElementById(filterName).style.display = "block";
-                    event.currentTarget.className += " active";
+                     event.currentTarget.className += " active";
             }
            
         }

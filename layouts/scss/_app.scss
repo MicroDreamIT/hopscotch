@@ -33,6 +33,31 @@ body {
             line-height: 48px;
             text-align: center;
             color: #333;
+          div{
+            &:last-child{
+              color:$primary;
+            }
+          }
+      }
+      &:nth-child(2){
+        padding: 0;
+        .tab{
+          border:0;
+          background-color: #F5F5F5;
+          width: 30%;
+          height: 100%;
+        }
+        .tabcontent{
+          border:0;
+        }
+        .tablinks{
+          padding: 10px 16px;
+          &.active{
+            border-left: 5px solid #ed54a4;
+            color:$primary;
+            background: #fff;
+          }
+        }
       }
         &:nth-child(3){
             position: absolute;
