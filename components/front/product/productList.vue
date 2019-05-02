@@ -10,7 +10,7 @@
         <mdb-row class="d-flex flex-row p-2 product-item">
                 <mdb-card v-for="(item,index) in product" :key="index">
                     <div @mouseover="showItem('item'+index)"
-                         @mouseleave="hideItem('item'+index)">
+                         @mouseleave="hideItem('item'+index)" v-if="item.hasOwnProperty('id') && item.id">
                         <nuxt-link :to="{name:'product-show', params:{show:item.id}}">
                             <img src="../../../static/images/product-image2.PNG" alt="">
                             <!--<img :src="item.images[0].path" alt="Card image cap"/>-->
@@ -61,7 +61,14 @@
                             </mdb-card>
                         </div>
                     </div>
+
+                    <vcl-facebook
+                            :width="400"
+                            :height="200"
+                            v-else
+                    ></vcl-facebook>
                 </mdb-card>
+
         </mdb-row>
     </mdb-container>
 </template>
