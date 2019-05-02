@@ -5,6 +5,35 @@ $primary: #ED54A4 !important;
 body {
   font-family: averta, sans-serif !important;
 }
+.navbar-toggler{
+  @media (max-width:425px) {
+    display: none;
+  }
+}
+.mobile-menu{
+  display: none;
+  @media (max-width:425px) {
+    display: flex;
+    height: 45px;
+    background: #fff;
+    box-shadow: -8px -3px 11px #0000001f;
+    justify-content: flex-start;
+    align-items: flex-end;
+    a{
+        color:#808080;
+        margin:0 8px;
+        min-height: 34px;
+        min-width: 99px;
+        border-bottom: 5px solid transparent;
+        text-align: center;
+    }
+  }
+}
+.nuxt-link-exact-active.nuxt-link-active{
+  border-bottom: 4px solid $primary;
+}
+
+
 .filterArea{
   display: none;
   position: fixed;

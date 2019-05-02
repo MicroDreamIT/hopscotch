@@ -1,5 +1,6 @@
 <template>
 
+    <div>
         <mdb-navbar expand="large" dark color="pink lighten-2">
             <!-- Navbar brand -->
             <mdb-container>
@@ -14,8 +15,13 @@
                     </mdb-navbar-nav>
                 </mdb-navbar-toggler>
             </mdb-container>
-
+    
         </mdb-navbar>
+        <div class="mobile-menu">
+            <router-link to="/">Home</router-link>
+            <router-link :to="{name:'products'}">Products</router-link>
+        </div>
+    </div>
 
 </template>
 <style scoped lang="scss">
