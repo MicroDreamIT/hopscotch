@@ -19,30 +19,46 @@
             </div>
             <div class="items">
                 <div class="tab">
-                    <button class="tablinks" @click="openCity('Age')" id="defaultOpen">Age</button>
-                    <button class="tablinks" @click="openCity('Price')">Price</button>
-                    <button class="tablinks" @click="openCity('Discount')">Discount</button>
-                    <button class="tablinks" @click="openCity('Branch')">Branch</button>
+                    <button class="tablinks" @click="openFilter('shop')" id="defaultOpen">Shop for</button>
+                    <button class="tablinks" @click="openFilter('age')">Age</button>
+                    <button class="tablinks" @click="openFilter('category')">Category</button>
+                    <button class="tablinks" @click="openFilter('delivery')">Delivery</button>
+                    <button class="tablinks" @click="openFilter('colour')">Coluor</button>
+                    <button class="tablinks" @click="openFilter('price')">Price</button>
+                    <button class="tablinks" @click="openFilter('discount')">Discount</button>
                 </div>
 
-                <div id="Age" class="tabcontent">
+                <div id="shop" class="tabcontent">
+                    <h3>shop</h3>
+                    <p>shop goes here</p>
+                </div>
+                <div id="age" class="tabcontent">
                     <h3>Age</h3>
                     <p>Age goes here</p>
                 </div>
+	            <div id="category" class="tabcontent">
+		            <h3>Age</h3>
+		            <p>Age goes here</p>
+	            </div>
 
-                <div id="Price" class="tabcontent">
+                <div id="delivery" class="tabcontent">
+                    <h3>Delivery</h3>
+                    <p>Delivery goes here</p>
+                </div>
+                <div id="colour" class="tabcontent">
+                    <h3>Colour</h3>
+                    <p>Colour goes here</p>
+                </div>
+                <div id="price" class="tabcontent">
                     <h3>Price</h3>
                     <p>Price goes here</p>
                 </div>
 
-                <div id="Discount" class="tabcontent">
+                <div id="discount" class="tabcontent">
                     <h3>Discount</h3>
                     <p>Discount goes here</p>
                 </div>
-                <div id="Branch" class="tabcontent">
-                    <h3>Branch</h3>
-                    <p>Branch goes here</p>
-                </div>
+                
 
 
 
@@ -122,16 +138,16 @@
             }
         },
         updated(){
-            document.getElementById("defaultOpen").click();
+            if(document.getElementById("defaultOpen")){
+                document.getElementById("defaultOpen").click();
+            }
+
         },
         methods:{
             triggerFilter(name){
                 alert(name)
             },
-
-
-            openCity(filterName){
-
+            openFilter(filterName){
                     var i, tabcontent, tablinks;
                     tabcontent = document.getElementsByClassName("tabcontent");
                     for (i = 0; i < tabcontent.length; i++) {
@@ -142,7 +158,7 @@
                         tablinks[i].className = tablinks[i].className.replace(" active", "");
                     }
                     document.getElementById(filterName).style.display = "block";
-                    event.currentTarget.className += " active";
+                     event.currentTarget.className += " active";
             }
 
         }
