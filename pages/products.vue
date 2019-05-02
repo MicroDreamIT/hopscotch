@@ -1,7 +1,7 @@
 <template>
     <div class="product-list">
         <div class="filter-bar">
-            <div class="items" @click="filterArea =! filterArea"><mdb-icon  icon="filter" /> filter</div>
+            <div class="items"  @click="filterArea =! filterArea"><mdb-icon  icon="filter"/> filter</div>
             <div class="items">1045 items</div>
             <div class="items"><mdb-icon  icon="sort-alpha-up" /> sort </div>
         </div>
@@ -12,7 +12,34 @@
                 <div>Clear all</div>
             </div>
             <div class="items">
-                dfsdfdsf
+                <div class="tab">
+                    <button class="tablinks" @click="openCity('Age')" id="defaultOpen">Age</button>
+                    <button class="tablinks" @click="openCity('Price')">Price</button>
+                    <button class="tablinks" @click="openCity('Discount')">Discount</button>
+                    <button class="tablinks" @click="openCity('Branch')">Branch</button>
+                </div>
+
+                <div id="Age" class="tabcontent">
+                    <h3>Age</h3>
+                    <p>Age goes here</p>
+                </div>
+
+                <div id="Price" class="tabcontent">
+                    <h3>Price</h3>
+                    <p>Price goes here</p>
+                </div>
+
+                <div id="Discount" class="tabcontent">
+                    <h3>Discount</h3>
+                    <p>Discount goes here</p>
+                </div>
+                <div id="Branch" class="tabcontent">
+                    <h3>Branch</h3>
+                    <p>Branch goes here</p>
+                </div>
+
+
+
             </div>
             <div class="items">
                 <mdb-btn block color="pink">Block level button</mdb-btn>
@@ -81,14 +108,31 @@
                 return this.$store.getters.sizesName
             }
         },
+        updated(){
+            document.getElementById("defaultOpen").click();
+        },
         methods:{
             triggerFilter(name){
                 alert(name)
             },
-            
+            openCity(filterName){
+
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(filterName).style.display = "block";
+                    event.currentTarget.className += " active";
+            }
            
         }
     }
+
 </script>
 
 
@@ -98,6 +142,40 @@
     }
 
 
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 30%;
+        height: 300px;
+    }
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
 
+    .tab button:hover {
+        background-color: #ddd;
+    }
+    .tab button.active {
+        background-color: #ccc;
+    }
+    .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        border: 1px solid #ccc;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+    }
 
 </style>
