@@ -13,7 +13,7 @@
         </div>
         <div v-if="filterArea" class="filterArea">
             <div class="items">
-                <div @click="filterArea = false">x</div>
+                <div @click="filterArea = false"> X </div>
                 <div>Filter</div>
                 <div>Clear all</div>
             </div>
