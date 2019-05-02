@@ -106,7 +106,7 @@
 							 v-bind:style="{ background: color }"
 							 class="color-box"
 						>
-							<input type="checkbox" :id="'colorBox'+index"/>
+							<mdb-input type="checkbox" :id="'colorBox'+index"/>
 					    </div>
 				</template>
 			</badger-accordion-item>
