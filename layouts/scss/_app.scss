@@ -372,7 +372,7 @@ body {
       min-width: 600px !important;
       @media(max-width: 768px){
         height: 400px!important;
-        min-width: 400px!important;
+        min-width: 425px!important;
       }
     }
   }
@@ -871,8 +871,9 @@ strike{
       padding: 0!important;
       margin: 0!important;
     }
-    .card{
-      //border: .2px solid #f5f5f5 !important;
+    .row{
+      padding: 0!important;
+      margin: 0!important;
     }
 
   }
