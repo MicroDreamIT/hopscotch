@@ -106,9 +106,10 @@
 							<div v-for="(color,index) in colors"
 								 :style="{ background: color }"
 								 class="color-box"
+								 @click="colorSelected=!colorSelected"
 							>
 
-								<!--<mdb-input type="checkbox" :id="'colorBox'+index"/>-->
+								<div v-if="colorSelected">x</div>
 							</div>
 						</div>
 				</template>
@@ -186,6 +187,7 @@
         props: ['ages'],
         data() {
             return {
+            	colorSelected:[],
                 prices: [
                     'Below 200',
                     '200-300',
@@ -204,7 +206,7 @@
 	            'AA','BB','CC','DD','EE','FF','GG'
 	            ],
 				colors:[
-						'red','yellow','green','blue','pink','cyan','black','gray','white'
+						'red','yellow','green','blue','pink','cyan','black','gray','white','rgb(220, 52, 59)'
 				],
                 filterItems: [],
             }
@@ -216,7 +218,6 @@
             },
 	       
         } ,
-	 
     }
 </script>
 
