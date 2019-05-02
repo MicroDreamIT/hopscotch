@@ -350,6 +350,10 @@ body {
 
 }
 
+.js-badger-accordion-panel-inner{
+  padding-bottom: 15px;
+}
+
 .product-slide {
   .owl-item[style] {
     width: 800px !important;
@@ -871,7 +875,7 @@ strike{
 }
 .color-box{
   width:35px;
-  border: 1px solid #e6e6e6;
+  border: 2px solid #e6e6e6;
   margin: 2px;
   height:24px;
 }
