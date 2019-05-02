@@ -219,11 +219,10 @@
     .item-hover {
         position: absolute;
         right: 0;
-	    bottom:-50%;
+	    bottom:-100%;
 	    transition: bottom 0.5s ease;
+        //display: block;
     }
-
-
     .hover-item {
         display: block;
     }
