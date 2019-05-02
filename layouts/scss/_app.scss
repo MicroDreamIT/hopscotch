@@ -46,17 +46,20 @@ body {
           background-color: #F5F5F5;
           width: 30%;
           height: 100%;
+          margin: 5px 0;
         }
         .tabcontent{
           border:0;
         }
         .tablinks{
           padding: 10px 16px;
-          &.active{
-            border-left: 5px solid #ed54a4;
-            color:$primary;
-            background: #fff;
-          }
+          font-size: 14px;
+          border-left: 5px solid transparent;
+              &.active{
+                  border-left: 5px solid #ed54a4;
+                  color:$primary;
+                  background: #fff;
+              }
         }
       }
         &:nth-child(3){
@@ -349,6 +352,10 @@ body {
 
 }
 
+.js-badger-accordion-panel-inner{
+  padding-bottom: 15px;
+}
+
 .product-slide {
   .owl-item[style] {
     width: 800px !important;
@@ -605,7 +612,7 @@ body {
 }
 .item-hover.hover-item{
   @media(max-width: 425px){
-    max-height: 198px;
+    max-height: 170px;
     overflow: scroll;
   }
   @media(max-width: 375px){
@@ -684,20 +691,25 @@ body {
 
       .item-hover {
         bottom: 14.5%;
+
         @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
           bottom: 18.5% !important;
         }
         @media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
           bottom: 15.2% !important;
+
         }
         @media only screen and (min-device-width: 376px) and (max-device-width: 425px) {
           bottom: 22.7% !important;
+          display: none;
         }
         @media only screen and (min-device-width: 321px) and (max-device-width: 375px) {
-          bottom: 29.8% !important;
+          bottom: 31.8% !important;
+          display: none;
         }
         @media(max-width: 320px) {
           bottom: 38.2% !important;
+          display: none;
         }
       }
     }
@@ -870,7 +882,7 @@ strike{
 }
 .color-box{
   width:35px;
-  border: 1px solid #e6e6e6;
+  border: 2px solid #e6e6e6;
   margin: 2px;
   height:24px;
 }
