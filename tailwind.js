@@ -127,6 +127,7 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
+    'hopscotch-grey': '#ebebeb'
 }
 
 module.exports = {
@@ -442,7 +443,7 @@ module.exports = {
     'none': '0',
     'sm': '.125rem',
     default: '.25rem',
-    'lg': '.5rem',
+    'lg': '.7rem',
     'full': '9999px',
   },
 
