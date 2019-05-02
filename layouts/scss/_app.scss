@@ -328,7 +328,9 @@ body {
     cursor: pointer;
     border-radius: 50%;
   }
-
+p{
+  font-size: 14px!important;
+}
 }
 
 .show-bottom-slider {
@@ -461,9 +463,10 @@ body {
 
   a {
     padding: 0 5px;
-    color: #1e1e1e;
+    color: rgba(0,0,0,.56);
     font-size: 14px;
-    font-weight: normal;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 
@@ -529,7 +532,7 @@ body {
       font-weight: bold;
       text-transform: capitalize;
       color: #4e4e4e;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     a {
@@ -890,4 +893,10 @@ strike{
   border: 2px solid #e6e6e6;
   margin: 2px;
   height:24px;
+}
+.f14{
+  font-size:14px!important;
+}
+.f18{
+  font-size:18px!important;
 }
