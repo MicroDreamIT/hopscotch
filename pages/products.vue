@@ -23,7 +23,7 @@
                     <button class="tablinks" @click="openFilter('age')">Age</button>
                     <button class="tablinks" @click="openFilter('category')">Category</button>
                     <button class="tablinks" @click="openFilter('delivery')">Delivery</button>
-                    <button class="tablinks" @click="openFilter('colour')">Coluor</button>
+                    <button class="tablinks" @click="openFilter('colour')">Colour</button>
                     <button class="tablinks" @click="openFilter('price')">Price</button>
                     <button class="tablinks" @click="openFilter('discount')">Discount</button>
                 </div>
@@ -124,7 +124,6 @@
         data(){
             return {
                 filterArea:false,
-                
             }
         },
         created() {
