@@ -600,7 +600,7 @@ body {
   }
   @media(max-width: 425px) {
     flex-wrap: wrap;
-    flex: 100%;
+    flex: 50%;
   }
 
 }
@@ -806,3 +806,20 @@ body {
 strike{
   color: #bbb7b7 !important;
 }
+
+@media(max-width: 425px) {
+  .product-list {
+    .container{
+      padding: 0!important;
+      margin: 0!important;
+      }
+    .p-2.product-item{
+      padding: 0!important;
+    }
+    .card{
+      //border: .2px solid #f5f5f5 !important;
+    }
+
+  }
+
+  }
