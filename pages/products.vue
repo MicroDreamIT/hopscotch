@@ -5,14 +5,11 @@
                 <mdb-icon icon="filter"/>
                 filter
             </div>
-            <div class="items"  @click="filterArea =! filterArea"><mdb-icon  icon="filter"/> filter</div>
             <div class="items">1045 items</div>
             <div class="items">
                 <mdb-icon icon="sort-alpha-up"/>
                 sort
             </div>
-            <div class="items">
-                <mdb-icon  icon="sort-alpha-up" /> sort </div>
         </div>
         <div v-if="filterArea" class="filterArea">
             <div class="items">
