@@ -51,16 +51,14 @@
                    alt="">
           </div>
           
-          <div class="rounded-lg group hv-slide-top lg:hover:shadow mt-lg-5">
-            <img src="https://static.hopscotch.in/fstatic/product/201905/4283aa61-756e-4d9b-ac52-a555568fa1cf_full.jpg?version=1556772632733" class="rounded-t-lg">
-            <div class="d-flex">
-
-               <img src="https://static.hopscotch.in/fstatic/product/201905/588d69d0-a703-4469-bba9-ad95a0f6d718_full.jpg?version=1556772664971" class="d-flex img-fluid">
-               <img src="https://static.hopscotch.in/fstatic/product/201905/f7017765-7c03-4c98-a892-a95d31cab551_full.jpg?version=1556772668191" class="d-flex img-fluid">
-               <img src="https://static.hopscotch.in/fstatic/product/201905/6f82e8dc-76f6-4dae-8ae7-1aabb885e3e3_full.jpg?version=1556772671154" class="d-flex img-fluid">
-
-            </div>
-          </div>
+          <!--<div class="rounded-lg group hv-slide-top lg:hover:shadow mt-lg-5">-->
+            <!--<img src="https://static.hopscotch.in/fstatic/product/201905/4283aa61-756e-4d9b-ac52-a555568fa1cf_full.jpg?version=1556772632733" class="rounded-t-lg">-->
+            <!--<div class="row">-->
+              <!--<div class="col"><img src="https://static.hopscotch.in/fstatic/product/201905/588d69d0-a703-4469-bba9-ad95a0f6d718_full.jpg?version=1556772664971" class="img-fluid"></div>-->
+              <!--<div class="col"> <img src="https://static.hopscotch.in/fstatic/product/201905/f7017765-7c03-4c98-a892-a95d31cab551_full.jpg?version=1556772668191" class="img-fluid"></div>-->
+              <!--<div class="col"><img src="https://static.hopscotch.in/fstatic/product/201905/6f82e8dc-76f6-4dae-8ae7-1aabb885e3e3_full.jpg?version=1556772671154" class="img-fluid"></div>-->
+            <!--</div>-->
+          <!--</div>-->
           
         </mdb-col>
       </mdb-row>
