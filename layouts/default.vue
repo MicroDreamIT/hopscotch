@@ -1,11 +1,12 @@
 <template>
   <div>
-    <vue-content-loading :width="300" :height="100">
-      <circle cx="30" cy="30" r="30" />
-      <rect x="75" y="13" rx="4" ry="4" width="100" height="15" />
-      <rect x="75" y="37" rx="4" ry="4" width="50" height="10" />
-    </vue-content-loading>
     <headers></headers>
+    <div class="flex h-full justify-center mt-xl-5" v-if="!$store.state.products.length">
+      <vcl-facebook
+              :width="600"
+              :height="200"
+      ></vcl-facebook>
+    </div>
     <nuxt />
     <footers></footers>
   </div>
