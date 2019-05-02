@@ -7,7 +7,19 @@
           <img src="https://static.hopscotch.in/fstatic/product/201904/ad2797ef-f844-430f-93d1-ba494b48630a_full.jpg?version=1556644603090"
                alt="" class="rounded-lg hv-slide-top lg:hover:shadow">
 
-          <br>
+          <img src="https://static.hopscotch.in/fstatic/product/201904/f25413dd-105d-4b15-997e-f0392e915abf_full.jpg?version=1555917901409"
+               alt="" class="rounded-lg hv-slide-top lg:hover:shadow mt-lg-5">
+
+          <div class="rounded-lg group hv-slide-top lg:hover:shadow mt-lg-5">
+            <h5 class="pt-4 pl-4">Deals of the Day</h5>
+            <img src="https://static.hopscotch.in/fstatic/product/201905/90c6329d-239a-4d1e-9bcd-a4599fa473ae_full.jpg?version=1556771272968"
+                 alt="">
+            <img src="https://static.hopscotch.in/fstatic/product/201905/90c6329d-239a-4d1e-9bcd-a4599fa473ae_full.jpg?version=1556771272968"
+                 alt="">
+            <img src="https://static.hopscotch.in/fstatic/product/201905/90c6329d-239a-4d1e-9bcd-a4599fa473ae_full.jpg?version=1556771272968"
+                 alt="">
+          </div>
+
 
 
         </mdb-col>
@@ -23,7 +35,7 @@
         </mdb-col>
         <mdb-col md="4">
           <div class="bg-hop-grey rounded-lg group hv-slide-top lg:hover:shadow">
-            <h5 class="pt-4 pl-3">Deals of the Day</h5>
+            <h5 class="pt-4 pl-4">Deals of the Day</h5>
               <img src="https://static.hopscotch.in/fstatic/product/201905/90c6329d-239a-4d1e-9bcd-a4599fa473ae_full.jpg?version=1556771272968"
                    alt="">
             <img src="https://static.hopscotch.in/fstatic/product/201905/90c6329d-239a-4d1e-9bcd-a4599fa473ae_full.jpg?version=1556771272968"
