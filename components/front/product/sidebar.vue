@@ -107,6 +107,7 @@
 								 :style="{ background: color }"
 								 class="color-box"
 								 @click="colorSelected=!colorSelected"
+								 :key="index"
 							>
 
 								<div v-if="colorSelected">x</div>
