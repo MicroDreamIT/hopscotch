@@ -3,6 +3,7 @@
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-md-8"><br>
+                    <a href="#similerImage">asdfsdf</a>
                     <div class="product-slide">
                         <carousel :dots="false"  :navText = "['','']" >
 	                        <img src="../../static/images/sim-1.jpg">
@@ -123,7 +124,7 @@
                 </mdb-col>
             </mdb-row>
         </mdb-container>
-        <section class="features">
+        <section class="features" id="similerImage">
             <div class="container">
                 <div class="row">
                     <div class="w-100">
