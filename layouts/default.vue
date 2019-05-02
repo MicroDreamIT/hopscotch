@@ -7,7 +7,7 @@
               :height="200"
       ></vcl-facebook>
     </div>
-    <nuxt />
+    <nuxt/>
     <footers></footers>
   </div>
 </template>
