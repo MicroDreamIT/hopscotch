@@ -1,8 +1,9 @@
 <template>
-    <div v-if="loaded">
+    <div v-if="loaded" class="product-show">
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
                 <mdb-col class="col-md-8"><br>
+                    <a href="#similerImage">asdfsdf</a>
                     <div class="product-slide">
                         <carousel :dots="false"  :navText = "['','']" >
 	                        <img src="../../static/images/sim-1.jpg">
@@ -39,9 +40,9 @@
                     <div class="cart-section">
                         <p>{{product.name}}</p>
                         <div v-if="selectedSize.hasOwnProperty('id')" class="price">
-                            <span>${{withDiscountPrice.toFixed(2)}}</span>
-                            <strike>${{withoutDiscountPrice}}</strike>
-                            <strong class="text-danger">
+                            <span class="f18">${{withDiscountPrice.toFixed(2)}}</span>
+                            <strike class="f14">${{withoutDiscountPrice}}</strike>
+                            <strong class="text-danger f14">
                                 {{selectedSize.discount? selectedSize.discount+'%off':''}}
                             </strong>
                         </div>
@@ -55,6 +56,7 @@
                                         v-for="size in product.attributes.size"
                                         :key="size.id"
                                         :value="size"
+
                                 >
                                     {{size.name}}
                                 </option>
@@ -122,7 +124,7 @@
                 </mdb-col>
             </mdb-row>
         </mdb-container>
-        <section class="features">
+        <section class="features" id="similerImage">
             <div class="container">
                 <div class="row">
                     <div class="w-100">
@@ -267,3 +269,23 @@
         }
     }
 </script>
+<style lang="scss" scoped>
+    @media(max-width: 425px) {
+        .product-show{
+            .container{
+                padding: 0!important;
+                margin: 0!important;
+            }
+            .row{
+                padding: 0!important;
+                margin: 0!important;
+            }
+            .col-md-8{
+                padding: 0!important;
+                margin: 0!important;
+            }
+        }
+    }
+
+
+</style>

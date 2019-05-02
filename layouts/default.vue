@@ -1,9 +1,12 @@
 <template>
   <div>
-    <!--<mdb-container>-->
-      <!--<vcl-facebook></vcl-facebook>-->
-    <!--</mdb-container>-->
     <headers></headers>
+    <div class="flex h-full justify-center mt-xl-5" v-if="!$store.state.products.length">
+      <vcl-facebook
+              :width="600"
+              :height="200"
+      ></vcl-facebook>
+    </div>
     <nuxt />
     <footers></footers>
   </div>
