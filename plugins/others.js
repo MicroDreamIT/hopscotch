@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {VclFacebook, VclInstagram} from 'vue-content-loading'
+import {VclFacebook, VclInstagram, VueContentLoading} from 'vue-content-loading'
 
 const components = {
     VclFacebook,
