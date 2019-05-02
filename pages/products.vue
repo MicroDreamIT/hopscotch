@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="product-list">
         <div class="filter-bar">
             <div class="items" @click="filterArea =! filterArea"><mdb-icon  icon="filter" /> filter</div>
             <div class="items">1045 items</div>
