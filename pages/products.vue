@@ -6,11 +6,27 @@
                 filter
             </div>
             <div class="items">1045 items</div>
-            <div class="items">
+            <div class="items" @click="sortArea =! sortArea">
                 <mdb-icon icon="sort-alpha-up"/>
                 sort
             </div>
         </div>
+	    <!--sort area-->
+	    <div v-if="sortArea" class="sortArea">
+			    <div class="items">
+				    <div> </div>
+				    <div>SORT</div>
+				    <div @click="sortArea = false"> X </div>
+			    </div>
+		    <div class="items">
+			    <mdb-list-group>
+				    <mdb-list-group-item> <b>Popular</b></mdb-list-group-item>
+				    <mdb-list-group-item>Lowest Price</mdb-list-group-item>
+				    <mdb-list-group-item>Heighest Price</mdb-list-group-item>
+			    </mdb-list-group>
+		    </div>
+	    </div>
+	    <!--filter Area-->
         <div v-if="filterArea" class="filterArea">
             <div class="items">
                 <div @click="filterArea = false"> X </div>
@@ -152,13 +168,9 @@
 		                </div>
 	                </mdb-list-group>
                 </div>
-                
-
-
-
             </div>
             <div class="items">
-                <mdb-btn block color="pink">Block level button</mdb-btn>
+                <mdb-btn block color="pink">Apply</mdb-btn>
             </div>
         </div>
         <mdb-container>
@@ -218,6 +230,7 @@
         data(){
             return {
                 filterArea:false,
+                sortArea:false,
                 prices: [
                     'Below 200',
                     '200-300',
