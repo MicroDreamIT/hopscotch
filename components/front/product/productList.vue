@@ -7,7 +7,7 @@
             <div>Highest Price</div>
         </mdb-row>
 
-        <mdb-row class="d-flex flex-row p-2 product-item">
+        <div class="d-flex flex-row p-2 product-item">
                 <mdb-card v-for="(item,index) in product" :key="index">
                     <div @mouseover="showItem('item'+index)"
                          @mouseleave="hideItem('item'+index)">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </mdb-card>
-        </mdb-row>
+        </div>
     </mdb-container>
 </template>
 
