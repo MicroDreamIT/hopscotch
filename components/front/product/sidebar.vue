@@ -101,13 +101,16 @@
 
 			<badger-accordion-item>
 				<template slot="header">Colour</template>
-				<template slot="content">
-						<div v-for="(color,index) in colors"
-							 v-bind:style="{ background: color }"
-							 class="color-box"
-						>
-							<mdb-input type="checkbox" :id="'colorBox'+index"/>
-					    </div>
+				<template slot="content" >
+						<div class="color-section">
+							<div v-for="(color,index) in colors"
+								 :style="{ background: color }"
+								 class="color-box"
+							>
+
+								<!--<mdb-input type="checkbox" :id="'colorBox'+index"/>-->
+							</div>
+						</div>
 				</template>
 			</badger-accordion-item>
 
