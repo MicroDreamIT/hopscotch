@@ -12,18 +12,87 @@
                 <div>Clear all</div>
             </div>
             <div class="items">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs md-tabs nav-justified primary-color" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel555" role="tab">
+                            <i class="fas fa-user pr-2"></i>Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#panel666" role="tab">
+                            <i class="fas fa-heart pr-2"></i>Follow</a>
+                    </li>
+                </ul>
+                <!-- Nav tabs -->
+    
+                <!-- Tab panels -->
+                <div class="tab-content">
+        
+                    <!-- Panel 1 -->
+                    <div class="tab-pane fade in show active" id="panel555" role="tabpanel">
+            
+                        <!-- Nav tabs -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <ul class="nav md-pills pills-primary flex-column" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#panel21" role="tab">Downloads
+                                            <i class="fas fa-download ml-2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#panel22" role="tab">Orders & invoices
+                                            <i class="fas fa-file-alt ml-2"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#panel23" role="tab">Billing details
+                                            <i class="fas fa-address-card ml-2"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-9">
+                                <!-- Tab panels -->
+                                <div class="tab-content vertical">
+                                    <!-- Panel 1 -->
+                                    <div class="tab-pane fade in show active" id="panel21" role="tabpanel">
+                                        <h5 class="my-2 h5">Panel 1</h5>
+                                    </div>
+                                    <!-- Panel 1 -->
+                                    <!-- Panel 2 -->
+                                    <div class="tab-pane fade" id="panel22" role="tabpanel">
+                                        <h5 class="my-2 h5">Panel 2</h5>
+                                    </div>
+                                    <!-- Panel 2 -->
+                                    <!-- Panel 3 -->
+                                    <div class="tab-pane fade" id="panel23" role="tabpanel">
+                                        <h5 class="my-2 h5">Panel 3</h5>
+                                    </div>
+                                    <!-- Panel 3 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nav tabs -->
+        
+                    </div>
+                    <!-- Panel 1 -->
+        
+                    <!-- Panel 2 -->
+                    <div class="tab-pane fade" id="panel666" role="tabpanel">
+            
+                        <p class="pt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta
+                            doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat
+                            ratione porro voluptate odit minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus
+                            reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione
+                            porro voluptate odit minima.</p>
+        
+                    </div>
+                    <!-- Panel 2 -->
+    
                 </div>
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-                </div>
+                <!-- Tab panels -->
             </div>
             <div class="items">
                 <mdb-btn block color="pink">Block level button</mdb-btn>
@@ -65,12 +134,10 @@
     </div>
 </template>
 
-
 <script>
     import Sidebar from '~/components/front/product/sidebar.vue'
     import ProductList from '~/components/front/product/productList.vue'
     import carousel from 'vue-owl-carousel'
-    
     
     
     export default {
