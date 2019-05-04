@@ -18,11 +18,11 @@
 
                         <div class="form-group">
                             <label>Expiry MM/YY</label>
-                            <input type="text" v-model="card.expiry" class="form-control" required>
+                            <input type="text" v-model="card.expiry" class="form-control" v-mask="['##/##']" required>
                         </div>
 
                         <div class="form-group">
-                            <mdb-btn color="pink" type="submit" >Add card</mdb-btn>
+                            <mdb-btn color="pink" type="submit">Add card</mdb-btn>
                         </div>
                     </form>
                 </div>
@@ -43,30 +43,30 @@
 </template>
 
 <script>
+
     export default {
         name: "cards",
-        data(){
-            return {
-                card:{
-                    number:'4242 4242 4242 4242',
-                    name:'john doe',
-                    expiry:'12/29'
-                },
-                cards:[
 
-                ]
+        data() {
+            return {
+                card: {
+                    number: '4242 4242 4242 4242',
+                    name: 'john doe',
+                    expiry: '12/29'
+                },
+                cards: []
             }
         },
-        methods:{
-            addCard(){
+        methods: {
+            addCard() {
                 this.cards.push(this.card)
-                this.card={
-                    number:'',
-                        name:'',
-                        expiry:''
+                this.card = {
+                    number: '',
+                    name: '',
+                    expiry: ''
                 }
             },
-            deleteCard(index){
+            deleteCard(index) {
                 this.cards.splice(index, 1)
             }
         }

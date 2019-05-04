@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import {VclFacebook, VclInstagram, VueContentLoading } from 'vue-content-loading'
-
+import VueTheMask from 'vue-the-mask'
+Vue.use(VueTheMask)
 const components = {
     VclFacebook,
     VclInstagram
