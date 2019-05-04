@@ -92,7 +92,7 @@
                           <hr>
                           <h5> Total <span class="ow-right">$ {{totalItemPrice[0]-totalItemPrice[1]}}</span></h5>
                       </div>
-                      <mdb-btn color="primary" class="mt-lg-5" block>Proceed to checkout</mdb-btn>
+                      <mdb-btn color="primary" class="mt-lg-5" block @click="proceedItem">Proceed to checkout</mdb-btn>
 
               </mdb-col>
               <mdb-col md="2"></mdb-col>
@@ -142,6 +142,9 @@
             deleteItem(index){
                 console.log(index)
                 this.cartItem.splice(index,1)
+            },
+            proceedItem(){
+                alert('I am ready to proceed with amount $ ' + (this.totalItemPrice[0]-this.totalItemPrice[1]))
             }
         }
     }
