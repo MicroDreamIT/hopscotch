@@ -33,9 +33,9 @@
                                 </nuxt-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-pink hover:text-pink-darker" href="#">
+                                <nuxt-link class="nav-link text-pink hover:text-pink-darker" href="#" to="cards">
                                     <mdb-icon fab icon="cc-mastercard"  class="pr-3"/>Saved Cards
-                                </a>
+                                </nuxt-link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-pink hover:text-pink-darker" href="#">
