@@ -1,13 +1,17 @@
 <template>
   <div>
     <headers></headers>
-    <div class="flex h-full justify-center mt-xl-5" v-if="!$store.state.products.length">
+    <div class="flex h-full justify-center mt-xl-5" v-if="placeholder">
       <vcl-facebook
               :width="600"
-              :height="200"
+              :height="600"
       ></vcl-facebook>
     </div>
-    <nuxt/>
+
+      <div v-if="!placeholder">
+          <nuxt/>
+      </div>
+
     <footers></footers>
   </div>
 </template>
@@ -16,6 +20,25 @@
   import Footers from '~/components/front/footers.vue'
   export default{
       components:{Headers, Footers},
+      data(){
+        return{
+            placeholder:true
+        }
+      },
+      created(){
+//          setTimeout(function () {
+//                  console.log(this.placeholder)
+//          },2000)
+          this.$nextTick().then(() => {
+              this.placeholder=false
+
+          });
+
+
+      },
+
+
+
 
   }
 </script>

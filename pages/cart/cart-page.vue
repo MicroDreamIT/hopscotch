@@ -140,8 +140,10 @@
         },
         methods:{
             deleteItem(index){
-                console.log(index)
-                this.cartItem.splice(index,1)
+                if(confirm('Are you sure?')){
+                    this.cartItem.splice(index,1)
+                }
+
             },
             proceedItem(){
                 alert('I am ready to proceed with amount $ ' + (this.totalItemPrice[0]-this.totalItemPrice[1]))
