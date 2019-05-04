@@ -3,7 +3,8 @@
     <mdb-container>
 
       <mdb-row class="mt-5">
-        <mdb-col md="4">
+       <mdb-col md="4">
+           <nuxt-link to="/products">
           <img src="https://static.hopscotch.in/fstatic/product/201904/ad2797ef-f844-430f-93d1-ba494b48630a_full.jpg?version=1556644603090"
                alt="" class="rounded-lg hv-slide-top lg:hover:shadow">
 
@@ -17,11 +18,12 @@
             <img src="https://static.hopscotch.in/fstatic/product/201904/d51dfdf5-b338-4539-84a8-d0d008d99aa0_full.gif?version=1556439947083"
                  alt="">
           </div>
-
+           </nuxt-link>
 
 
         </mdb-col>
         <mdb-col md="4">
+            <nuxt-link to="/products">
           <div class="group hv-slide-top lg:hover:shadow">
             <img src="https://static.hopscotch.in/fstatic/product/201904/d2984b4f-5a7b-4504-a6a0-e5a76111e4f4_full.jpg?version=1555478694854"
                  class="rounded-lg">
@@ -37,10 +39,11 @@
             <img src="https://static.hopscotch.in/fstatic/product/201904/e34dd266-6f25-42da-8aaa-2bb4120e56bb_full.jpg?version=1556618083856"
                  alt="">
           </div>
-
+            </nuxt-link>
 
         </mdb-col>
         <mdb-col md="4">
+            <nuxt-link to="/products">
           <div class="deal-day rounded-lg group hv-slide-top lg:hover:shadow">
             <h5 class="pt-4 pl-4">Deals of the Day</h5>
               <img src="https://static.hopscotch.in/fstatic/product/201905/90c6329d-239a-4d1e-9bcd-a4599fa473ae_full.jpg?version=1556771272968"
@@ -64,6 +67,7 @@
               <img src="https://static.hopscotch.in/fstatic/product/201905/a29b05e5-3919-4b8d-ba05-46c412316bd1_full.jpg?version=1556772687994" class="img-fluid" style="width: 33.33333%; height: 33%">
             </div>
           </div>
+            </nuxt-link>
           
         </mdb-col>
       </mdb-row>

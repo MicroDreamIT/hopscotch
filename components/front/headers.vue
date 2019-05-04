@@ -11,6 +11,13 @@
                         <mdb-nav-item to="/" active>Home</mdb-nav-item>
                         <mdb-nav-item :to="{name:'products'}">Products</mdb-nav-item>
                         <mdb-nav-item :to="{name:'account-order'}">Account</mdb-nav-item>
+                        <mdb-nav-item :to="{name:'cart-cart-page'}">
+                            <div  class="cart-item">
+                                <mdb-icon icon="shopping-cart" />
+                                <mdb-badge color="white" class="ow-cart-badge">5</mdb-badge>
+                            </div>
+
+                        </mdb-nav-item>
                     </mdb-navbar-nav>
                 </mdb-navbar-toggler>
             </mdb-container>
