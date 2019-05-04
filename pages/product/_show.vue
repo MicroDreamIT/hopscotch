@@ -2,9 +2,16 @@
     <div v-if="loaded" class="product-show">
         <mdb-container class="border-bottom">
             <mdb-row class="bg-white">
-                <mdb-col class="col-md-8"><br>
-                    <a href="#similerImage">asdfsdf</a>
+                <mdb-col class="col-md-8 slide-wrapper"><br>
+
+                    <div class="similer-image-btn">
+                        <a href="#similerImage" >
+                            <mdb-icon far icon="clone" />
+                        </a>
+                    </div>
+
                     <div class="product-slide">
+
                         <carousel :dots="false"  :navText = "['','']" >
 	                        <img src="../../static/images/sim-1.jpg">
 	                        <img src="../../static/images/product-image2.PNG">
@@ -286,6 +293,27 @@
             }
         }
     }
+    .slide-wrapper{
+        position: relative;
+    }
+    .similer-image-btn{
+        padding: 12px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        z-index: 10;
+        background: white;
 
+        box-shadow: 0px 1px 7px #bababa;
+        i{
+            color: #ED54A4!important;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
 
 </style>
