@@ -4,7 +4,7 @@
           <mdb-row class="mt-lg-5 mb-lg-5">
               <mdb-col md="2"></mdb-col>
               <mdb-col md="5">
-                    <div class="cart-header">
+                 <div class="cart-header">
                         <span class="title">Cart</span>
                         <span class="circle"> </span>
                         <span class="count">3 items</span>
@@ -21,104 +21,59 @@
 
                             </mdb-dropdown-menu>
                         </mdb-dropdown>
-                    </div>
+                 </div>
                   <hr>
-                    <div class="cart-body">
-                        <template>
-                            <div class="row">
-
-                                    <mdb-col md="2">
-                                    <img src="../../static/images/sim-1.jpg">
-                                    <select class="browser-default custom-select">
-                                        <option value="1">Qty 1</option>
-                                        <option value="2">Qty 2</option>
-                                        <option value="3">Qty 3</option>
-                                    </select>
-                                </mdb-col>
-                                    <mdb-col md="10">
-                                        <a href="">Navy Fish Print Half Sleeves T-Shirt A...</a> <span class="ow-right">Arrives 10 May</span>
-                                        <p>by TGX</p>
-                                        <p class="ow-opacity-6">Size: 6-12 months</p>
-                                        <p>₹ 379 <strike>₹ 609</strike>
-                                            38% off <a href="" class="ow-right">Delete</a></p>
-
-                                    </mdb-col>
-
-
-                            </div>
-                            <hr>
-                        </template>
-                        <template>
-                            <div class="row">
+                 <div class="cart-body">
+                    <template v-for="(item,index) in cartItem">
+                        <div class="row">
 
                                 <mdb-col md="2">
-                                    <img src="../../static/images/sim-1.jpg">
-                                    <select class="browser-default custom-select">
-                                        <option value="1">Qty 1</option>
-                                        <option value="2">Qty 2</option>
-                                        <option value="3">Qty 3</option>
-                                    </select>
-                                </mdb-col>
-                                <mdb-col md="10">
-                                    <a href="">Navy Fish Print Half Sleeves T-Shirt A...</a> <span class="ow-right">Arrives 10 May</span>
-                                    <p>by TGX</p>
-                                    <p class="ow-opacity-6">Size: 6-12 months</p>
-                                    <p>₹ 379 <strike>₹ 609</strike>
-                                        38% off <a href="" class="ow-right">Delete</a></p>
+                                <img :src="item.image">
+                                <select class="browser-default custom-select" v-model="item.quantity">
+                                    <option value="1">Qty 1</option>
+                                    <option value="2">Qty 2</option>
+                                    <option value="3">Qty 3</option>
+                                </select>
 
-                                </mdb-col>
-
-
-                            </div>
-                            <hr>
-                        </template>
-                        <template>
-                            <div class="row">
-
-                                <mdb-col md="2">
-                                    <img src="../../static/images/sim-1.jpg">
-                                    <select class="browser-default custom-select">
-                                        <option value="1">Qty 1</option>
-                                        <option value="2">Qty 2</option>
-                                        <option value="3">Qty 3</option>
-                                    </select>
-                                </mdb-col>
-                                <mdb-col md="10">
-                                    <a href="">Navy Fish Print Half Sleeves T-Shirt A...</a> <span class="ow-right">Arrives 10 May</span>
-                                    <p>by TGX</p>
-                                    <p class="ow-opacity-6">Size: 6-12 months</p>
-                                    <p>₹ 379 <strike>₹ 609</strike>
-                                        38% off <a href="" class="ow-right">Delete</a></p>
-
-                                </mdb-col>
-
-
-                            </div>
-                            <hr>
-                        </template>
-                        <mdb-row>
-                            <mdb-col md="12">
-                                <div class="cart-bottom mt-lg-5">
-                                    <div>
-                                        <mdb-icon icon="shipping-fast" class="f25 d-flex justify-content-center pb-4 pt-4" />
-                                        <h6>Free Shipping*</h6>
-                                        <span> On orders of ₹500 and above.Details</span>
-                                    </div>
-                                    <div>
-                                        <mdb-icon  icon="reply-all"  class="f25 d-flex justify-content-center pb-4 pt-4"/>
-                                        <h6>Easy returns</h6>
-                                        <span>Send items back for free within 15 days</span>
-                                    </div>
-                                    <!--<div>-->
-                                        <!--<mdb-icon  icon="shield-alt" class="f25 d-flex justify-content-center pb-4 pt-4" />-->
-                                        <!--<h6>Secure shopping</h6>-->
-                                        <!--<span>Your payment details are fully encrypted</span>-->
-                                    <!--</div>-->
-                                </div>
                             </mdb-col>
-                        </mdb-row>
+                                <mdb-col md="10">
+                                    <a href="">{{item.title}}</a> <span class="ow-right">Arrives 10 May</span>
+                                    <p>by {{item.created_by}}</p>
+                                    <p class="ow-opacity-6">Size: {{item.size}}</p>
+                                    <p>₹ {{(parseFloat(item.orginal_price)*parseInt(item.quantity))-((parseInt(item.quantity)*
+                                        parseFloat(item.orginal_price))*parseFloat(item.discount))/100}}
+                                        <strike>₹ {{parseInt(item.quantity)*parseFloat(item.orginal_price)}}</strike>
+                                        <span class="text-success">{{item.discount}}% off</span> <a href="" class="ow-right">Delete</a></p>
 
-                    </div>
+                                </mdb-col>
+
+
+                        </div>
+                        <hr>
+                    </template>
+
+
+
+
+                </div>
+
+                  <div class="cart-bottom mt-lg-5">
+                      <div>
+                          <mdb-icon icon="shipping-fast" class="f25 d-flex justify-content-center pb-4 pt-4" />
+                          <h6>Free Shipping*</h6>
+                          <span> On orders of ₹500 and above.Details</span>
+                      </div>
+                      <div>
+                          <mdb-icon  icon="reply-all"  class="f25 d-flex justify-content-center pb-4 pt-4"/>
+                          <h6>Easy returns</h6>
+                          <span>Send items back for free within 15 days</span>
+                      </div>
+                      <div>
+                          <mdb-icon  icon="shield-alt" class="f25 d-flex justify-content-center pb-4 pt-4" />
+                          <h6>Secure shopping</h6>
+                          <span>Your payment details are fully encrypted</span>
+                      </div>
+                  </div>
 
 
               </mdb-col>
@@ -126,12 +81,12 @@
                   <h4> Price Summary</h4>
                   <span class="includes">Includes GST and all government taxes</span>
                       <div >
-                          <p>Total item Price <span class="ow-right">$395</span></p>
+                          <p>Total item Price <span class="ow-right">$ {{totalItemPrice[0]}}</span></p>
 
-                          <p>Item Discount <span class="ow-right">-1300</span></p>
+                          <p>Item Discount <span class="ow-right">$ {{totalItemPrice[1]}}</span></p>
                           <p>Shipping fee <span class="ow-right">Free</span></p>
                           <hr>
-                          <h5> Total <span class="ow-right">$2,395</span></h5>
+                          <h5> Total <span class="ow-right">$ {{totalItemPrice[0]-totalItemPrice[1]}}</span></h5>
                       </div>
                       <mdb-btn color="primary" class="mt-lg-5" block>Proceed to checkout</mdb-btn>
 
@@ -148,8 +103,36 @@
         data(){
 
             return{
+                cartItem:[
+                    {image:'/_nuxt/static/images/sim-1.jpg',
+                        title:'Navy Fish Print Half Sleeves T-Shirt A',
+                        size:'6-12 months',quantity:1,orginal_price:2500,
+                        discount:10,created_by:'TGX',date:'2019-10-05'},
+                    {image:'/_nuxt/static/images/sim-1.jpg',
+                        title:'Navy Fish Print Half Sleeves T-Shirt A',
+                        size:'6-12 months',quantity:3,orginal_price:1500,
+                        discount:20,created_by:'GFE', date:'2019-10-05'},
+                    {image:'/_nuxt/static/images/sim-1.jpg',
+                        title:'Navy Fish Print Half Sleeves T-Shirt A',
+                        size:'6-12 months',quantity:2,orginal_price:1800,
+                        discount:10, created_by:'NEO Rin',date:'2019-10-05'},
+                ]
             }
         
+        },
+        computed:{
+            totalItemPrice(){
+                let total=0
+                let discount =0
+               this.cartItem.forEach(data=>{
+                   let discountAmount =((parseInt(data.quantity)*parseFloat(data.orginal_price))*
+                       parseFloat(data.discount))/100
+                   total += (parseFloat(data.orginal_price)*parseInt(data.quantity))-discountAmount
+                   discount+=discountAmount
+               })
+
+                return [total,discount]
+            },
         }
     }
 </script>
@@ -157,13 +140,16 @@
 
     .cart-bottom{
         display: flex;
-        /*justify-content: space-between;*/
-
         div{
             color: rgba(0,0,0,.56);
             background-color: rgba(221, 222, 224, 0.72);
             padding: 20px;
             margin-right: 15px;
+            @media (max-width: 425px) {
+                margin-right: 0px;
+                margin-bottom: 15px;
+
+            }
             &:last-child{
                 margin-right: 0;
             }
@@ -177,6 +163,10 @@
                 line-height: 16px;
                 letter-spacing: .4px;
             }
+        }
+        @media (max-width: 425px) {
+            flex-direction: column;
+
         }
     }
     .cart-side-item{
@@ -192,7 +182,7 @@
         button{
             background: #ED54A4!important;
         }
-        @media (max-width: 425px) {
+        @media (max-width: 1024px) {
 
             padding:20px 0px;
         }
@@ -273,6 +263,20 @@
                 display: inline;
             }
         }
+        .col-md-5{
+            max-width: 100%;
+        }
+        .col-md-3{
+            max-width: 100%;
+        }
 
     }
+    @media (max-width: 1024px) {
+
+        .col-md-10,.col-md-2{
+         padding-left: 0px!important;
+        }
+
+    }
+
 </style>
