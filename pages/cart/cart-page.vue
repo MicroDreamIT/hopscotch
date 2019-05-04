@@ -7,7 +7,7 @@
                  <div class="cart-header">
                         <span class="title">Cart</span>
                         <span class="circle"> </span>
-                        <span class="count">3 items</span>
+                        <span class="count">{{cartItem.length}} items</span>
 
                         <mdb-dropdown class="ow-dropdown ow-right">
                             <mdb-dropdown-toggle slot="toggle">Enter pincode for delivery </mdb-dropdown-toggle>
@@ -43,7 +43,11 @@
                                     <p>₹ {{(parseFloat(item.orginal_price)*parseInt(item.quantity))-((parseInt(item.quantity)*
                                         parseFloat(item.orginal_price))*parseFloat(item.discount))/100}}
                                         <strike>₹ {{parseInt(item.quantity)*parseFloat(item.orginal_price)}}</strike>
-                                        <span class="text-success">{{item.discount}}% off</span> <a href="" class="ow-right">Delete</a></p>
+                                        <span class="text-success">{{item.discount}}% off</span>
+
+                                        <a href="" class="ow-right" @click.prevent="deleteItem(index)">
+                                            <mdb-icon far icon="trash-alt" /></a>
+                                    </p>
 
                                 </mdb-col>
 
@@ -127,12 +131,18 @@
                this.cartItem.forEach(data=>{
                    let discountAmount =((parseInt(data.quantity)*parseFloat(data.orginal_price))*
                        parseFloat(data.discount))/100
-                   total += (parseFloat(data.orginal_price)*parseInt(data.quantity))-discountAmount
+                   total += (parseFloat(data.orginal_price)*parseInt(data.quantity))
                    discount+=discountAmount
                })
 
                 return [total,discount]
             },
+        },
+        methods:{
+            deleteItem(index){
+                console.log(index)
+                this.cartItem.splice(index,1)
+            }
         }
     }
 </script>
