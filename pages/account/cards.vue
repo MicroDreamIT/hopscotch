@@ -8,7 +8,7 @@
                     <form @submit.prevent="addCard()">
                         <div class="form-group">
                             <label>Card Number</label>
-                            <input type="text" v-model="card.number" class="form-control" required>
+                            <input type="text" v-model="card.number" class="form-control" required :ref="'card_number'">
                         </div>
 
                         <div class="form-group">
@@ -31,8 +31,9 @@
                 <div class="bg-white p-4 w-50" v-for="(crd, index) in cards">
                     <p>{{crd.name}}</p>
                     <p>{{crd.number}}</p>
-                    <p>{{crd.expiry}}</p>
+                    <p>card expired on: {{crd.expiry}}</p>
                     <a href="#" @click.prevent="deleteCard(index)">remove</a>
+                    <a href="#" @click.prevent="editCard(index)">edit</a>
                 </div>
             </mdb-col>
 
@@ -68,6 +69,11 @@
             },
             deleteCard(index) {
                 this.cards.splice(index, 1)
+            },
+            editCard(index){
+                this.card = this.cards[index]
+                this.deleteCard(index)
+                this.$nextTick(()=>this.$refs['card_number'].focus())
             }
         }
     }

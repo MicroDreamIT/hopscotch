@@ -5,7 +5,7 @@
             <mdb-row>
                 <mdb-col md="2"></mdb-col>
                 <mdb-col md="2">
-                    <div class="bg-white p-2 .flex .flex-col">
+                    <div class="bg-white p-2 mt-4 .flex .flex-col">
                         <img class="block h-16 sm:h-24 rounded-full mx-auto mt-4"
                              src="https://avatars1.githubusercontent.com/u/8063392?s=460&v=4" alt="">
 
@@ -39,7 +39,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-pink hover:text-pink-darker" href="#">
-                                    <mdb-icon icon="hand-holding-usd"  class="pr-3"/>Credits
+                                    <mdb-icon icon="hand-holding-usd"  class="pr-3"/>Credits $7896
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -50,7 +50,7 @@
                         </ul>
                     </div>
                 </mdb-col>
-                <mdb-col md="6">
+                <mdb-col md="6" class="p-4">
                     <nuxtChild></nuxtChild>
                 </mdb-col>
                 <mdb-col md="2"></mdb-col>
