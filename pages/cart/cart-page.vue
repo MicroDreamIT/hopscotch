@@ -1,6 +1,6 @@
 <template>
     <div>
-      <mdb-container>
+      <mdb-container class="cart-details">
           <mdb-row class="mt-lg-5 mb-lg-5">
               <mdb-col md="2"></mdb-col>
               <mdb-col md="5">
@@ -96,23 +96,28 @@
                             </div>
                             <hr>
                         </template>
-                        <div class="cart-bottom mt-lg-5">
-                            <div>
-                                <mdb-icon icon="shipping-fast" class="f25 d-flex justify-content-center pb-4 pt-4" />
-                                <h6>Free Shipping*</h6>
-                               <span> On orders of ₹500 and above.Details</span>
-                            </div>
-                            <div>
-                                <mdb-icon  icon="reply-all"  class="f25 d-flex justify-content-center pb-4 pt-4"/>
-                                <h6>Easy returns</h6>
-                                <span>Send items back for free within 15 days</span>
-                            </div>
-                            <div>
-                                <mdb-icon  icon="shield-alt" class="f25 d-flex justify-content-center pb-4 pt-4" />
-                                <h6>Secure shopping</h6>
-                                <span>Your payment details are fully encrypted</span>
-                            </div>
-                        </div>
+                        <mdb-row>
+                            <mdb-col md="12">
+                                <div class="cart-bottom mt-lg-5">
+                                    <div>
+                                        <mdb-icon icon="shipping-fast" class="f25 d-flex justify-content-center pb-4 pt-4" />
+                                        <h6>Free Shipping*</h6>
+                                        <span> On orders of ₹500 and above.Details</span>
+                                    </div>
+                                    <div>
+                                        <mdb-icon  icon="reply-all"  class="f25 d-flex justify-content-center pb-4 pt-4"/>
+                                        <h6>Easy returns</h6>
+                                        <span>Send items back for free within 15 days</span>
+                                    </div>
+                                    <!--<div>-->
+                                        <!--<mdb-icon  icon="shield-alt" class="f25 d-flex justify-content-center pb-4 pt-4" />-->
+                                        <!--<h6>Secure shopping</h6>-->
+                                        <!--<span>Your payment details are fully encrypted</span>-->
+                                    <!--</div>-->
+                                </div>
+                            </mdb-col>
+                        </mdb-row>
+
                     </div>
 
 
@@ -152,7 +157,7 @@
 
     .cart-bottom{
         display: flex;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
 
         div{
             color: rgba(0,0,0,.56);
@@ -186,6 +191,10 @@
         }
         button{
             background: #ED54A4!important;
+        }
+        @media (max-width: 425px) {
+
+            padding:20px 0px;
         }
     }
     .cart-body{
@@ -257,5 +266,13 @@
             margin: 0 12px;
             border-radius: 4px;
         }
+    }
+    @media (max-width: 768px) {
+        .cart-details{
+            .row{
+                display: inline;
+            }
+        }
+
     }
 </style>
