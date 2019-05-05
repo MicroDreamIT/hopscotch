@@ -337,7 +337,7 @@
                 }
                 &:last-child{
                     flex:4;
-                    min-width: 230px;
+                    //min-width: 230px;
                     padding: 0 11px;
                 }
             }
