@@ -1,5 +1,5 @@
 @import "_custom-variables.scss";
-
+@import "_boss.scss";
 $primary: #ED54A4 !important;
 
 body {
@@ -975,7 +975,9 @@ strike{
   }
 
   }
-
+html{
+  scroll-behavior: smooth!important;
+}
 .color-section{
   display: flex;
   flex-wrap: wrap;
@@ -998,4 +1000,27 @@ strike{
 }
 .f18{
   font-size:18px!important;
+}
+
+.f25{
+  font-size:25px!important;
+}
+.cart-item{
+  position: relative;
+  .ow-cart-badge{
+    color: $primary;
+    border-radius: 50%;
+    position: absolute;
+    right:-7px;
+    top:-8px;
+  }
+}
+.ow-right{
+  float: right;
+}
+.bg-primary{
+  background: $primary;
+}
+.ow-opacity-6{
+  opacity: .6;
 }
