@@ -3,7 +3,7 @@
         <div class="topBar">
                <div class="container">
                    <div class="float-right">
-                       <a href="" class="pr-3"> Account </a>
+                       <a href="" class="pr-3"> Account</a>
                        <a href=""> 24x7 Customer care </a>
                    </div>
                    
