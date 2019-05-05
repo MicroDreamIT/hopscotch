@@ -1,5 +1,14 @@
 <template>
-
+    <div>
+        <div class="topBar">
+               <div class="container">
+                   <div class="float-right">
+                       <a href="" class="pr-3"> Account</a>
+                       <a href=""> 24x7 Customer care </a>
+                   </div>
+                   
+               </div>
+        </div>
         <mdb-navbar expand="large" dark color="pink lighten-2">
             <!-- Navbar brand -->
             <mdb-container>
@@ -21,8 +30,13 @@
                     </mdb-navbar-nav>
                 </mdb-navbar-toggler>
             </mdb-container>
-
+    
         </mdb-navbar>
+        <div class="mobile-menu">
+            <router-link to="/">Home</router-link>
+            <router-link :to="{name:'products'}">Products</router-link>
+        </div>
+    </div>
 
 </template>
 <style scoped lang="scss">
@@ -41,5 +55,6 @@
     }
     .navbar{
         padding-bottom: 5px;
+        box-shadow: 6px 3px 5px #00000026!important;
     }
 </style>
