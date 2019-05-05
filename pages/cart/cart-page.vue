@@ -78,8 +78,21 @@
                          </div>
                      </div>
                      <div class="col-lg-4">
-                         <br>
-                         <br>
+                       <div class="promo">
+                           <br>
+                           <badger-accordion class="filter-item">
+                               <badger-accordion-item>
+                                   <template slot="header">Get a Promo Code</template>
+                                   <template slot="content">
+                                       <template>
+                                         <mdb-input box label="Promo Code" />
+                                       <button class="apply-btn">Apply</button>
+                                       </template>
+                                   </template>
+                               </badger-accordion-item>
+                           </badger-accordion>
+                       </div>
+                       
                          <div class="price_summary">
                              <h5> <b>Price Summary</b></h5>
                              <span class="includes">Includes GST and all government taxes</span>
@@ -141,6 +154,7 @@
 </template>
 
 <script>
+  
     export default{
         data(){
 
@@ -186,7 +200,8 @@
             proceedItem(){
                 alert('I am ready to proceed with amount $ ' + (this.totalItemPrice[0]-this.totalItemPrice[1]))
             }
-        }
+        },
+      
     }
 </script>
 <style lang="scss" scoped="">
@@ -194,7 +209,7 @@
     
     .price_summary{
         @media(max-width: 768px){
-           // padding: 0 17px;
+            padding-bottom:200px;
         }
     }
     .checkout-head{
@@ -309,7 +324,9 @@
         }
         @media (max-width: 425px) {
             flex-direction: column;
-
+        }
+        @media (max-width: 768px) {
+            display: none;
         }
     }
     .cart-side-item{

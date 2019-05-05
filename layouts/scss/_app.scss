@@ -5,12 +5,34 @@ $primary: #ED54A4 !important;
 body {
   font-family: averta, sans-serif !important;
 }
+
 .addd:target{
   //-webkit-transition-property: background;
   //-webkit-transition-duration: 5s;
   //-webkit-transition-timing-function:ease-out;
   //background: red;
 }
+.promo{
+  .form-control{
+    width: calc(100% - 50px);
+  }
+  .component-badger-accordion.filter-item{
+    padding: 0;
+  }
+  .component-badger-accordion.filter-item.badger-accordion__header{
+    padding: 0;
+  }
+  .js-badger-accordion-panel-inner{
+    position: relative;
+        .apply-btn{
+          position: absolute;
+          right: 0;
+          top: 6px;
+      }
+  }
+
+}
+
 .topBar{
   display: none;
   justify-content: flex-end;

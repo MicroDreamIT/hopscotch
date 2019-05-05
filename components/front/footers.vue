@@ -1,6 +1,7 @@
 <template>
     <!-- Footer -->
-    <mdb-footer color="stylish-color-dark" class="font-small pt-4 mt-4">
+    <div>
+    <mdb-footer color="stylish-color-dark" class="font-small pt-4 mt-4" v-if="getShowStatus">
         <mdb-container class="text-center text-md-left">
             <mdb-row class="text-center text-md-left mt-3 pb-3">
                 <mdb-col md="3" lg="3" xl="3" class="mx-auto mt-3">
@@ -52,8 +53,26 @@
             </mdb-row>
         </mdb-container>
     </mdb-footer>
+    </div>
     <!-- Footer -->
 </template>
+<script>
+    export default {
+        computed:{
+            getShowStatus(){
+               
+                if(window.innerWidth<1024){
+                    if(this.$nuxt.$route.path=='/cart/cart-page'){
+                        return false
+                    }
+                }else{
+                    return true
+                }
+                
+            }
+        }
+    }
+</script>
 
 
 <style scoped>
