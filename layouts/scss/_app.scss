@@ -212,7 +212,7 @@ body {
 
   .owl-nav {
     position: absolute;
-    top: -10px;
+    //top: -10px;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -228,6 +228,7 @@ body {
       width: 36px;
       border-radius: 50% !important;
       background: #fff !important;
+
       &:hover {
         color: $primary;
       }
@@ -236,6 +237,7 @@ body {
     .owl-prev {
       box-shadow: -20px 2px 25px 12px #f8f8ff9c;
       position: relative;
+      top:-57px!important;
 
       &:after {
         content: ' \203A';
@@ -264,6 +266,8 @@ body {
     .owl-next {
       box-shadow: 20px 0px 25px 12px #f8f8ff9c;
       position: relative;
+      top:-57px!important;
+
       &:after {
         content: '\2039';
         position: absolute;
