@@ -124,7 +124,7 @@
                 </mdb-col>
             </mdb-row>
         </mdb-container>
-        <section class="features" id="similerImage">
+        <section class="features addd" id="similerImage">
             <div class="container">
                 <div class="row">
                     <div class="w-100">

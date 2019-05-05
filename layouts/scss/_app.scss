@@ -5,6 +5,25 @@ $primary: #ED54A4 !important;
 body {
   font-family: averta, sans-serif !important;
 }
+.addd:target{
+  //-webkit-transition-property: background;
+  //-webkit-transition-duration: 5s;
+  //-webkit-transition-timing-function:ease-out;
+  //background: red;
+}
+.topBar{
+  display: none;
+  justify-content: flex-end;
+  background: #ed54a4;
+  font-size: 12px;
+  padding: 5px;
+    a{
+      color:#fff;
+    }
+    @media(min-width: 768px){
+      display: flex;
+    }
+}
 .navbar-toggler{
   @media (max-width:425px) {
     display: none;
@@ -137,34 +156,34 @@ body {
       }
     }
 }
-.badger-accordion__header .js-badger-accordion-header {
-  display: flex;
-  align-items: center;
-  padding: 3px 0;
-}
-.filter-bar{
-     display: none;
-         @media(max-width: 425px){
-           display: flex !important;
-           justify-content: space-around;
-           border-top: 1px solid #e6e6e6;
-           border-bottom: 1px solid #e6e6e6;
-           background-color: #fff;
-           align-items: center;
-           margin: 0 0 10px;
-           min-height: 50px;
-            .items{
-              font-size: 15px;
-              color:$primary;
-              flex:1;
-              text-align: center;
-              text-transform: capitalize;
-              &:nth-child(2){
-                color:#000!important;
+  .badger-accordion__header .js-badger-accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+  }
+  .filter-bar{
+       display: none;
+           @media(max-width: 425px){
+             display: flex !important;
+             justify-content: space-around;
+             border-top: 1px solid #e6e6e6;
+             border-bottom: 1px solid #e6e6e6;
+             background-color: #fff;
+             align-items: center;
+             margin: 0 0 10px;
+             min-height: 50px;
+              .items{
+                font-size: 15px;
+                color:$primary;
+                flex:1;
+                text-align: center;
+                text-transform: capitalize;
+                &:nth-child(2){
+                  color:#000!important;
+                }
               }
-            }
-       }
-}
+         }
+  }
 
   .badger-accordion__header .js-badger-accordion-header {
     display: flex;
@@ -197,7 +216,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    //flex-direction: row-reverse;
+    flex-direction: row-reverse;
     [class*='owl-'] {
       color: #737373 !important;
       font-size: 14px;
@@ -209,7 +228,6 @@ body {
       width: 36px;
       border-radius: 50% !important;
       background: #fff !important;
-
       &:hover {
         color: $primary;
       }
@@ -220,7 +238,7 @@ body {
       position: relative;
 
       &:after {
-        content: '\2039';
+        content: ' \203A';
         position: absolute;
         top: -5px;
         left: 13px;
@@ -246,9 +264,8 @@ body {
     .owl-next {
       box-shadow: 20px 0px 25px 12px #f8f8ff9c;
       position: relative;
-
       &:after {
-        content: ' \203A';
+        content: '\2039';
         position: absolute;
         top: -5px;
         left: 13px;
@@ -856,7 +873,21 @@ body {
   .owl-item[style]{
     width: 160px!important;
   }
+  .owl-nav{
+    position: relative;
+    .owl-prev{
+      position: absolute;
+      top: -46px;
+      right: 0;
+    }
+    .owl-next{
+      position: absolute;
+      top: -46px;
+      left: 0;
+    }
+  }
 }
+
 .owl-theme .owl-nav [class*='owl-']:hover {
   background: #fff!important;
   color: $primary!important;

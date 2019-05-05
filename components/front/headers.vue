@@ -1,6 +1,14 @@
 <template>
-
     <div>
+        <div class="topBar">
+               <div class="container">
+                   <div class="float-right">
+                       <a href="" class="pr-3"> Account </a>
+                       <a href=""> 24x7 Customer care </a>
+                   </div>
+                   
+               </div>
+        </div>
         <mdb-navbar expand="large" dark color="pink lighten-2">
             <!-- Navbar brand -->
             <mdb-container>
@@ -40,5 +48,6 @@
     }
     .navbar{
         padding-bottom: 5px;
+        box-shadow: 6px 3px 5px #00000026!important;
     }
 </style>
