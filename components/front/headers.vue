@@ -25,7 +25,6 @@
                                 <mdb-icon icon="shopping-cart" />
                                 <mdb-badge color="white" class="ow-cart-badge">3</mdb-badge>
                             </div>
-
                         </mdb-nav-item>
                     </mdb-navbar-nav>
                 </mdb-navbar-toggler>

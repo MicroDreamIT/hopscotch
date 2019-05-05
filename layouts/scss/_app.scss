@@ -975,26 +975,27 @@ strike{
   }
 
   }
-html{
-  scroll-behavior: smooth!important;
-}
-.color-section{
-  display: flex;
-  flex-wrap: wrap;
-  width:100%;
-  @media(max-width: 425px){
-    flex-direction: column;
-   .color-box{
-     margin: 12px 8px;
-   }
+    html{
+      scroll-behavior: smooth !important;
+    }
+
+    .color-section{
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+          @media(max-width: 425px){
+              flex-direction: column;
+               .color-box{
+                   margin: 12px 8px;
+               }
+          }
   }
-}
-.color-box{
-  width:35px;
-  border: 2px solid #e6e6e6;
-  margin: 2px;
-  height:24px;
-}
+  .color-box{
+    width:35px;
+    border: 2px solid #e6e6e6;
+    margin: 2px;
+    height:24px;
+  }
 .f14{
   font-size:14px!important;
 }
