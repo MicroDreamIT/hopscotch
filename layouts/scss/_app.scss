@@ -12,9 +12,81 @@ body {
   //-webkit-transition-timing-function:ease-out;
   //background: red;
 }
+    .pinCode{
+          position: absolute;
+          top: 3px;
+          padding: 22px;
+          right: 0px;
+          min-width: 242px;
+          min-height: 137px;
+          background: #fff;
+          z-index: 3;
+          transition: height .2s ease-out, visibility .15s ease-out;
+          overflow: hidden;
+          border-radius: 4px;
+          box-shadow: 0 16px 48px 0 rgba(0, 0, 0, .16);
+            @media(max-width: 768px){
+              right: 30%;
+              top: 37%;
+            }
+            @media(max-width: 425px){
+              right: 22%;
+              top: 103%;
+            }
+            @media(max-width:375px){
+              right: 21%;
+              top: 103%;
+            }
+            @media(max-width:320px){
+              right: 14%;
+              top: 103%;
+            }
+
+          .close-pin{
+            color: #6b6b6b;
+            position: absolute;
+            right: 14px;
+            top: 6px;
+            cursor:pointer;
+            &:hover{
+                 color:$primary;
+            }
+          }
+          .md-form {
+               margin-bottom: 10px;
+            margin-top: 0;
+          }
+          .md-form label.active {
+               transform: translateY(0)!important;
+          }
+      .form-control{
+        background: #EFF1F4!important;
+          &:focus{
+            box-shadow: 0 1px 0 0 #ED54A4!important;
+            border-bottom: 1px solid #ED54A4!important;
+          }
+          &:focus + label{
+            color: #ED54A4 !important;
+            top: 0.15rem !important;
+          }
+
+      }
+      label{
+        font-size: 12px!important;
+        padding-left: 8px;
+      }
+    }
+
 .promo{
   .form-control{
     width: calc(100% - 50px);
+    &:focus{
+      box-shadow: 0 1px 0 0 #ED54A4!important;
+      border-bottom: 1px solid #ED54A4!important;
+    }
+    &:focus + label{
+      color: #ED54A4 !important;
+    }
   }
   .component-badger-accordion.filter-item{
     padding: 0;

@@ -10,18 +10,15 @@
                              <span class="title">Cart</span>
                              <span class="circle"> </span>
                              <span class="count">{{cartItem.length}} items</span>
-                             <mdb-dropdown class="ow-dropdown ow-right adjust">
-                                 <mdb-dropdown-toggle slot="toggle">Enter pincode for delivery </mdb-dropdown-toggle>
-                                 <mdb-dropdown-menu>
-                                     <mdb-dropdown-item @click.prevent>
-                                         <label>Enter a pincode</label><br>
-                                         <input type="text"><br>
-                                         <mdb-btn  class="bg-primary" size="sm">Check</mdb-btn>
-                    
-                                     </mdb-dropdown-item>
-                
-                                 </mdb-dropdown-menu>
-                             </mdb-dropdown>
+                             <a  class="ow-right" @click.prevent="pinCodePopup=!pinCodePopup">Enter pincode for delivery</a>
+                             <div class="pinCode" v-if="pinCodePopup">
+                                 <template>
+                                     <span class="close-pin" @click="pinCodePopup=false">x</span>
+                                     <pre>Enter a pincode</pre>
+                                     <mdb-input box label="Promo Code"  />
+                                     <mdb-btn color="pink" class="" block > check</mdb-btn>
+                                 </template>
+                             </div>
                          </div>
                          <hr>
                          <div class="cart-body">
@@ -54,10 +51,6 @@
                                  </div>
                                  <hr>
                              </template>
-        
-        
-        
-        
                          </div>
                          <div class="cart-bottom mt-lg-5">
                              <div>
@@ -85,8 +78,8 @@
                                    <template slot="header">Get a Promo Code</template>
                                    <template slot="content">
                                        <template>
-                                         <mdb-input box label="Promo Code" />
-                                       <button class="apply-btn">Apply</button>
+                                         <mdb-input box label="Promo Code" v-model="promoCode" />
+                                        <button class="apply-btn" :disabled="!promoCode.length">Apply</button>
                                        </template>
                                    </template>
                                </badger-accordion-item>
@@ -112,44 +105,17 @@
              </div>
            </div>
         </div>
-        <div class="bottom-cart">
+        <!--<div class="bottom-cart">-->
+            <!--&lt;!&ndash;<div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="#total-cart">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<b>Total 985 <mdb-icon  icon="caret-down" /> </b><br>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span>View price summery</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
             <!--<div>-->
-                <!--<a href="#total-cart">-->
-                    <!--<b>Total 985 <mdb-icon  icon="caret-down" /> </b><br>-->
-                    <!--<span>View price summery</span>-->
-                <!--</a>-->
+                <!--&lt;!&ndash;<mdb-btn color="pink" class="mt-lg-5" block @click="proceedItem">Proceed to checkout</mdb-btn>&ndash;&gt;-->
             <!--</div>-->
-            <div>
-                <!--<mdb-btn color="pink" class="mt-lg-5" block @click="proceedItem">Proceed to checkout</mdb-btn>-->
-            </div>
-        </div>
-        
-        <!--<div id="total-cart" class="total-cart">-->
-         <!---->
-                <!--<div class="checkout-head">-->
-                    <!--<span class="title">Cart</span>-->
-                    <!--<span class="count"> * {{cartItem.length}} items</span>-->
-                     <!--<span>  *  Total  ${{totalItemPrice[0]-totalItemPrice[1]}}</span>-->
-                     <!--<a href="#" class="ow-right pt-2"> <mdb-icon  icon="times" /> </a>-->
-                <!--</div>-->
-            <!--<br>-->
-            <!--<br>-->
-            <!--<br>-->
-            <!--<div class="price_summary">-->
-                <!--<h5> <b>Price Summary</b></h5>-->
-                <!--<span class="includes">Includes GST and all government taxes</span>-->
-                <!--<div class="payment_term">-->
-                    <!--<p>Total item Price <span class="ow-right">$ {{totalItemPrice[0]}}</span></p>-->
-                    <!--<p>Item Discount <span class="ow-right">$ {{totalItemPrice[1]}}</span></p>-->
-                    <!--<p>Shipping fee <span class="ow-right">Free</span></p>-->
-                    <!--<div class="total">Total <span class="ow-right">$ {{totalItemPrice[0]-totalItemPrice[1]}}</span></div>-->
-                <!--</div>-->
-                <!--<br>-->
-                <!--<mdb-btn color="pink" class="mt-lg-5" block @click="proceedItem">Proceed to checkout</mdb-btn>-->
-            <!--</div>-->
-        <!--</div>-->
- 
-    
+        <!--</div> -->
     </div>
 </template>
 
@@ -159,6 +125,8 @@
         data(){
 
             return{
+                promoCode:'',
+                pinCodePopup:false,
                 cartItem:[
                     {image:'/_nuxt/static/images/sim-1.jpg',
                         title:'Navy Fish Print Half Sleeves T-Shirt A',
@@ -205,6 +173,7 @@
     }
 </script>
 <style lang="scss" scoped="">
+    
     
     
     .price_summary{
@@ -379,6 +348,7 @@
         }
     }
     .cart-header{
+        position:relative;
         @media(max-width: 768px){
             box-shadow: 1px 1px 14px #00000014;
             position: fixed;
@@ -389,12 +359,20 @@
             padding: 12px 17px;
             z-index: 10;
         }
-
+        a{
+            margin-top: 13px;
+            font-size: 13px;
+            color: #737373;
+        }
+        pre{
+            margin-bottom: 0;
+            color: grey;
+        }
+        
         .ow-dropdown{
             position: relative;
             span{
                 font-size: 14px!important;
-
             }
             button{
                 max-width: 300px;
