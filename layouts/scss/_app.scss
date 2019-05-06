@@ -5,6 +5,55 @@ $primary: #ED54A4 !important;
 body {
   font-family: averta, sans-serif !important;
 }
+.steps{
+  display: flex;
+  flex-direction: row;
+     .tab{
+      flex:1;
+      background: grey;
+       padding:25px 10px;
+    }
+    .tab-content{
+      flex:5;
+      padding: 25px;
+      .mobile-number{
+        width: 80%;
+        margin: 0 auto;
+          .form-control{
+            height: 38px;
+            background: #EFF1F4;
+            padding-top: 14px;
+            padding-left: 10px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            &:focus{
+             // padding: 7px 10px 7px px;
+              box-shadow: 0 1px 0 0 #ED54A4!important;
+              border-bottom: 1px solid #ED54A4!important;
+              font-size: 14px;
+              padding-top: 14px;
+              padding-left: 10px;
+            }
+            &:focus + label{
+              font-size: 13px;
+              padding-left: 14px;
+              top: 30px;
+            }
+          }
+        label{
+          font-size: 13px;
+          padding-left: 14px;
+          top: 17px;
+        }
+        .md-form {
+          margin-bottom: 0.6rem!important;
+          overflow: hidden;
+        }
+      }
+    }
+
+}
 
 .addd:target{
   //-webkit-transition-property: background;
