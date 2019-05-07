@@ -43,7 +43,6 @@
                     <button class="tablinks" @click="openFilter('price')">Price</button>
                     <button class="tablinks" @click="openFilter('discount')">Discount</button>
                 </div>
-
                 <div id="shop" class="tabcontent">
                     <mdb-list-group>
                         <div class="custom-control custom-checkbox">
@@ -101,7 +100,6 @@
 			            <label class="custom-control-label colorLabel" for="cat1">Cat 1</label>
 		            </div>
 	            </div>
-
                 <div id="delivery" class="tabcontent">
 	                <mdb-list-group>
 		                <div class="custom-control custom-radio">
@@ -151,7 +149,6 @@
 		                </label>
 	                </div>
                 </div>
-
                 <div id="discount" class="tabcontent">
 	                <mdb-list-group>
 		                <div class="custom-control custom-radio"
