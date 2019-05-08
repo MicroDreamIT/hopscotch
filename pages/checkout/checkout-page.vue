@@ -9,7 +9,7 @@
 							<br>
 							<h2>Checkout</h2>
 							<hr>
-							<div class="steps">
+							<div class="steps" v-if="stepOne">
 								<div class="tab">
 									<h5>Mobile</h5>
 								</div>
@@ -21,40 +21,58 @@
 										</p>
 										<template>
 											<mdb-input  label="Your mobile number"/>
-											<mdb-btn color="pink" class="" block > CONTINUE</mdb-btn>
+											<mdb-btn color="pink" class="" block @click="maintainStep(1)"> CONTINUE</mdb-btn>
 										</template>
 									</div>
 								</div>
 							</div>
-							<div class="steps">
-								<div class="tab">
-									<h5>ship to </h5>
-								</div>
-								<div class="tab-content">
-									<div class="address">
-										Add an Address
+								<div class="step-mobile" v-if="!stepOne">
+								  <div>Mobile</div>
+								  <div>9121241215241</div>
+								  <div>
+									  <button class="change" @click="maintainStep(1,true)">Change</button>
+								  </div>
+							  </div>
+							<div class="steps" v-if="stepTwo">
+									<div class="tab">
+										<h5>ship to </h5>
 									</div>
-									<div class="ship-to">
-									<mdb-input  label="Full Name"></mdb-input>
-									<mdb-input  label="Pincode"></mdb-input>
-									<mdb-input type="textarea" label="Address"></mdb-input>
-									<mdb-input  label="Landmark"></mdb-input>
-									<div class="city-area">
-										<mdb-input  label="City"></mdb-input>
-										<mdb-input  label="State"></mdb-input>
-									</div>
-									<mdb-input  label="Mobile"></mdb-input>
-									<mdb-input  label="Email"></mdb-input>
-									<span class="link-account">
+									<div class="tab-content">
+										<div class="address">
+											Add an Address
+										</div>
+										<div class="ship-to">
+											<mdb-input  label="Full Name"></mdb-input>
+											<mdb-input  label="Pincode"></mdb-input>
+											<mdb-input type="textarea" label="Address"></mdb-input>
+											<mdb-input  label="Landmark"></mdb-input>
+											<div class="city-area">
+												<mdb-input  label="City"></mdb-input>
+												<mdb-input  label="State"></mdb-input>
+											</div>
+											<mdb-input  label="Mobile"></mdb-input>
+											<mdb-input  label="Email"></mdb-input>
+											<span class="link-account">
 										This email address will be linked to your account
 									</span>
-									<mdb-btn color="pink" class="" block > CONTINUE</mdb-btn>
+											<mdb-btn color="pink" class="" block @click="maintainStep(2)"> CONTINUE</mdb-btn>
+										</div>
 									</div>
+							</div>
+							<div class="step-shipping"  v-if="!stepTwo">
+								<div>Ship to</div>
+								<div>
+									Fsd , Dsfsdf <br>
+									VADODARA, 333333
+								</div>
+								<div>
+									<button class="change" @click="maintainStep(2,true)">Change</button>
 								</div>
 							</div>
-							<div class="steps">
+							
+							<div class="steps" v-if="stepThree">
 								<div class="tab">
-									<h5 class="text-center">Pay By</h5>
+									<h5 class="payBy">Pay By</h5>
 									<div class="tab">
 										<button class="tablinks" @click="openFilter('shop')" id="defaultOpen">Credit or Debit Cards</button>
 										<button class="tablinks" @click="openFilter('age')">Netbankings</button>
@@ -112,20 +130,47 @@
 													</label>
 												</div>
 											</div>
-											<mdb-select v-model="basicOptions" />
 										</div>
-										<div id="category" class="tabcontent">
+										<div id="category" class="tabcontent adjust" >
 										<div class="cash">
 											<h5>Cash on delivery</h5>
 											<p>Verify your mobile number <span style="color:black;">+91 9652555455</span> to <br> pay with cash on delivery</p>
-											<mdb-btn color="pink" class="" block > SEND OTP </mdb-btn>
+											<mdb-btn color="pink" class="" block @click="maintainStep(3)"> SEND OTP </mdb-btn>
 										</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="step-shipping"  v-if="!stepThree">
+								<div>Pay</div>
+								<div>
+									Fsd , Dsfsdf <br>
+									VADODARA, 333333
+								</div>
+								<div>
+									<button class="change" @click="maintainStep(3,true)">Change</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-lg-4">
+							<div class="item-summary mt-3">
+								<badger-accordion class="filter-item">
+									<badger-accordion-item>
+										<template slot="header">Item Summary</template>
+										<template slot="content">
+											<div class="product-items">
+												<div>
+													<img src="https://static.hopscotch.in/fstatic/product/201805/b490efe5-0e70-4870-a696-831f619d93bf_medium.jpg?version=1526461554276">
+												</div>
+												<div>Qty : 7 <br> Arrives 10 May  </div>
+												<div>₹649</div>
+											</div>
+											<br>
+											<nuxt-link :to="{name:'cart-cart-page'}" class="edit-cart">EDIT CART</nuxt-link>
+										</template>
+									</badger-accordion-item>
+								</badger-accordion>
+							</div>
 								<div class="price-summary">
 									<badger-accordion class="filter-item">
 										<badger-accordion-item>
@@ -173,6 +218,9 @@
                         size:'6-12 months',quantity:2,orginal_price:1800,
                         discount:10, created_by:'NEO Rin',date:'2019-10-05'},
                 ],
+		        stepOne:true,
+		        stepTwo:false,
+		        stepThree:false
 	        }
 	    },
         computed:{
@@ -189,7 +237,20 @@
                 return [total,discount]
             },
         },
+        updated(){
+            if(document.getElementById("defaultOpen")){
+                document.getElementById("defaultOpen").click();
+            }
+
+        },
 		methods:{
+            maintainStep(val,change=null){
+                val==1? !change?[this.stepTwo=true,this.stepOne=false]:
+	                [this.stepOne=true,this.stepTwo=false,this.stepThree=false]:''
+                val==2?!change?[this.stepThree=true,this.stepTwo=false]:
+	                [this.stepOne=false,this.stepTwo=true,this.stepThree=false]:''
+                val==3?!change?'':[this.stepOne=false,this.stepTwo=false,this.stepThree=true]:''
+            },
             openFilter(filterName){
                 var i, tabcontent, tablinks;
                 tabcontent = document.getElementsByClassName("tabcontent");

@@ -96,7 +96,10 @@
                                  <div class="total"> Total <span class="ow-right">$ {{totalItemPrice[0]-totalItemPrice[1]}}</span></div>
                              </div>
                              <div class="proceed-button">
-                                 <mdb-btn color="pink" class="mt-lg-5 " block @click="proceedItem">Proceed to checkout</mdb-btn>
+                                 <nuxt-link to='/checkout/checkout-page'>
+                                     <mdb-btn color="pink" class="mt-lg-5 " block >Proceed to checkout</mdb-btn>
+                                     <!--@click="proceedItem"-->
+                                 </nuxt-link>
                              </div>
                            
                          </div>
