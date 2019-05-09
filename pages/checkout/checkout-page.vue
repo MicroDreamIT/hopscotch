@@ -12,6 +12,11 @@
 							<div class="steps" v-if="stepOne">
 								<div class="tab">
 									<h5>Mobile</h5>
+									<div class="timeline">
+										<div class="pointer">
+											1
+										</div>
+									</div>
 								</div>
 								<div class="tab-content">
 									<div class="mobile-number">
@@ -27,7 +32,12 @@
 								</div>
 							</div>
 								<div class="step-mobile" v-if="!stepOne">
-								  <div>Mobile</div>
+								  <div>
+									  <div class="checkout-status">
+										  <mdb-icon far icon="check-circle" />
+									  </div>
+									  Mobile
+								  </div>
 								  <div>9121241215241</div>
 								  <div>
 									  <button class="change" @click="maintainStep(1,true)">Change</button>
@@ -36,6 +46,11 @@
 							<div class="steps" v-if="stepTwo">
 									<div class="tab">
 										<h5>ship to </h5>
+										<div class="timeline">
+											<div class="pointer">
+												2
+											</div>
+										</div>
 									</div>
 									<div class="tab-content">
 										<div class="address">
@@ -60,7 +75,12 @@
 									</div>
 							</div>
 							<div class="step-shipping"  v-if="!stepTwo">
-								<div>Ship to</div>
+								<div>
+									<div class="checkout-status">
+										<mdb-icon far icon="check-circle" />
+									</div>
+									Ship to
+								</div>
 								<div>
 									Fsd , Dsfsdf <br>
 									VADODARA, 333333
@@ -73,6 +93,11 @@
 							<div class="steps" v-if="stepThree">
 								<div class="tab">
 									<h5 class="payBy">Pay By</h5>
+									<div class="timeline">
+										<div class="pointer">
+											3
+										</div>
+									</div>
 									<div class="tab">
 										<button class="tablinks" @click="openFilter('shop')" id="defaultOpen">Credit or Debit Cards</button>
 										<button class="tablinks" @click="openFilter('age')">Netbankings</button>

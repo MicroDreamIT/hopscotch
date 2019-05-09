@@ -272,13 +272,15 @@
         input[type="checkbox"] {
             opacity: 0;
         }
-
     }
+    
     .checkMark{
         display: flex;
         justify-content: center;
         text-align: center;
         height: 25px;
+	    color: #3e3e3e;
+	    font-weight: 600;
     }
 
 
