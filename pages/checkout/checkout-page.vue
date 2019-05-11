@@ -137,23 +137,28 @@
 													<input type="radio" id="icici" class="bank-select" value="icici" name="bank">
 													<label for="icici"class="bank-select-label">
 														<img src="https://hopscotch.in/w/901b03477fc7f695dcc71f348598b284.svg" width='35px'>
-														ICICI
+														ICICI NetBanking
 													</label>
 												</div>
 												<div>
 													<input type="radio" id="axis" class="bank-select" value="axis" name="bank">
 													<label for="axis"class="bank-select-label">
 														<img src="https://hopscotch.in/w/69e2edc0b540bb9d813c8dec8b2da1e9.svg" width='35px'>
-														AXIS
+														Axis Bank
 													</label>
 												</div>
 												<div>
 													<input type="radio" id="kotak" class="bank-select" value="kotak" name="bank">
 													<label for="kotak" class="bank-select-label">
 														<img src="https://hopscotch.in/w/20c240fd2b2cc165416e12c4b015cdbe.svg" width='25px'>
-														KOTAK
+														Kotak Mahindra Bank
 													</label>
 												</div>
+											
+											</div>
+											<div>
+												
+												<mdb-btn color="pink" class="" block > PROCEED TO REVIEW </mdb-btn>
 											</div>
 										</div>
 										<div id="category" class="tabcontent adjust" >
