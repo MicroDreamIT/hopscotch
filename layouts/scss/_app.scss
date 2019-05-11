@@ -257,7 +257,7 @@ $primary: #ED54A4 !important;
        background: #F7F8FA;
        padding: 25px 10px;
        display: flex;
-       justify-content: center;
+       justify-content: flex-start;
        align-items: flex-start;
        text-transform: capitalize;
        position: relative;
@@ -297,7 +297,8 @@ $primary: #ED54A4 !important;
             .tab{
               width: 100%;
               .tablinks{
-                min-width: 127px;
+                //min-width: 127px;
+                min-width: 100%;
                 text-align: left;
                 border-left: 3px solid transparent;
                 border-top: 1px solid transparent;
