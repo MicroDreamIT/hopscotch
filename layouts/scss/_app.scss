@@ -302,15 +302,16 @@ $primary: #ED54A4 !important;
                 border-left: 3px solid transparent;
                 border-top: 1px solid transparent;
                 border-bottom: 1px solid transparent;
-                padding: 12px;
+                padding: 15px;
                 outline: 0;
+                font-size: 13px;
                 @media(max-width: 425px){
                   min-width: 100%!important;
                 }
                 &.active{
                   border-left: 3px solid #ed54a4;
-                  border-top: 1px solid lightgrey;
-                  border-bottom: 1px solid lightgrey;
+                  border-top: 1px solid #E0E0E0;
+                  border-bottom: 1px solid #E0E0E0;
                 }
               }
             }

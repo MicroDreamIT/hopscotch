@@ -157,7 +157,7 @@
 											
 											</div>
 											<div>
-												
+												<mdb-select search  />
 												<mdb-btn color="pink" class="" block > PROCEED TO REVIEW </mdb-btn>
 											</div>
 										</div>
@@ -230,7 +230,7 @@
 	</div>
 </template>
 <script>
- 
+    import { mdbSelect } from 'mdbvue';
 	export default {
 	    data(){
 	        return{
